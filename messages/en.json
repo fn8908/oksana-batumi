@@ -1,0 +1,199 @@
+{
+  "nav": {
+    "rent": "Rent",
+    "districts": "Neighborhoods",
+    "howItWorks": "How It Works",
+    "reviews": "Reviews",
+    "cta": "Submit Request"
+  },
+  "hero": {
+    "title": "Rent an Apartment in Batumi — Simple and Safe",
+    "subtitle": "Verified properties. Clear terms. A community of Batumi real estate professionals.",
+    "cta1": "Find an Apartment",
+    "cta2": "View Properties",
+    "fact1": "200+ properties",
+    "fact2": "No hidden fees",
+    "fact3": "Verified documents"
+  },
+  "search": {
+    "rentalType": "Rental Type",
+    "longTerm": "Long-term",
+    "shortTerm": "Short-term",
+    "budget": "Budget",
+    "budget1": "under $500",
+    "budget2": "$500–$1000",
+    "budget3": "$1000–$2000",
+    "budget4": "$2000+",
+    "rooms": "Rooms",
+    "studio": "Studio",
+    "room1": "1",
+    "room2": "2",
+    "room3": "3+",
+    "findBtn": "Search"
+  },
+  "catalog": {
+    "title": "Current Listings",
+    "subtitle": "Hand-picked properties from our realtor community",
+    "from": "from",
+    "perMonth": "/mo",
+    "details": "View Details"
+  },
+  "properties": [
+    {
+      "type": "Sea-view Studio",
+      "district": "New Boulevard",
+      "price": "$350",
+      "tags": ["Sea view", "Long-term", "Short-term"],
+      "gradient": "from-blue-900 to-teal-700"
+    },
+    {
+      "type": "1+1 Downtown",
+      "district": "Khimshiashvili",
+      "price": "$500",
+      "tags": ["Central", "Mountain view"],
+      "gradient": "from-indigo-900 to-blue-700"
+    },
+    {
+      "type": "2+1 Historic",
+      "district": "Old Town",
+      "price": "$700",
+      "tags": ["Historic area", "Family-friendly"],
+      "gradient": "from-purple-900 to-indigo-700"
+    },
+    {
+      "type": "First-line Studio",
+      "district": "Orbi City",
+      "price": "$400",
+      "tags": ["First line", "High floor"],
+      "gradient": "from-cyan-900 to-blue-800"
+    },
+    {
+      "type": "1+1 Park View",
+      "district": "Rustaveli",
+      "price": "$550",
+      "tags": ["Park nearby", "New building"],
+      "gradient": "from-green-900 to-teal-800"
+    },
+    {
+      "type": "3+1 Countryside",
+      "district": "Gonio",
+      "price": "$900",
+      "tags": ["Countryside", "With pool"],
+      "gradient": "from-amber-900 to-orange-800"
+    }
+  ],
+  "howItWorks": {
+    "title": "How It Works",
+    "steps": [
+      {
+        "title": "Submit a Request",
+        "desc": "Tell us your budget, type, and preferred area"
+      },
+      {
+        "title": "Get a Selection",
+        "desc": "We'll send you options via Telegram within 2 hours"
+      },
+      {
+        "title": "View Properties",
+        "desc": "We'll arrange viewings at a convenient time"
+      },
+      {
+        "title": "Move In",
+        "desc": "We assist with the contract and key handover"
+      }
+    ]
+  },
+  "form": {
+    "title": "We'll Find the Right Apartment for You",
+    "subtitle": "Submit a request — we'll respond within 2 hours",
+    "rentalTypeLabel": "Rental Type",
+    "longTerm": "Long-term",
+    "shortTerm": "Short-term",
+    "investment": "Investment",
+    "roomsLabel": "Rooms",
+    "studio": "Studio",
+    "budgetLabel": "Monthly Budget",
+    "districtsLabel": "Neighborhood (optional)",
+    "districts": ["New Boulevard", "Old Town", "Khimshiashvili", "Gonio", "Any"],
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "contactLabel": "Telegram or WhatsApp",
+    "contactPlaceholder": "@username or +1...",
+    "commentLabel": "Comment",
+    "commentPlaceholder": "When are you planning to move in? Any special requirements?",
+    "submit": "Submit Request",
+    "privacy": "🔒 Your data is not shared with third parties. Only with our realtor community.",
+    "success": "✅ Request received! Expect a message on Telegram within 2 hours.",
+    "next": "Next",
+    "back": "Back",
+    "step1": "Parameters",
+    "step2": "Contact"
+  },
+  "neighborhoods": {
+    "title": "Batumi Neighborhoods",
+    "items": [
+      {
+        "name": "New Boulevard",
+        "desc": "First line. The most popular tourist area.",
+        "price": "from $350/mo"
+      },
+      {
+        "name": "Old Town",
+        "desc": "Atmosphere and history. Narrow streets.",
+        "price": "from $220/mo"
+      },
+      {
+        "name": "Khimshiashvili",
+        "desc": "Central. Everything nearby.",
+        "price": "from $400/mo"
+      },
+      {
+        "name": "Rustaveli",
+        "desc": "Prestige. Park. Quiet.",
+        "price": "from $450/mo"
+      },
+      {
+        "name": "Gonio / Kobuleti",
+        "desc": "Countryside. Nature. Peace.",
+        "price": "from $300/mo"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "items": [
+      {
+        "text": "Found an apartment in 3 days. Everything was clear, no unnecessary calls.",
+        "author": "Alexander",
+        "city": "Moscow"
+      },
+      {
+        "text": "They helped us understand the contract and explained all the nuances of the Georgian market.",
+        "author": "Elena",
+        "city": "Kyiv"
+      },
+      {
+        "text": "We came for a month and stayed a year. Found the perfect place within our budget.",
+        "author": "Dmitry",
+        "city": "Minsk"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Ready to Find Your Home in Batumi?",
+    "subtitle": "Submit a request — we'll find options within 2 hours",
+    "btn": "Submit Request"
+  },
+  "footer": {
+    "tagline": "BATUMI REALTY — Batumi Realtor Community",
+    "copyright": "© 2024 Batumi Realty. All rights reserved.",
+    "links": ["Properties", "Neighborhoods", "How It Works", "Submit Request"],
+    "schedule": "We accept requests daily 9:00–22:00 (GMT+4)"
+  },
+  "modal": {
+    "title": "Request Details",
+    "subtitle": "Submit a request — a realtor will contact you within 2 hours",
+    "submit": "Submit Request",
+    "close": "Close"
+  }
+}
