@@ -44,49 +44,49 @@
       "district": "New Boulevard",
       "price": "$350",
       "tags": ["Sea view", "Long-term", "Short-term"],
-      "image": "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "1+1 Heroes Alley",
       "district": "Heroes Alley",
       "price": "$480",
       "tags": ["Central", "New building", "Parking"],
-      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 Heroes Alley",
       "district": "Heroes Alley",
       "price": "$650",
       "tags": ["Central", "Mountain view", "European renovation"],
-      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 Historic",
       "district": "Old Town",
       "price": "$700",
       "tags": ["Historic area", "Family-friendly"],
-      "image": "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "First-line Studio",
       "district": "Orbi City",
       "price": "$400",
       "tags": ["First line", "High floor"],
-      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "1+1 Park View",
       "district": "Rustaveli",
       "price": "$550",
       "tags": ["Park nearby", "New building"],
-      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "3+1 Countryside",
       "district": "Gonio",
       "price": "$900",
       "tags": ["Countryside", "With pool"],
-      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ],
   "howItWorks": {
@@ -147,31 +147,31 @@
         "name": "New Boulevard",
         "desc": "First line. The most popular tourist area.",
         "price": "from $350/mo",
-        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Old Town",
         "desc": "Atmosphere and history. Narrow streets.",
         "price": "from $220/mo",
-        "image": "https://images.unsplash.com/photo-1558618047-b8789c19b4a4?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Heroes Alley",
         "desc": "Modern center. New buildings with mountain and sea views.",
         "price": "from $400/mo",
-        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Rustaveli",
         "desc": "Prestige. Park. Quiet.",
         "price": "from $450/mo",
-        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Gonio / Kobuleti",
         "desc": "Countryside. Nature. Peace.",
         "price": "from $300/mo",
-        "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
       }
     ]
   },
@@ -186,7 +186,7 @@
         "price": "from $2,500/mo",
         "desc": "Private villa with pool, garden and Black Sea views. 4 bedrooms.",
         "tags": ["Sea view", "Pool", "Garden", "Garage"],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Mountain House",
@@ -194,7 +194,7 @@
         "price": "from $1,800/mo",
         "desc": "Two-storey house with garden. Mountain and sea views. 3 bedrooms.",
         "tags": ["Mountain view", "Garden", "BBQ", "Peaceful"],
-        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Townhouse",
@@ -202,7 +202,7 @@
         "price": "from $1,200/mo",
         "desc": "3-storey townhouse near Batumi. 3 bedrooms + office.",
         "tags": ["New building", "3 floors", "Parking", "Near sea"],
-        "image": "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Adjara Mountain Villa",
@@ -210,7 +210,7 @@
         "price": "from $3,000/mo",
         "desc": "Exclusive villa in the Adjara mountains. Panoramic views. 5 bedrooms.",
         "tags": ["Panoramic view", "Nature", "Peaceful", "Forest"],
-        "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
       }
     ]
   },

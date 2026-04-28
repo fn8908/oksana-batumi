@@ -44,49 +44,49 @@
       "district": "Yeni Bulvar",
       "price": "$350",
       "tags": ["Deniz Manzarası", "Uzun Dönem", "Kısa Dönem"],
-      "image": "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "1+1 Kahramanlar Caddesi",
       "district": "Kahramanlar Caddesi",
       "price": "$480",
       "tags": ["Merkez", "Yeni Bina", "Otopark"],
-      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 Kahramanlar Caddesi",
       "district": "Kahramanlar Caddesi",
       "price": "$650",
       "tags": ["Merkez", "Dağ Manzarası", "Tadilatlı"],
-      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 Tarihi",
       "district": "Eski Şehir",
       "price": "$700",
       "tags": ["Tarihi Bölge", "Aile Dostu"],
-      "image": "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "Birinci Hat Stüdyo",
       "district": "Orbi City",
       "price": "$400",
       "tags": ["Birinci Hat", "Yüksek Kat"],
-      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "1+1 Park Manzaralı",
       "district": "Rustaveli",
       "price": "$550",
       "tags": ["Park Yakını", "Yeni Bina"],
-      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "3+1 Şehir Dışı",
       "district": "Gonyo",
       "price": "$900",
       "tags": ["Şehir Dışı", "Havuzlu"],
-      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ],
   "howItWorks": {
@@ -147,31 +147,31 @@
         "name": "Yeni Bulvar",
         "desc": "Birinci hat. En turistik bölge.",
         "price": "$350'den/ay",
-        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Eski Şehir",
         "desc": "Atmosfer ve tarih. Dar sokaklar.",
         "price": "$220'den/ay",
-        "image": "https://images.unsplash.com/photo-1558618047-b8789c19b4a4?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Kahramanlar Caddesi",
         "desc": "Modern merkez. Dağ ve deniz manzaralı yeni binalar.",
         "price": "$400'den/ay",
-        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Rustaveli",
         "desc": "Prestij. Park. Sakin.",
         "price": "$450'den/ay",
-        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Gonyo / Kobuleti",
         "desc": "Şehir dışı. Doğa. Huzur.",
         "price": "$300'den/ay",
-        "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
       }
     ]
   },
@@ -186,7 +186,7 @@
         "price": "$2.500'den/ay",
         "desc": "Karadeniz manzaralı özel villa. Havuz, bahçe, garaj. 4 yatak odası.",
         "tags": ["Deniz Manzarası", "Havuz", "Bahçe", "Garaj"],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Dağ Evi",
@@ -194,7 +194,7 @@
         "price": "$1.800'den/ay",
         "desc": "Bahçeli iki katlı ev. Dağ ve deniz manzarası. 3 yatak odası.",
         "tags": ["Dağ Manzarası", "Bahçe", "BBQ", "Huzur"],
-        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Townhouse",
@@ -202,7 +202,7 @@
         "price": "$1.200'den/ay",
         "desc": "Batum yakınında 3 katlı townhouse. 3 yatak odası + ofis.",
         "tags": ["Yeni Bina", "3 Kat", "Otopark", "Denize Yakın"],
-        "image": "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Acaristan Villası",
@@ -210,7 +210,7 @@
         "price": "$3.000'den/ay",
         "desc": "Acaristan dağlarında özel villa. Panoramik manzara. 5 yatak odası.",
         "tags": ["Panoramik Manzara", "Doğa", "Huzur", "Orman"],
-        "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
       }
     ]
   },

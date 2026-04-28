@@ -7,11 +7,6 @@ export default function FinalCTA() {
   const { t } = useLanguage();
   const { ref, inView } = useInView();
 
-  const scrollToForm = () => {
-    const el = document.getElementById("contact-form");
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
@@ -61,17 +56,39 @@ export default function FinalCTA() {
         >
           {t("finalCta.subtitle")}
         </p>
-        <button
-          onClick={scrollToForm}
-          className="inline-flex items-center gap-2 px-10 py-5 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95"
+
+        {/* Telegram CTA button */}
+        <a
+          href="https://t.me/River095"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95"
           style={{
             background: "#C9A96E",
             color: "#0F1C2E",
             boxShadow: "0 16px 48px rgba(201,169,110,0.35)",
+            textDecoration: "none",
           }}
         >
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 13.985l-2.95-.924c-.64-.203-.654-.64.136-.953l11.5-4.432c.534-.194 1.001.13.616.572z"/>
+          </svg>
           {t("finalCta.btn")}
-        </button>
+        </a>
+
+        {/* Secondary: form link */}
+        <div className="mt-5">
+          <button
+            onClick={() => {
+              const el = document.getElementById("contact-form");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+            }}
+            className="text-sm font-nunito underline underline-offset-4 transition-opacity hover:opacity-80"
+            style={{ color: "rgba(245,240,232,0.4)" }}
+          >
+            или заполнить форму →
+          </button>
+        </div>
       </div>
     </section>
   );

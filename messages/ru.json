@@ -44,49 +44,49 @@
       "district": "Новый Бульвар",
       "price": "$350",
       "tags": ["Вид на море", "Долгосрочно", "Посуточно"],
-      "image": "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "1+1 Аллея героев",
       "district": "Аллея героев",
       "price": "$480",
       "tags": ["Центр", "Новый дом", "Парковка"],
-      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 Аллея героев",
       "district": "Аллея героев",
       "price": "$650",
       "tags": ["Центр", "Вид на горы", "Евроремонт"],
-      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 исторический",
       "district": "Старый город",
       "price": "$700",
       "tags": ["Историческое место", "Семьям"],
-      "image": "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "Студия первая линия",
       "district": "Орби Сити",
       "price": "$400",
       "tags": ["Первая линия", "Высокий этаж"],
-      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "1+1 у парка",
       "district": "Руставели",
       "price": "$550",
       "tags": ["Парк рядом", "Новый дом"],
-      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "3+1 за городом",
       "district": "Гонио",
       "price": "$900",
       "tags": ["За городом", "С бассейном"],
-      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop"
+      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
     }
   ],
   "howItWorks": {
@@ -147,31 +147,31 @@
         "name": "Новый Бульвар",
         "desc": "Первая линия. Самый туристический район.",
         "price": "от $350/мес",
-        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Старый город",
         "desc": "Атмосфера и история. Узкие улочки.",
         "price": "от $220/мес",
-        "image": "https://images.unsplash.com/photo-1558618047-b8789c19b4a4?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Аллея героев",
         "desc": "Современный центр. Новые дома с видом на горы и море.",
         "price": "от $400/мес",
-        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Руставели",
         "desc": "Престиж. Парк. Тихо.",
         "price": "от $450/мес",
-        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
       },
       {
         "name": "Гонио / Кобулети",
         "desc": "За городом. Природа. Тишина.",
         "price": "от $300/мес",
-        "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
       }
     ]
   },
@@ -186,7 +186,7 @@
         "price": "от $2 500/мес",
         "desc": "Частная вилла с бассейном, садом и видом на Чёрное море. 4 спальни.",
         "tags": ["Вид на море", "Бассейн", "Сад", "Гараж"],
-        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Дом в горах",
@@ -194,7 +194,7 @@
         "price": "от $1 800/мес",
         "desc": "Двухэтажный дом с садом. Вид на горы и море. 3 спальни.",
         "tags": ["Вид на горы", "Сад", "BBQ", "Тишина"],
-        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Таунхаус",
@@ -202,7 +202,7 @@
         "price": "от $1 200/мес",
         "desc": "3-этажный таунхаус рядом с Батуми. 3 спальни + кабинет.",
         "tags": ["Новый дом", "3 этажа", "Парковка", "Близко к морю"],
-        "image": "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
       },
       {
         "type": "Вилла в горах Аджарии",
@@ -210,7 +210,7 @@
         "price": "от $3 000/мес",
         "desc": "Эксклюзивная вилла в горах Аджарии. Панорамный вид. 5 спален.",
         "tags": ["Панорамный вид", "Природа", "Тишина", "Лес"],
-        "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&q=80&fit=crop"
+        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
       }
     ]
   },
