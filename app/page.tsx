@@ -8,6 +8,8 @@ import Catalog from "@/components/Catalog";
 import HowItWorks from "@/components/HowItWorks";
 import ContactForm from "@/components/ContactForm";
 import Neighborhoods from "@/components/Neighborhoods";
+import EliteRealty from "@/components/EliteRealty";
+import AdjariaMap from "@/components/AdjariaMap";
 import Testimonials from "@/components/Testimonials";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -31,9 +33,11 @@ export default function Home() {
       <Hero />
       <QuickSearch onSearch={setFilters} />
       <Catalog filters={filters} />
+      <Neighborhoods />
       <HowItWorks />
       <ContactForm />
-      <Neighborhoods />
+      <EliteRealty />
+      <AdjariaMap />
       <Testimonials />
       <FinalCTA />
       <Footer />

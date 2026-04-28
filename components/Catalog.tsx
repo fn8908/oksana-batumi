@@ -10,7 +10,8 @@ interface Property {
   district: string;
   price: string;
   tags: string[];
-  gradient: string;
+  image?: string;
+  gradient?: string;
 }
 
 interface Filters {
@@ -23,23 +24,24 @@ interface CatalogProps {
   filters: Filters;
 }
 
-const gradients = [
+const fallbackGradients = [
   "linear-gradient(135deg, #0a3d62, #1a6b8a)",
   "linear-gradient(135deg, #1a1a6b, #2d3a8c)",
   "linear-gradient(135deg, #3d0a62, #6b1a8c)",
   "linear-gradient(135deg, #0a4d6b, #0d7a9c)",
   "linear-gradient(135deg, #0a3d1a, #1a6b3a)",
   "linear-gradient(135deg, #6b3d0a, #9c6b1a)",
+  "linear-gradient(135deg, #1a4a5e, #2d7a8c)",
 ];
 
 export default function Catalog({ filters }: CatalogProps) {
   const { t, tArr, lang } = useLanguage();
   const { ref, inView } = useInView();
-  const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
-
-  const properties = tArr<Property>(
-    lang === "ru" ? "properties" : "properties"
+  const [selectedProperty, setSelectedProperty] = useState<Property | null>(
+    null
   );
+
+  const properties = tArr<Property>("properties");
 
   return (
     <section id="catalog" className="py-24 px-4 sm:px-6 lg:px-8" ref={ref}>
@@ -54,12 +56,18 @@ export default function Catalog({ filters }: CatalogProps) {
           >
             {t("catalog.title")}
           </h2>
-          <p className="font-nunito text-base" style={{ color: "rgba(245,240,232,0.55)" }}>
+          <p
+            className="font-nunito text-base"
+            style={{ color: "rgba(245,240,232,0.55)" }}
+          >
             {t("catalog.subtitle")}
           </p>
           <div
             className="w-16 h-px mx-auto mt-6"
-            style={{ background: "linear-gradient(90deg, transparent, #C9A96E, transparent)" }}
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, #C9A96E, transparent)",
+            }}
           />
         </div>
 
@@ -69,27 +77,47 @@ export default function Catalog({ filters }: CatalogProps) {
             {filters.rentalType && (
               <span
                 className="text-xs px-3 py-1.5 rounded-full font-semibold"
-                style={{ background: "rgba(78,205,196,0.15)", color: "#4ECDC4", border: "1px solid rgba(78,205,196,0.3)" }}
+                style={{
+                  background: "rgba(78,205,196,0.15)",
+                  color: "#4ECDC4",
+                  border: "1px solid rgba(78,205,196,0.3)",
+                }}
               >
-                {filters.rentalType === "long" ? t("search.longTerm") : t("search.shortTerm")}
+                {filters.rentalType === "long"
+                  ? t("search.longTerm")
+                  : t("search.shortTerm")}
               </span>
             )}
             {filters.budget && (
               <span
                 className="text-xs px-3 py-1.5 rounded-full font-semibold"
-                style={{ background: "rgba(78,205,196,0.15)", color: "#4ECDC4", border: "1px solid rgba(78,205,196,0.3)" }}
+                style={{
+                  background: "rgba(78,205,196,0.15)",
+                  color: "#4ECDC4",
+                  border: "1px solid rgba(78,205,196,0.3)",
+                }}
               >
-                {filters.budget === "500" ? t("search.budget1") :
-                  filters.budget === "1000" ? t("search.budget2") :
-                    filters.budget === "2000" ? t("search.budget3") : t("search.budget4")}
+                {filters.budget === "500"
+                  ? t("search.budget1")
+                  : filters.budget === "1000"
+                    ? t("search.budget2")
+                    : filters.budget === "2000"
+                      ? t("search.budget3")
+                      : t("search.budget4")}
               </span>
             )}
             {filters.rooms && (
               <span
                 className="text-xs px-3 py-1.5 rounded-full font-semibold"
-                style={{ background: "rgba(78,205,196,0.15)", color: "#4ECDC4", border: "1px solid rgba(78,205,196,0.3)" }}
+                style={{
+                  background: "rgba(78,205,196,0.15)",
+                  color: "#4ECDC4",
+                  border: "1px solid rgba(78,205,196,0.3)",
+                }}
               >
-                {filters.rooms === "studio" ? t("search.studio") : `${filters.rooms} ${lang === "ru" ? "комн." : "br."}`}
+                {filters.rooms === "studio"
+                  ? t("search.studio")
+                  : `${filters.rooms} ${lang === "ru" || lang === "uk" ? "комн." : "br."}`}
               </span>
             )}
           </div>
@@ -109,26 +137,43 @@ export default function Catalog({ filters }: CatalogProps) {
               }}
               onClick={() => setSelectedProperty(prop)}
             >
-              {/* Image placeholder */}
-              <div
-                className="relative h-48 flex items-center justify-center overflow-hidden"
-                style={{ background: gradients[i] }}
-              >
-                <div
-                  className="absolute inset-0 opacity-20"
-                  style={{
-                    backgroundImage: "radial-gradient(circle at 30% 70%, rgba(255,255,255,0.15) 0%, transparent 60%)",
-                  }}
-                />
-                <span className="text-5xl opacity-60 group-hover:scale-110 transition-transform duration-300">🏢</span>
+              {/* Photo or gradient */}
+              <div className="relative h-48 overflow-hidden">
+                {prop.image ? (
+                  <>
+                    <img
+                      src={prop.image}
+                      alt={prop.type}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(to bottom, transparent 50%, rgba(10,20,35,0.7))",
+                      }}
+                    />
+                  </>
+                ) : (
+                  <div
+                    className="w-full h-full flex items-center justify-center"
+                    style={{ background: fallbackGradients[i % fallbackGradients.length] }}
+                  >
+                    <span className="text-5xl opacity-60 group-hover:scale-110 transition-transform duration-300">
+                      🏢
+                    </span>
+                  </div>
+                )}
+
                 {/* Price badge */}
                 <div
                   className="absolute top-3 right-3 px-3 py-1.5 rounded-full text-sm font-bold"
                   style={{
-                    background: "rgba(15,28,46,0.8)",
+                    background: "rgba(15,28,46,0.85)",
                     backdropFilter: "blur(8px)",
                     color: "#C9A96E",
-                    border: "1px solid rgba(201,169,110,0.3)",
+                    border: "1px solid rgba(201,169,110,0.35)",
                   }}
                 >
                   {t("catalog.from")} {prop.price}
@@ -146,7 +191,10 @@ export default function Catalog({ filters }: CatalogProps) {
                     {prop.type}
                   </h3>
                 </div>
-                <p className="text-sm mb-4 flex items-center gap-1.5" style={{ color: "rgba(245,240,232,0.5)" }}>
+                <p
+                  className="text-sm mb-4 flex items-center gap-1.5"
+                  style={{ color: "rgba(245,240,232,0.5)" }}
+                >
                   <span>📍</span> {prop.district}
                 </p>
 

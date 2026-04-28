@@ -7,17 +7,8 @@ interface Neighborhood {
   name: string;
   desc: string;
   price: string;
+  image: string;
 }
-
-const neighborhoodGradients = [
-  "linear-gradient(135deg, #0a3d62 0%, #1e5f8a 100%)",
-  "linear-gradient(135deg, #2d1b4e 0%, #5b3d8a 100%)",
-  "linear-gradient(135deg, #1a4a2e 0%, #2d7a50 100%)",
-  "linear-gradient(135deg, #4a1a1a 0%, #8a3030 100%)",
-  "linear-gradient(135deg, #1a3a4a 0%, #2d6b7a 100%)",
-];
-
-const neighborhoodIcons = ["🌊", "🕌", "🏙️", "🌳", "🏡"];
 
 export default function Neighborhoods() {
   const { t, tArr } = useLanguage();
@@ -56,25 +47,36 @@ export default function Neighborhoods() {
           {neighborhoods.map((n, i) => (
             <div
               key={i}
-              className={`flex-shrink-0 w-64 sm:w-72 lg:w-auto snap-start rounded-2xl overflow-hidden transition-all duration-700 cursor-pointer group hover:scale-[1.03] ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+              className={`flex-shrink-0 w-64 sm:w-72 lg:w-auto snap-start rounded-2xl overflow-hidden transition-all duration-700 cursor-pointer group hover:scale-[1.03] hover:shadow-2xl ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
               style={{
                 transitionDelay: `${i * 0.1}s`,
                 border: "1px solid rgba(255,255,255,0.08)",
               }}
             >
-              {/* Gradient top */}
-              <div
-                className="h-32 flex items-center justify-center text-4xl relative"
-                style={{ background: neighborhoodGradients[i] }}
-              >
+              {/* Photo */}
+              <div className="h-36 relative overflow-hidden">
+                <img
+                  src={n.image}
+                  alt={n.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading="lazy"
+                />
                 <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  className="absolute inset-0"
                   style={{
                     background:
-                      "radial-gradient(circle at center, rgba(201,169,110,0.1), transparent 70%)",
+                      "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(10,20,35,0.55))",
                   }}
                 />
-                <span className="relative z-10">{neighborhoodIcons[i]}</span>
+                {/* District name overlay */}
+                <div className="absolute bottom-2 left-3">
+                  <span
+                    className="text-xs font-bold tracking-wider uppercase"
+                    style={{ color: "#C9A96E" }}
+                  >
+                    {n.name}
+                  </span>
+                </div>
               </div>
 
               {/* Content */}
@@ -82,15 +84,9 @@ export default function Neighborhoods() {
                 className="p-5"
                 style={{ background: "rgba(255,255,255,0.04)" }}
               >
-                <h3
-                  className="font-cormorant font-semibold text-lg mb-2 leading-tight"
-                  style={{ color: "#F5F0E8" }}
-                >
-                  {n.name}
-                </h3>
                 <p
-                  className="text-sm mb-4 leading-relaxed"
-                  style={{ color: "rgba(245,240,232,0.55)" }}
+                  className="text-sm mb-3 leading-relaxed"
+                  style={{ color: "rgba(245,240,232,0.6)" }}
                 >
                   {n.desc}
                 </p>

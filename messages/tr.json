@@ -1,0 +1,259 @@
+{
+  "nav": {
+    "rent": "Kiralık",
+    "districts": "Semtler",
+    "howItWorks": "Nasıl Çalışır",
+    "reviews": "Yorumlar",
+    "cta": "Başvuru Bırak"
+  },
+  "hero": {
+    "title": "Batum'da Daire Kiralama — Kolay ve Güvenli",
+    "subtitle": "Onaylı mülkler. Net koşullar. Batum emlak piyasasında deneyimli komisyoncular topluluğu.",
+    "cta1": "Daire Bul",
+    "cta2": "İlanları Görüntüle",
+    "fact1": "200+ mülk",
+    "fact2": "Gizli komisyon yok",
+    "fact3": "Onaylı belgeler"
+  },
+  "search": {
+    "rentalType": "Kiralama Türü",
+    "longTerm": "Uzun Dönem",
+    "shortTerm": "Kısa Dönem",
+    "budget": "Bütçe",
+    "budget1": "$500 altı",
+    "budget2": "$500–$1000",
+    "budget3": "$1000–$2000",
+    "budget4": "$2000+",
+    "rooms": "Oda Sayısı",
+    "studio": "Stüdyo",
+    "room1": "1",
+    "room2": "2",
+    "room3": "3+",
+    "findBtn": "Ara"
+  },
+  "catalog": {
+    "title": "Güncel İlanlar",
+    "subtitle": "Komisyoncular topluluğundan seçilmiş mülkler",
+    "from": "den",
+    "perMonth": "/ay",
+    "details": "Detayları Gör"
+  },
+  "properties": [
+    {
+      "type": "Deniz Manzaralı Stüdyo",
+      "district": "Yeni Bulvar",
+      "price": "$350",
+      "tags": ["Deniz Manzarası", "Uzun Dönem", "Kısa Dönem"],
+      "image": "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "1+1 Kahramanlar Caddesi",
+      "district": "Kahramanlar Caddesi",
+      "price": "$480",
+      "tags": ["Merkez", "Yeni Bina", "Otopark"],
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "2+1 Kahramanlar Caddesi",
+      "district": "Kahramanlar Caddesi",
+      "price": "$650",
+      "tags": ["Merkez", "Dağ Manzarası", "Tadilatlı"],
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "2+1 Tarihi",
+      "district": "Eski Şehir",
+      "price": "$700",
+      "tags": ["Tarihi Bölge", "Aile Dostu"],
+      "image": "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "Birinci Hat Stüdyo",
+      "district": "Orbi City",
+      "price": "$400",
+      "tags": ["Birinci Hat", "Yüksek Kat"],
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "1+1 Park Manzaralı",
+      "district": "Rustaveli",
+      "price": "$550",
+      "tags": ["Park Yakını", "Yeni Bina"],
+      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "3+1 Şehir Dışı",
+      "district": "Gonyo",
+      "price": "$900",
+      "tags": ["Şehir Dışı", "Havuzlu"],
+      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop"
+    }
+  ],
+  "howItWorks": {
+    "title": "Nasıl Çalışır",
+    "steps": [
+      {
+        "title": "Başvuru Bırakın",
+        "desc": "Parametreleri belirtin: bütçe, tür, semt"
+      },
+      {
+        "title": "Seçim Alın",
+        "desc": "2 saat içinde Telegram'dan seçenekler göndereceğiz"
+      },
+      {
+        "title": "Mülkleri Görüntüleyin",
+        "desc": "Uygun bir zamanda geziler düzenleriz"
+      },
+      {
+        "title": "Taşının",
+        "desc": "Sözleşme ve anahtar tesliminde yardım ederiz"
+      }
+    ]
+  },
+  "form": {
+    "title": "İhtiyaçlarınıza Göre Mülk Bulacağız",
+    "subtitle": "Başvuru bırakın — 2 saat içinde iletişime geçeceğiz",
+    "rentalTypeLabel": "Kiralama Türü",
+    "longTerm": "Uzun Dönem",
+    "shortTerm": "Kısa Dönem",
+    "investment": "Yatırım",
+    "house": "Ev",
+    "villa": "Villa",
+    "propertyTypeLabel": "Mülk Türü",
+    "apartment": "Daire",
+    "roomsLabel": "Oda Sayısı",
+    "studio": "Stüdyo",
+    "budgetLabel": "Aylık Bütçe",
+    "districtsLabel": "Semt (isteğe bağlı)",
+    "districts": ["Yeni Bulvar", "Eski Şehir", "Kahramanlar Caddesi", "Gonyo", "Herhangi Biri"],
+    "nameLabel": "Ad",
+    "namePlaceholder": "Adınız",
+    "contactLabel": "Telegram veya WhatsApp",
+    "contactPlaceholder": "@kullanıcıadı veya +90...",
+    "commentLabel": "Yorum",
+    "commentPlaceholder": "Ne zaman taşınmayı planlıyorsunuz? Özel istekleriniz var mı?",
+    "submit": "Başvuru Gönder",
+    "privacy": "🔒 Verileriniz üçüncü taraflarla paylaşılmaz.",
+    "success": "✅ Başvurunuz alındı! 2 saat içinde Telegram'da mesaj bekleyin.",
+    "next": "İleri",
+    "back": "Geri",
+    "step1": "Parametreler",
+    "step2": "İletişim"
+  },
+  "neighborhoods": {
+    "title": "Batum Semtleri",
+    "items": [
+      {
+        "name": "Yeni Bulvar",
+        "desc": "Birinci hat. En turistik bölge.",
+        "price": "$350'den/ay",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80&fit=crop"
+      },
+      {
+        "name": "Eski Şehir",
+        "desc": "Atmosfer ve tarih. Dar sokaklar.",
+        "price": "$220'den/ay",
+        "image": "https://images.unsplash.com/photo-1558618047-b8789c19b4a4?w=500&q=80&fit=crop"
+      },
+      {
+        "name": "Kahramanlar Caddesi",
+        "desc": "Modern merkez. Dağ ve deniz manzaralı yeni binalar.",
+        "price": "$400'den/ay",
+        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80&fit=crop"
+      },
+      {
+        "name": "Rustaveli",
+        "desc": "Prestij. Park. Sakin.",
+        "price": "$450'den/ay",
+        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&q=80&fit=crop"
+      },
+      {
+        "name": "Gonyo / Kobuleti",
+        "desc": "Şehir dışı. Doğa. Huzur.",
+        "price": "$300'den/ay",
+        "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80&fit=crop"
+      }
+    ]
+  },
+  "elite": {
+    "title": "Lüks Gayrimenkul",
+    "subtitle": "Batum ve Acaristan dağlarında deniz manzaralı özel evler, villalar ve townhouse'lar",
+    "cta": "Başvuru Bırak",
+    "items": [
+      {
+        "type": "Havuzlu Villa",
+        "location": "Yeşil Burun",
+        "price": "$2.500'den/ay",
+        "desc": "Karadeniz manzaralı özel villa. Havuz, bahçe, garaj. 4 yatak odası.",
+        "tags": ["Deniz Manzarası", "Havuz", "Bahçe", "Garaj"],
+        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Dağ Evi",
+        "location": "Sarpi / Khulo",
+        "price": "$1.800'den/ay",
+        "desc": "Bahçeli iki katlı ev. Dağ ve deniz manzarası. 3 yatak odası.",
+        "tags": ["Dağ Manzarası", "Bahçe", "BBQ", "Huzur"],
+        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Townhouse",
+        "location": "Batum, Kobuleti",
+        "price": "$1.200'den/ay",
+        "desc": "Batum yakınında 3 katlı townhouse. 3 yatak odası + ofis.",
+        "tags": ["Yeni Bina", "3 Kat", "Otopark", "Denize Yakın"],
+        "image": "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Acaristan Villası",
+        "location": "Khulo / Kheda",
+        "price": "$3.000'den/ay",
+        "desc": "Acaristan dağlarında özel villa. Panoramik manzara. 5 yatak odası.",
+        "tags": ["Panoramik Manzara", "Doğa", "Huzur", "Orman"],
+        "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&q=80&fit=crop"
+      }
+    ]
+  },
+  "map": {
+    "title": "Acaristan Gayrimenkul Haritası",
+    "subtitle": "Haritadaki nesneler — detaylar için tıklayın",
+    "viewDetails": "Detayları Gör"
+  },
+  "testimonials": {
+    "title": "Müşterilerimiz Ne Diyor",
+    "items": [
+      {
+        "text": "3 günde daire bulduk. Her şey net, gereksiz aramalar yok.",
+        "author": "Aleksandr",
+        "city": "Moskova"
+      },
+      {
+        "text": "Sözleşmeyi anlamama yardımcı oldular, Gürcü piyasasının tüm nüanslarını açıkladılar.",
+        "author": "Elena",
+        "city": "Kiev"
+      },
+      {
+        "text": "Bir aylığına geldik — bir yıl kaldık. Bütçemize mükemmel bir yer bulduk.",
+        "author": "Dmitry",
+        "city": "Minsk"
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Batum'da Evinizi Bulmaya Hazır mısınız?",
+    "subtitle": "Başvuru bırakın — 2 saat içinde seçenekler bulacağız",
+    "btn": "Başvuru Bırak"
+  },
+  "footer": {
+    "tagline": "BATUMI REALTY — Batum Komisyoncular Topluluğu",
+    "copyright": "© 2024 Batumi Realty. Tüm hakları saklıdır.",
+    "links": ["İlanlar", "Semtler", "Nasıl Çalışır", "Başvuru Bırak"],
+    "schedule": "Başvuruları her gün 9:00–22:00 kabul ediyoruz (GMT+4)"
+  },
+  "modal": {
+    "title": "Detayları Öğren",
+    "subtitle": "Başvuru bırakın — komisyoncu 2 saat içinde iletişime geçecek",
+    "submit": "Başvuru Gönder",
+    "close": "Kapat"
+  }
+}

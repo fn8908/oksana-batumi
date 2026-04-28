@@ -1,17 +1,38 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useLanguage } from "@/context/LanguageContext";
+import { useState, useEffect, useRef } from "react";
+import { useLanguage, Lang } from "@/context/LanguageContext";
+
+const LANG_OPTIONS: { code: Lang; flag: string; label: string }[] = [
+  { code: "ka", flag: "🇬🇪", label: "KA" },
+  { code: "en", flag: "🇬🇧", label: "EN" },
+  { code: "ru", flag: "🇷🇺", label: "RU" },
+  { code: "tr", flag: "🇹🇷", label: "TR" },
+  { code: "uk", flag: "🇺🇦", label: "UK" },
+  { code: "he", flag: "🇮🇱", label: "HE" },
+];
 
 export default function Header() {
   const { t, lang, setLang } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const langRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (langRef.current && !langRef.current.contains(e.target as Node)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
   const scrollTo = (id: string) => {
@@ -20,13 +41,13 @@ export default function Header() {
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const current = LANG_OPTIONS.find((l) => l.code === lang) ?? LANG_OPTIONS[0];
+
   return (
     <header
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
-        background: scrolled
-          ? "rgba(15,28,46,0.92)"
-          : "rgba(15,28,46,0.4)",
+        background: scrolled ? "rgba(15,28,46,0.95)" : "rgba(15,28,46,0.4)",
         backdropFilter: scrolled ? "blur(16px)" : "blur(8px)",
         borderBottom: scrolled
           ? "1px solid rgba(201,169,110,0.15)"
@@ -36,7 +57,10 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 cursor-pointer" onClick={() => scrollTo("hero")}>
+          <div
+            className="flex-shrink-0 cursor-pointer"
+            onClick={() => scrollTo("hero")}
+          >
             <span
               className="font-cormorant font-bold text-xl lg:text-2xl tracking-wider"
               style={{ color: "#C9A96E" }}
@@ -62,8 +86,8 @@ export default function Header() {
               <button
                 key={item.key}
                 onClick={() => scrollTo(item.id)}
-                className="text-sm font-nunito transition-colors duration-200 hover:text-gold"
-                style={{ color: "rgba(245,240,232,0.8)" }}
+                className="text-sm font-nunito transition-colors duration-200 hover:opacity-100"
+                style={{ color: "rgba(245,240,232,0.75)" }}
               >
                 {t(item.key)}
               </button>
@@ -71,35 +95,69 @@ export default function Header() {
           </nav>
 
           {/* Right side */}
-          <div className="flex items-center gap-3 lg:gap-4">
-            {/* Language toggle */}
-            <div
-              className="flex items-center rounded-full p-0.5 gap-0.5"
-              style={{ background: "rgba(255,255,255,0.08)" }}
-            >
-              {(["ru", "en"] as const).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => setLang(l)}
-                  className="text-xs font-semibold px-3 py-1.5 rounded-full transition-all duration-200"
+          <div className="flex items-center gap-2 lg:gap-3">
+            {/* Language dropdown */}
+            <div className="relative" ref={langRef}>
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-xs font-semibold transition-all duration-200"
+                style={{
+                  background: "rgba(255,255,255,0.08)",
+                  border: "1px solid rgba(255,255,255,0.12)",
+                  color: "#F5F0E8",
+                }}
+              >
+                <span>{current.flag}</span>
+                <span>{current.label}</span>
+                <span style={{ fontSize: "8px", opacity: 0.6 }}>▾</span>
+              </button>
+
+              {langOpen && (
+                <div
+                  className="absolute right-0 top-full mt-2 rounded-xl overflow-hidden z-50 w-28"
                   style={{
-                    background: lang === l ? "#C9A96E" : "transparent",
-                    color: lang === l ? "#0F1C2E" : "#F5F0E8",
+                    background: "rgba(15,28,46,0.98)",
+                    border: "1px solid rgba(201,169,110,0.25)",
+                    backdropFilter: "blur(20px)",
+                    boxShadow: "0 16px 40px rgba(0,0,0,0.5)",
                   }}
                 >
-                  {l.toUpperCase()}
-                </button>
-              ))}
+                  {LANG_OPTIONS.map((opt) => (
+                    <button
+                      key={opt.code}
+                      onClick={() => {
+                        setLang(opt.code);
+                        setLangOpen(false);
+                      }}
+                      className="flex items-center gap-2 w-full px-3 py-2 text-xs font-semibold transition-all duration-150 hover:opacity-100"
+                      style={{
+                        background:
+                          lang === opt.code
+                            ? "rgba(201,169,110,0.15)"
+                            : "transparent",
+                        color:
+                          lang === opt.code
+                            ? "#C9A96E"
+                            : "rgba(245,240,232,0.7)",
+                        borderLeft:
+                          lang === opt.code
+                            ? "2px solid #C9A96E"
+                            : "2px solid transparent",
+                      }}
+                    >
+                      <span>{opt.flag}</span>
+                      <span>{opt.label}</span>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* CTA button */}
             <button
               onClick={() => scrollTo("contact-form")}
               className="hidden sm:block text-sm font-semibold px-4 py-2 rounded-full transition-all duration-200 hover:opacity-90"
-              style={{
-                background: "#C9A96E",
-                color: "#0F1C2E",
-              }}
+              style={{ background: "#C9A96E", color: "#0F1C2E" }}
             >
               {t("nav.cta")}
             </button>
@@ -110,9 +168,28 @@ export default function Header() {
               onClick={() => setMenuOpen(!menuOpen)}
               style={{ color: "#F5F0E8" }}
             >
-              <div className="w-5 h-0.5 mb-1 transition-all" style={{ background: "#F5F0E8", transform: menuOpen ? "rotate(45deg) translate(2px,2px)" : "none" }} />
-              <div className="w-5 h-0.5 mb-1" style={{ background: menuOpen ? "transparent" : "#F5F0E8" }} />
-              <div className="w-5 h-0.5 transition-all" style={{ background: "#F5F0E8", transform: menuOpen ? "rotate(-45deg) translate(2px,-2px)" : "none" }} />
+              <div
+                className="w-5 h-0.5 mb-1 transition-all"
+                style={{
+                  background: "#F5F0E8",
+                  transform: menuOpen
+                    ? "rotate(45deg) translate(2px,2px)"
+                    : "none",
+                }}
+              />
+              <div
+                className="w-5 h-0.5 mb-1"
+                style={{ background: menuOpen ? "transparent" : "#F5F0E8" }}
+              />
+              <div
+                className="w-5 h-0.5 transition-all"
+                style={{
+                  background: "#F5F0E8",
+                  transform: menuOpen
+                    ? "rotate(-45deg) translate(2px,-2px)"
+                    : "none",
+                }}
+              />
             </button>
           </div>
         </div>

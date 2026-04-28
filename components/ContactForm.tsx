@@ -4,20 +4,27 @@ import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 
-const DISTRICTS_RU = ["Новый Бульвар", "Старый город", "Химшиашвили", "Гонио", "Любой"];
-const DISTRICTS_EN = ["New Boulevard", "Old Town", "Khimshiashvili", "Gonio", "Any"];
+const DISTRICTS: Record<string, string[]> = {
+  ru: ["Новый Бульвар", "Старый город", "Аллея героев", "Гонио", "Любой"],
+  en: ["New Boulevard", "Old Town", "Heroes Alley", "Gonio", "Any"],
+  ka: ["ახალი ბულვარი", "ძველი ქალაქი", "გმირთა გამზირი", "გონიო", "ნებისმიერი"],
+  tr: ["Yeni Bulvar", "Eski Şehir", "Kahramanlar Caddesi", "Gonyo", "Herhangi Biri"],
+  uk: ["Новий Бульвар", "Старе місто", "Алея Героїв", "Гоніо", "Будь-який"],
+  he: ["הבולוואר החדש", "העיר העתיקה", "שדרת הגיבורים", "גוניו", "כל שכונה"],
+};
 
 export default function ContactForm() {
   const { t, lang } = useLanguage();
   const { ref, inView } = useInView();
 
-  const districts = lang === "ru" ? DISTRICTS_RU : DISTRICTS_EN;
+  const districts = DISTRICTS[lang] ?? DISTRICTS.ru;
 
   const [step, setStep] = useState(1);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const [rentalType, setRentalType] = useState("");
+  const [propertyType, setPropertyType] = useState("apartment");
   const [rooms, setRooms] = useState("");
   const [budget, setBudget] = useState(700);
   const [selectedDistricts, setSelectedDistricts] = useState<string[]>([]);
@@ -45,8 +52,10 @@ export default function ContactForm() {
           budget,
           rooms,
           rental_type: rentalType,
+          property_type: propertyType,
           districts: selectedDistricts,
           comment,
+          lang,
         }),
       });
       setSubmitted(true);
@@ -87,6 +96,12 @@ export default function ContactForm() {
     { value: "invest", label: t("form.investment") },
   ];
 
+  const propertyTypes = [
+    { value: "apartment", label: t("form.apartment") },
+    { value: "house", label: t("form.house") },
+    { value: "villa", label: t("form.villa") },
+  ];
+
   const roomOptions = [
     { value: "studio", label: t("form.studio") },
     { value: "1", label: "1" },
@@ -100,8 +115,7 @@ export default function ContactForm() {
       className="py-24 px-4 sm:px-6 lg:px-8"
       ref={ref}
       style={{
-        background:
-          "linear-gradient(180deg, #0F1C2E 0%, #0a1620 100%)",
+        background: "linear-gradient(180deg, #0F1C2E 0%, #0a1620 100%)",
       }}
     >
       <div className="max-w-3xl mx-auto">
@@ -115,12 +129,18 @@ export default function ContactForm() {
           >
             {t("form.title")}
           </h2>
-          <p className="font-nunito text-base" style={{ color: "rgba(245,240,232,0.55)" }}>
+          <p
+            className="font-nunito text-base"
+            style={{ color: "rgba(245,240,232,0.55)" }}
+          >
             {t("form.subtitle")}
           </p>
           <div
             className="w-16 h-px mx-auto mt-6"
-            style={{ background: "linear-gradient(90deg, transparent, #C9A96E, transparent)" }}
+            style={{
+              background:
+                "linear-gradient(90deg, transparent, #C9A96E, transparent)",
+            }}
           />
         </div>
 
@@ -137,7 +157,10 @@ export default function ContactForm() {
             <div className="text-center py-12">
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"
-                style={{ background: "rgba(78,205,196,0.12)", border: "1px solid rgba(78,205,196,0.3)" }}
+                style={{
+                  background: "rgba(78,205,196,0.12)",
+                  border: "1px solid rgba(78,205,196,0.3)",
+                }}
               >
                 ✅
               </div>
@@ -161,20 +184,32 @@ export default function ContactForm() {
                       <div
                         className="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold"
                         style={{
-                          background: step >= s ? "#C9A96E" : "rgba(255,255,255,0.1)",
+                          background:
+                            step >= s ? "#C9A96E" : "rgba(255,255,255,0.1)",
                           color: step >= s ? "#0F1C2E" : "#F5F0E8",
                         }}
                       >
                         {s}
                       </div>
-                      <span className="text-xs font-semibold" style={{ color: step >= s ? "#C9A96E" : "rgba(245,240,232,0.4)" }}>
+                      <span
+                        className="text-xs font-semibold"
+                        style={{
+                          color:
+                            step >= s
+                              ? "#C9A96E"
+                              : "rgba(245,240,232,0.4)",
+                        }}
+                      >
                         {s === 1 ? t("form.step1") : t("form.step2")}
                       </span>
                     </div>
                     {s < 2 && (
                       <div
                         className="w-12 h-px"
-                        style={{ background: step > 1 ? "#C9A96E" : "rgba(255,255,255,0.15)" }}
+                        style={{
+                          background:
+                            step > 1 ? "#C9A96E" : "rgba(255,255,255,0.15)",
+                        }}
                       />
                     )}
                   </div>
@@ -184,6 +219,28 @@ export default function ContactForm() {
               <form onSubmit={handleSubmit}>
                 {step === 1 && (
                   <div className="space-y-6">
+                    {/* Property type */}
+                    <div>
+                      <label
+                        className="block text-xs font-semibold mb-3 uppercase tracking-wider"
+                        style={{ color: "rgba(245,240,232,0.5)" }}
+                      >
+                        {t("form.propertyTypeLabel")}
+                      </label>
+                      <div className="flex flex-wrap gap-2">
+                        {propertyTypes.map((pt) => (
+                          <button
+                            key={pt.value}
+                            type="button"
+                            style={toggleBtnStyle(propertyType === pt.value)}
+                            onClick={() => setPropertyType(pt.value)}
+                          >
+                            {pt.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
                     {/* Rental type */}
                     <div>
                       <label
@@ -206,27 +263,29 @@ export default function ContactForm() {
                       </div>
                     </div>
 
-                    {/* Rooms */}
-                    <div>
-                      <label
-                        className="block text-xs font-semibold mb-3 uppercase tracking-wider"
-                        style={{ color: "rgba(245,240,232,0.5)" }}
-                      >
-                        {t("form.roomsLabel")}
-                      </label>
-                      <div className="flex flex-wrap gap-2">
-                        {roomOptions.map((ro) => (
-                          <button
-                            key={ro.value}
-                            type="button"
-                            style={toggleBtnStyle(rooms === ro.value)}
-                            onClick={() => setRooms(ro.value)}
-                          >
-                            {ro.label}
-                          </button>
-                        ))}
+                    {/* Rooms (only for apartment) */}
+                    {propertyType === "apartment" && (
+                      <div>
+                        <label
+                          className="block text-xs font-semibold mb-3 uppercase tracking-wider"
+                          style={{ color: "rgba(245,240,232,0.5)" }}
+                        >
+                          {t("form.roomsLabel")}
+                        </label>
+                        <div className="flex flex-wrap gap-2">
+                          {roomOptions.map((ro) => (
+                            <button
+                              key={ro.value}
+                              type="button"
+                              style={toggleBtnStyle(rooms === ro.value)}
+                              onClick={() => setRooms(ro.value)}
+                            >
+                              {ro.label}
+                            </button>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     {/* Budget slider */}
                     <div>
@@ -237,22 +296,33 @@ export default function ContactForm() {
                         {t("form.budgetLabel")}
                       </label>
                       <div className="flex items-center justify-between mb-3">
-                        <span className="text-sm" style={{ color: "rgba(245,240,232,0.5)" }}>$200</span>
+                        <span
+                          className="text-sm"
+                          style={{ color: "rgba(245,240,232,0.5)" }}
+                        >
+                          $200
+                        </span>
                         <span
                           className="font-cormorant font-bold text-xl"
                           style={{ color: "#C9A96E" }}
                         >
                           ${budget.toLocaleString()}
                         </span>
-                        <span className="text-sm" style={{ color: "rgba(245,240,232,0.5)" }}>$3000</span>
+                        <span
+                          className="text-sm"
+                          style={{ color: "rgba(245,240,232,0.5)" }}
+                        >
+                          $5000
+                        </span>
                       </div>
                       <input
                         type="range"
                         min={200}
-                        max={3000}
+                        max={5000}
                         step={50}
                         value={budget}
                         onChange={(e) => setBudget(Number(e.target.value))}
+                        style={{ width: "100%" }}
                       />
                     </div>
 

@@ -44,42 +44,49 @@
       "district": "Новый Бульвар",
       "price": "$350",
       "tags": ["Вид на море", "Долгосрочно", "Посуточно"],
-      "gradient": "from-blue-900 to-teal-700"
+      "image": "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&fit=crop"
     },
     {
-      "type": "1+1 в центре",
-      "district": "Химшиашвили",
-      "price": "$500",
-      "tags": ["Центр", "Вид на горы"],
-      "gradient": "from-indigo-900 to-blue-700"
+      "type": "1+1 Аллея героев",
+      "district": "Аллея героев",
+      "price": "$480",
+      "tags": ["Центр", "Новый дом", "Парковка"],
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "2+1 Аллея героев",
+      "district": "Аллея героев",
+      "price": "$650",
+      "tags": ["Центр", "Вид на горы", "Евроремонт"],
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80&fit=crop"
     },
     {
       "type": "2+1 исторический",
       "district": "Старый город",
       "price": "$700",
       "tags": ["Историческое место", "Семьям"],
-      "gradient": "from-purple-900 to-indigo-700"
+      "image": "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=600&q=80&fit=crop"
     },
     {
       "type": "Студия первая линия",
       "district": "Орби Сити",
       "price": "$400",
       "tags": ["Первая линия", "Высокий этаж"],
-      "gradient": "from-cyan-900 to-blue-800"
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&fit=crop"
     },
     {
       "type": "1+1 у парка",
       "district": "Руставели",
       "price": "$550",
       "tags": ["Парк рядом", "Новый дом"],
-      "gradient": "from-green-900 to-teal-800"
+      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&fit=crop"
     },
     {
       "type": "3+1 за городом",
       "district": "Гонио",
       "price": "$900",
       "tags": ["За городом", "С бассейном"],
-      "gradient": "from-amber-900 to-orange-800"
+      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop"
     }
   ],
   "howItWorks": {
@@ -104,17 +111,21 @@
     ]
   },
   "form": {
-    "title": "Подберём квартиру под ваши задачи",
+    "title": "Подберём недвижимость под ваши задачи",
     "subtitle": "Оставьте заявку — свяжемся в течение 2 часов",
     "rentalTypeLabel": "Тип аренды",
     "longTerm": "Долгосрочная",
     "shortTerm": "Посуточная",
     "investment": "Инвестиция",
+    "house": "Дом",
+    "villa": "Вилла",
+    "propertyTypeLabel": "Тип недвижимости",
+    "apartment": "Квартира",
     "roomsLabel": "Количество комнат",
     "studio": "Студия",
     "budgetLabel": "Бюджет в месяц",
     "districtsLabel": "Район (необязательно)",
-    "districts": ["Новый Бульвар", "Старый город", "Химшиашвили", "Гонио", "Любой"],
+    "districts": ["Новый Бульвар", "Старый город", "Аллея героев", "Гонио", "Любой"],
     "nameLabel": "Имя",
     "namePlaceholder": "Ваше имя",
     "contactLabel": "Telegram или WhatsApp",
@@ -135,29 +146,78 @@
       {
         "name": "Новый Бульвар",
         "desc": "Первая линия. Самый туристический район.",
-        "price": "от $350/мес"
+        "price": "от $350/мес",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80&fit=crop"
       },
       {
         "name": "Старый город",
         "desc": "Атмосфера и история. Узкие улочки.",
-        "price": "от $220/мес"
+        "price": "от $220/мес",
+        "image": "https://images.unsplash.com/photo-1558618047-b8789c19b4a4?w=500&q=80&fit=crop"
       },
       {
-        "name": "Химшиашвили",
-        "desc": "Центр. Всё рядом.",
-        "price": "от $400/мес"
+        "name": "Аллея героев",
+        "desc": "Современный центр. Новые дома с видом на горы и море.",
+        "price": "от $400/мес",
+        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80&fit=crop"
       },
       {
         "name": "Руставели",
         "desc": "Престиж. Парк. Тихо.",
-        "price": "от $450/мес"
+        "price": "от $450/мес",
+        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&q=80&fit=crop"
       },
       {
         "name": "Гонио / Кобулети",
         "desc": "За городом. Природа. Тишина.",
-        "price": "от $300/мес"
+        "price": "от $300/мес",
+        "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80&fit=crop"
       }
     ]
+  },
+  "elite": {
+    "title": "Элитная недвижимость",
+    "subtitle": "Частные дома, виллы и таунхаусы в Батуми и горах Аджарии с видом на море",
+    "cta": "Оставить заявку",
+    "items": [
+      {
+        "type": "Вилла с бассейном",
+        "location": "Зелёный мыс",
+        "price": "от $2 500/мес",
+        "desc": "Частная вилла с бассейном, садом и видом на Чёрное море. 4 спальни.",
+        "tags": ["Вид на море", "Бассейн", "Сад", "Гараж"],
+        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Дом в горах",
+        "location": "Сарпи / Хеда",
+        "price": "от $1 800/мес",
+        "desc": "Двухэтажный дом с садом. Вид на горы и море. 3 спальни.",
+        "tags": ["Вид на горы", "Сад", "BBQ", "Тишина"],
+        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Таунхаус",
+        "location": "Батуми, Кобулети",
+        "price": "от $1 200/мес",
+        "desc": "3-этажный таунхаус рядом с Батуми. 3 спальни + кабинет.",
+        "tags": ["Новый дом", "3 этажа", "Парковка", "Близко к морю"],
+        "image": "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Вилла в горах Аджарии",
+        "location": "Хуло / Хеда",
+        "price": "от $3 000/мес",
+        "desc": "Эксклюзивная вилла в горах Аджарии. Панорамный вид. 5 спален.",
+        "tags": ["Панорамный вид", "Природа", "Тишина", "Лес"],
+        "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&q=80&fit=crop"
+      }
+    ]
+  },
+  "map": {
+    "title": "Карта недвижимости Аджарии",
+    "subtitle": "Объекты на карте — нажмите для просмотра деталей",
+    "viewDetails": "Посмотреть объект"
   },
   "testimonials": {
     "title": "Что говорят наши клиенты",

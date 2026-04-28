@@ -20,38 +20,50 @@ export default function Hero() {
     <section
       id="hero"
       className="relative min-h-screen flex flex-col justify-center overflow-hidden"
-      style={{
-        background:
-          "linear-gradient(160deg, #0F1C2E 0%, #1a3a5c 45%, #0d2137 100%)",
-      }}
     >
-      {/* Subtle animated background */}
+      {/* Panorama background image */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1596484552834-6a58f850e0a1?w=1920&q=85&fit=crop"
+          alt="Батуми панорама"
+          className="w-full h-full object-cover"
+          style={{ objectPosition: "center 40%" }}
+        />
+        {/* Dark overlay for readability */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(160deg, rgba(10,18,30,0.82) 0%, rgba(15,28,46,0.70) 50%, rgba(8,15,25,0.88) 100%)",
+          }}
+        />
+        {/* Bottom fade to site background */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-48"
+          style={{
+            background:
+              "linear-gradient(to bottom, transparent, #0F1C2E)",
+          }}
+        />
+      </div>
+
+      {/* Animated gradient accents */}
       <div
-        className="absolute inset-0 opacity-30"
+        className="absolute inset-0 opacity-20 pointer-events-none"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse at 20% 50%, rgba(78,205,196,0.08) 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 20%, rgba(201,169,110,0.06) 0%, transparent 40%),
-            radial-gradient(ellipse at 60% 80%, rgba(26,58,92,0.4) 0%, transparent 50%)
+            radial-gradient(ellipse at 15% 60%, rgba(78,205,196,0.25) 0%, transparent 45%),
+            radial-gradient(ellipse at 85% 25%, rgba(201,169,110,0.2) 0%, transparent 40%)
           `,
         }}
       />
 
-      {/* Noise texture overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-          backgroundSize: "128px",
-        }}
-      />
-
-      {/* Decorative line */}
+      {/* Top gold line */}
       <div
         className="absolute top-0 left-0 right-0 h-px"
         style={{
           background:
-            "linear-gradient(90deg, transparent, rgba(201,169,110,0.4), transparent)",
+            "linear-gradient(90deg, transparent, rgba(201,169,110,0.5), transparent)",
         }}
       />
 
@@ -61,9 +73,10 @@ export default function Hero() {
           className={`inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8 text-xs font-semibold tracking-widest uppercase transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"}`}
           style={{
             background: "rgba(201,169,110,0.12)",
-            border: "1px solid rgba(201,169,110,0.3)",
+            border: "1px solid rgba(201,169,110,0.35)",
             color: "#C9A96E",
             transitionDelay: "0.1s",
+            backdropFilter: "blur(8px)",
           }}
         >
           <span
@@ -79,6 +92,7 @@ export default function Hero() {
           style={{
             color: "#F5F0E8",
             transitionDelay: "0.2s",
+            textShadow: "0 2px 20px rgba(0,0,0,0.5)",
           }}
         >
           {t("hero.title")}
@@ -88,8 +102,9 @@ export default function Hero() {
         <p
           className={`font-nunito text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           style={{
-            color: "rgba(245,240,232,0.7)",
+            color: "rgba(245,240,232,0.8)",
             transitionDelay: "0.35s",
+            textShadow: "0 1px 8px rgba(0,0,0,0.4)",
           }}
         >
           {t("hero.subtitle")}
@@ -106,7 +121,7 @@ export default function Hero() {
             style={{
               background: "#C9A96E",
               color: "#0F1C2E",
-              boxShadow: "0 8px 32px rgba(201,169,110,0.3)",
+              boxShadow: "0 8px 32px rgba(201,169,110,0.35)",
             }}
           >
             {t("hero.cta1")}
@@ -115,8 +130,10 @@ export default function Hero() {
             onClick={() => scrollTo("catalog")}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-base transition-all duration-200 hover:bg-white/10 active:scale-95"
             style={{
-              border: "1px solid rgba(245,240,232,0.4)",
+              border: "1px solid rgba(245,240,232,0.5)",
               color: "#F5F0E8",
+              backdropFilter: "blur(8px)",
+              background: "rgba(255,255,255,0.06)",
             }}
           >
             {t("hero.cta2")}
@@ -137,14 +154,15 @@ export default function Hero() {
               key={fact.text}
               className="flex items-center justify-center gap-3 px-5 py-3 rounded-2xl"
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: "rgba(15,28,46,0.55)",
+                border: "1px solid rgba(201,169,110,0.2)",
+                backdropFilter: "blur(12px)",
               }}
             >
               <span className="text-xl">{fact.icon}</span>
               <span
                 className="font-nunito font-semibold text-sm"
-                style={{ color: "rgba(245,240,232,0.9)" }}
+                style={{ color: "rgba(245,240,232,0.95)" }}
               >
                 {fact.text}
               </span>

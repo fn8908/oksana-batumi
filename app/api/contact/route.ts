@@ -1,8 +1,99 @@
 import { NextRequest, NextResponse } from "next/server";
 
+const PROPERTY_TYPE_LABELS: Record<string, string> = {
+  apartment: "Квартира",
+  house: "Дом",
+  villa: "Вилла",
+};
+
+const RENTAL_TYPE_LABELS: Record<string, string> = {
+  long: "Долгосрочная",
+  short: "Посуточная",
+  invest: "Инвестиция",
+};
+
+async function sendTelegramMessage(text: string) {
+  const botToken = process.env.TELEGRAM_BOT_TOKEN;
+  const chatId = process.env.TELEGRAM_CHAT_ID;
+
+  if (!botToken || !chatId) {
+    console.warn("[Telegram] TELEGRAM_BOT_TOKEN or TELEGRAM_CHAT_ID not set");
+    return;
+  }
+
+  const res = await fetch(
+    `https://api.telegram.org/bot${botToken}/sendMessage`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text,
+        parse_mode: "HTML",
+        disable_web_page_preview: true,
+      }),
+    }
+  );
+
+  if (!res.ok) {
+    const err = await res.text();
+    console.error("[Telegram] Failed to send message:", err);
+  }
+}
+
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { name, contact, budget, rooms, rental_type, districts, comment, property_type, district, price } = body;
+  const {
+    name,
+    contact,
+    budget,
+    rooms,
+    rental_type,
+    property_type,
+    districts,
+    comment,
+    district,
+    price,
+    property_type: modalPropertyType,
+    lang,
+  } = body;
+
+  const timestamp = new Date().toLocaleString("ru-RU", {
+    timeZone: "Asia/Tbilisi",
+  });
+
+  // Build Telegram message
+  let message = `🏠 <b>Новая заявка — Batumi Realty</b>\n`;
+  message += `━━━━━━━━━━━━━━━\n`;
+  message += `🕐 <i>${timestamp} (GMT+4)</i>\n\n`;
+
+  if (name) message += `👤 <b>Имя:</b> ${name}\n`;
+  if (contact) message += `📱 <b>Контакт:</b> ${contact}\n`;
+
+  if (property_type || modalPropertyType) {
+    const pt = property_type ?? modalPropertyType;
+    message += `🏡 <b>Тип недвижимости:</b> ${PROPERTY_TYPE_LABELS[pt] ?? pt}\n`;
+  }
+
+  if (district || price) {
+    // Modal submission (quick property enquiry)
+    if (district) message += `📍 <b>Район:</b> ${district}\n`;
+    if (price) message += `💰 <b>Цена:</b> ${price}/мес\n`;
+  } else {
+    // Full form submission
+    if (rental_type)
+      message += `📋 <b>Тип аренды:</b> ${RENTAL_TYPE_LABELS[rental_type] ?? rental_type}\n`;
+    if (rooms) message += `🚪 <b>Комнат:</b> ${rooms}\n`;
+    if (budget) message += `💰 <b>Бюджет:</b> $${budget}/мес\n`;
+    if (districts?.length)
+      message += `📍 <b>Районы:</b> ${districts.join(", ")}\n`;
+  }
+
+  if (comment) message += `\n💬 <b>Комментарий:</b> ${comment}\n`;
+  if (lang) message += `\n🌐 <b>Язык:</b> ${lang.toUpperCase()}\n`;
+
+  message += `\n━━━━━━━━━━━━━━━\n`;
+  message += `<a href="https://t.me/River095">@River095</a>`;
 
   console.log("[Contact Form Submission]", {
     name,
@@ -10,24 +101,17 @@ export async function POST(req: NextRequest) {
     budget,
     rooms,
     rental_type,
+    property_type,
     districts,
     comment,
-    property_type,
-    district,
-    price,
-    timestamp: new Date().toISOString(),
+    timestamp,
   });
 
-  // TODO: интеграция с Telegram Bot API
-  // TELEGRAM_BOT_TOKEN и TELEGRAM_CHAT_ID берутся из .env
-  // const botToken = process.env.TELEGRAM_BOT_TOKEN;
-  // const chatId = process.env.TELEGRAM_CHAT_ID;
-  // const message = `...`;
-  // await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/json" },
-  //   body: JSON.stringify({ chat_id: chatId, text: message, parse_mode: "HTML" }),
-  // });
+  try {
+    await sendTelegramMessage(message);
+  } catch (err) {
+    console.error("[Telegram] Error:", err);
+  }
 
   return NextResponse.json({ success: true, message: "Application received" });
 }

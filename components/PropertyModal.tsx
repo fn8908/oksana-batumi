@@ -8,7 +8,8 @@ interface Property {
   district: string;
   price: string;
   tags: string[];
-  gradient: string;
+  image?: string;
+  gradient?: string;
 }
 
 interface PropertyModalProps {
@@ -82,14 +83,24 @@ export default function PropertyModal({ property, onClose }: PropertyModalProps)
         </button>
 
         {/* Property preview */}
-        <div
-          className="rounded-xl h-24 mb-5 flex items-center justify-center text-3xl"
-          style={{
-            background: "linear-gradient(135deg, rgba(78,205,196,0.15), rgba(26,58,92,0.8))",
-            border: "1px solid rgba(78,205,196,0.1)",
-          }}
-        >
-          🏢
+        <div className="rounded-xl h-32 mb-5 overflow-hidden relative">
+          {property.image ? (
+            <img
+              src={property.image}
+              alt={property.type}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div
+              className="w-full h-full flex items-center justify-center text-3xl"
+              style={{
+                background:
+                  "linear-gradient(135deg, rgba(78,205,196,0.15), rgba(26,58,92,0.8))",
+              }}
+            >
+              🏢
+            </div>
+          )}
         </div>
 
         <div className="mb-2">

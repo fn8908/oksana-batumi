@@ -44,42 +44,49 @@
       "district": "New Boulevard",
       "price": "$350",
       "tags": ["Sea view", "Long-term", "Short-term"],
-      "gradient": "from-blue-900 to-teal-700"
+      "image": "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&fit=crop"
     },
     {
-      "type": "1+1 Downtown",
-      "district": "Khimshiashvili",
-      "price": "$500",
-      "tags": ["Central", "Mountain view"],
-      "gradient": "from-indigo-900 to-blue-700"
+      "type": "1+1 Heroes Alley",
+      "district": "Heroes Alley",
+      "price": "$480",
+      "tags": ["Central", "New building", "Parking"],
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80&fit=crop"
+    },
+    {
+      "type": "2+1 Heroes Alley",
+      "district": "Heroes Alley",
+      "price": "$650",
+      "tags": ["Central", "Mountain view", "European renovation"],
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80&fit=crop"
     },
     {
       "type": "2+1 Historic",
       "district": "Old Town",
       "price": "$700",
       "tags": ["Historic area", "Family-friendly"],
-      "gradient": "from-purple-900 to-indigo-700"
+      "image": "https://images.unsplash.com/photo-1560185007-5f0bb1866cab?w=600&q=80&fit=crop"
     },
     {
       "type": "First-line Studio",
       "district": "Orbi City",
       "price": "$400",
       "tags": ["First line", "High floor"],
-      "gradient": "from-cyan-900 to-blue-800"
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80&fit=crop"
     },
     {
       "type": "1+1 Park View",
       "district": "Rustaveli",
       "price": "$550",
       "tags": ["Park nearby", "New building"],
-      "gradient": "from-green-900 to-teal-800"
+      "image": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&fit=crop"
     },
     {
       "type": "3+1 Countryside",
       "district": "Gonio",
       "price": "$900",
       "tags": ["Countryside", "With pool"],
-      "gradient": "from-amber-900 to-orange-800"
+      "image": "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=600&q=80&fit=crop"
     }
   ],
   "howItWorks": {
@@ -104,17 +111,21 @@
     ]
   },
   "form": {
-    "title": "We'll Find the Right Apartment for You",
+    "title": "We'll Find the Right Property for You",
     "subtitle": "Submit a request — we'll respond within 2 hours",
     "rentalTypeLabel": "Rental Type",
     "longTerm": "Long-term",
     "shortTerm": "Short-term",
     "investment": "Investment",
+    "house": "House",
+    "villa": "Villa",
+    "propertyTypeLabel": "Property Type",
+    "apartment": "Apartment",
     "roomsLabel": "Rooms",
     "studio": "Studio",
     "budgetLabel": "Monthly Budget",
     "districtsLabel": "Neighborhood (optional)",
-    "districts": ["New Boulevard", "Old Town", "Khimshiashvili", "Gonio", "Any"],
+    "districts": ["New Boulevard", "Old Town", "Heroes Alley", "Gonio", "Any"],
     "nameLabel": "Name",
     "namePlaceholder": "Your name",
     "contactLabel": "Telegram or WhatsApp",
@@ -135,29 +146,78 @@
       {
         "name": "New Boulevard",
         "desc": "First line. The most popular tourist area.",
-        "price": "from $350/mo"
+        "price": "from $350/mo",
+        "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=500&q=80&fit=crop"
       },
       {
         "name": "Old Town",
         "desc": "Atmosphere and history. Narrow streets.",
-        "price": "from $220/mo"
+        "price": "from $220/mo",
+        "image": "https://images.unsplash.com/photo-1558618047-b8789c19b4a4?w=500&q=80&fit=crop"
       },
       {
-        "name": "Khimshiashvili",
-        "desc": "Central. Everything nearby.",
-        "price": "from $400/mo"
+        "name": "Heroes Alley",
+        "desc": "Modern center. New buildings with mountain and sea views.",
+        "price": "from $400/mo",
+        "image": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80&fit=crop"
       },
       {
         "name": "Rustaveli",
         "desc": "Prestige. Park. Quiet.",
-        "price": "from $450/mo"
+        "price": "from $450/mo",
+        "image": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=500&q=80&fit=crop"
       },
       {
         "name": "Gonio / Kobuleti",
         "desc": "Countryside. Nature. Peace.",
-        "price": "from $300/mo"
+        "price": "from $300/mo",
+        "image": "https://images.unsplash.com/photo-1501854140801-50d01698950b?w=500&q=80&fit=crop"
       }
     ]
+  },
+  "elite": {
+    "title": "Elite Real Estate",
+    "subtitle": "Private homes, villas and townhouses in Batumi and the Adjara mountains with sea views",
+    "cta": "Submit Request",
+    "items": [
+      {
+        "type": "Villa with Pool",
+        "location": "Green Cape",
+        "price": "from $2,500/mo",
+        "desc": "Private villa with pool, garden and Black Sea views. 4 bedrooms.",
+        "tags": ["Sea view", "Pool", "Garden", "Garage"],
+        "image": "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Mountain House",
+        "location": "Sarpi / Kheda",
+        "price": "from $1,800/mo",
+        "desc": "Two-storey house with garden. Mountain and sea views. 3 bedrooms.",
+        "tags": ["Mountain view", "Garden", "BBQ", "Peaceful"],
+        "image": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Townhouse",
+        "location": "Batumi, Kobuleti",
+        "price": "from $1,200/mo",
+        "desc": "3-storey townhouse near Batumi. 3 bedrooms + office.",
+        "tags": ["New building", "3 floors", "Parking", "Near sea"],
+        "image": "https://images.unsplash.com/photo-1613977257592-4871e5fcd7c4?w=700&q=80&fit=crop"
+      },
+      {
+        "type": "Adjara Mountain Villa",
+        "location": "Khulo / Kheda",
+        "price": "from $3,000/mo",
+        "desc": "Exclusive villa in the Adjara mountains. Panoramic views. 5 bedrooms.",
+        "tags": ["Panoramic view", "Nature", "Peaceful", "Forest"],
+        "image": "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=700&q=80&fit=crop"
+      }
+    ]
+  },
+  "map": {
+    "title": "Adjara Real Estate Map",
+    "subtitle": "Properties on the map — click for details",
+    "viewDetails": "View property"
   },
   "testimonials": {
     "title": "What Our Clients Say",
