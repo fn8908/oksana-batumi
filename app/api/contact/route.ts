@@ -72,7 +72,13 @@ export async function POST(req: NextRequest) {
   message += `🕐 <i>${timestamp} (GMT+4)</i>\n\n`;
 
   if (name) message += `👤 <b>Имя:</b> ${name}\n`;
-  if (contact) message += `📱 <b>Контакт:</b> ${contact}\n`;
+  if (contact) {
+    const c = contact.trim();
+    const formatted = c.startsWith("@")
+      ? `<a href="https://t.me/${c.slice(1)}">${c}</a>`
+      : `<code>${c}</code>`;
+    message += `📱 <b>Контакт:</b> ${formatted}\n`;
+  }
 
   if (property_type || modalPropertyType) {
     const pt = property_type ?? modalPropertyType;
