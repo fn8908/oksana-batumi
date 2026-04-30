@@ -73,11 +73,7 @@ export async function POST(req: NextRequest) {
 
   if (name) message += `👤 <b>Имя:</b> ${name}\n`;
   if (contact) {
-    const c = contact.trim();
-    const formatted = c.startsWith("@")
-      ? `<a href="https://t.me/${c.slice(1)}">${c}</a>`
-      : `<code>${c}</code>`;
-    message += `📱 <b>Контакт:</b> ${formatted}\n`;
+    message += `📱 <b>Контакт:</b> <code>${contact.trim()}</code>\n`;
   }
 
   if (property_type || modalPropertyType) {
