@@ -15,7 +15,7 @@ interface QuickSearchProps {
 }
 
 export default function QuickSearch({ onSearch }: QuickSearchProps) {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const { ref, inView } = useInView();
 
   const [filters, setFilters] = useState<Filters>({
@@ -23,10 +23,28 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
     budget: "",
     rooms: "",
   });
+  const [loading, setLoading] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
-  const handleSearch = () => {
-    const catalogEl = document.getElementById("catalog");
-    if (catalogEl) catalogEl.scrollIntoView({ behavior: "smooth" });
+  const handleSearch = async () => {
+    setLoading(true);
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          rental_type: filters.rentalType,
+          budget: filters.budget,
+          rooms: filters.rooms,
+          lang,
+          source: "quick_search",
+        }),
+      });
+    } catch {
+      // show success regardless of network errors
+    }
+    setLoading(false);
+    setSubmitted(true);
     onSearch(filters);
   };
 
@@ -59,97 +77,109 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
             backdropFilter: "blur(20px)",
           }}
         >
-          <div className="flex flex-col sm:flex-row gap-3 items-end">
-            {/* Rental type */}
-            <div className="flex-1 min-w-0">
-              <label
-                className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                style={{ color: "rgba(245,240,232,0.5)" }}
+          {submitted ? (
+            <div className="flex items-center justify-center py-4 text-center">
+              <p
+                className="text-base sm:text-lg font-semibold"
+                style={{ color: "#4ECDC4", fontFamily: "var(--font-nunito)" }}
               >
-                {t("search.rentalType")}
-              </label>
-              <div className="relative">
-                <select
-                  style={selectStyle}
-                  value={filters.rentalType}
-                  onChange={(e) =>
-                    setFilters({ ...filters, rentalType: e.target.value })
-                  }
+                {t("search.success")}
+              </p>
+            </div>
+          ) : (
+            <div className="flex flex-col sm:flex-row gap-3 items-end">
+              {/* Rental type */}
+              <div className="flex-1 min-w-0">
+                <label
+                  className="block text-xs font-semibold mb-2 uppercase tracking-wider"
+                  style={{ color: "rgba(245,240,232,0.5)" }}
                 >
-                  <option value="">—</option>
-                  <option value="long">{t("search.longTerm")}</option>
-                  <option value="short">{t("search.shortTerm")}</option>
-                </select>
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#C9A96E" }}>▾</span>
+                  {t("search.rentalType")}
+                </label>
+                <div className="relative">
+                  <select
+                    style={selectStyle}
+                    value={filters.rentalType}
+                    onChange={(e) =>
+                      setFilters({ ...filters, rentalType: e.target.value })
+                    }
+                  >
+                    <option value="">—</option>
+                    <option value="long">{t("search.longTerm")}</option>
+                    <option value="short">{t("search.shortTerm")}</option>
+                  </select>
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#C9A96E" }}>▾</span>
+                </div>
+              </div>
+
+              {/* Budget */}
+              <div className="flex-1 min-w-0">
+                <label
+                  className="block text-xs font-semibold mb-2 uppercase tracking-wider"
+                  style={{ color: "rgba(245,240,232,0.5)" }}
+                >
+                  {t("search.budget")}
+                </label>
+                <div className="relative">
+                  <select
+                    style={selectStyle}
+                    value={filters.budget}
+                    onChange={(e) =>
+                      setFilters({ ...filters, budget: e.target.value })
+                    }
+                  >
+                    <option value="">—</option>
+                    <option value="500">{t("search.budget1")}</option>
+                    <option value="1000">{t("search.budget2")}</option>
+                    <option value="2000">{t("search.budget3")}</option>
+                    <option value="2000+">{t("search.budget4")}</option>
+                  </select>
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#C9A96E" }}>▾</span>
+                </div>
+              </div>
+
+              {/* Rooms */}
+              <div className="flex-1 min-w-0">
+                <label
+                  className="block text-xs font-semibold mb-2 uppercase tracking-wider"
+                  style={{ color: "rgba(245,240,232,0.5)" }}
+                >
+                  {t("search.rooms")}
+                </label>
+                <div className="relative">
+                  <select
+                    style={selectStyle}
+                    value={filters.rooms}
+                    onChange={(e) =>
+                      setFilters({ ...filters, rooms: e.target.value })
+                    }
+                  >
+                    <option value="">—</option>
+                    <option value="studio">{t("search.studio")}</option>
+                    <option value="1">{t("search.room1")}</option>
+                    <option value="2">{t("search.room2")}</option>
+                    <option value="3+">{t("search.room3")}</option>
+                  </select>
+                  <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#C9A96E" }}>▾</span>
+                </div>
+              </div>
+
+              {/* Search button */}
+              <div className="w-full sm:w-auto flex-shrink-0">
+                <button
+                  onClick={handleSearch}
+                  disabled={loading}
+                  className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95 whitespace-nowrap disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
+                  style={{
+                    background: "#4ECDC4",
+                    color: "#0F1C2E",
+                  }}
+                >
+                  {loading ? "..." : t("search.findBtn")}
+                </button>
               </div>
             </div>
-
-            {/* Budget */}
-            <div className="flex-1 min-w-0">
-              <label
-                className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                style={{ color: "rgba(245,240,232,0.5)" }}
-              >
-                {t("search.budget")}
-              </label>
-              <div className="relative">
-                <select
-                  style={selectStyle}
-                  value={filters.budget}
-                  onChange={(e) =>
-                    setFilters({ ...filters, budget: e.target.value })
-                  }
-                >
-                  <option value="">—</option>
-                  <option value="500">{t("search.budget1")}</option>
-                  <option value="1000">{t("search.budget2")}</option>
-                  <option value="2000">{t("search.budget3")}</option>
-                  <option value="2000+">{t("search.budget4")}</option>
-                </select>
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#C9A96E" }}>▾</span>
-              </div>
-            </div>
-
-            {/* Rooms */}
-            <div className="flex-1 min-w-0">
-              <label
-                className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                style={{ color: "rgba(245,240,232,0.5)" }}
-              >
-                {t("search.rooms")}
-              </label>
-              <div className="relative">
-                <select
-                  style={selectStyle}
-                  value={filters.rooms}
-                  onChange={(e) =>
-                    setFilters({ ...filters, rooms: e.target.value })
-                  }
-                >
-                  <option value="">—</option>
-                  <option value="studio">{t("search.studio")}</option>
-                  <option value="1">{t("search.room1")}</option>
-                  <option value="2">{t("search.room2")}</option>
-                  <option value="3+">{t("search.room3")}</option>
-                </select>
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#C9A96E" }}>▾</span>
-              </div>
-            </div>
-
-            {/* Search button */}
-            <div className="w-full sm:w-auto flex-shrink-0">
-              <button
-                onClick={handleSearch}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold text-sm transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95 whitespace-nowrap"
-                style={{
-                  background: "#4ECDC4",
-                  color: "#0F1C2E",
-                }}
-              >
-                {t("search.findBtn")}
-              </button>
-            </div>
-          </div>
+          )}
         </div>
       </div>
     </section>

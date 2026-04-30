@@ -49,7 +49,7 @@ function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
 }
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("ka");
+  const [lang, setLangState] = useState<Lang>("ru");
   const isRTL = RTL_LANGS.includes(lang);
 
   const setLang = useCallback((l: Lang) => {

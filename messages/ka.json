@@ -29,7 +29,8 @@
     "room1": "1",
     "room2": "2",
     "room3": "3+",
-    "findBtn": "ძიება"
+    "findBtn": "ძიება",
+    "success": "✅ მალე გამოგიგზავნით ვარიანტებს"
   },
   "catalog": {
     "title": "აქტუალური შეთავაზებები",
@@ -41,52 +42,76 @@
   "properties": [
     {
       "type": "სტუდიო ზღვასთან",
-      "district": "ახალი ბულვარი",
+      "district": "Batumi View",
       "price": "$350",
-      "tags": ["ზღვის ხედი", "გრძელვადიანი", "მოკლევადიანი"],
-      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "ზღვის ხედი",
+        "გრძელვადიანი",
+        "მოკლევადიანი"
+      ],
+      "image": "/1.jpeg"
     },
     {
       "type": "1+1 გმირთა გამზირი",
       "district": "გმირთა გამზირი",
       "price": "$480",
-      "tags": ["ცენტრი", "ახალი სახლი", "პარკინგი"],
-      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "ცენტრი",
+        "ახალი სახლი",
+        "პარკინგი"
+      ],
+      "image": "/2.png"
     },
     {
       "type": "2+1 გმირთა გამზირი",
       "district": "გმირთა გამზირი",
       "price": "$650",
-      "tags": ["ცენტრი", "მთის ხედი", "ევრორემონტი"],
+      "tags": [
+        "ცენტრი",
+        "მთის ხედი",
+        "ევრორემონტი"
+      ],
       "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 ისტორიული",
       "district": "ძველი ქალაქი",
       "price": "$700",
-      "tags": ["ისტორიული ადგილი", "ოჯახებისთვის"],
-      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "ისტორიული ადგილი",
+        "ოჯახებისთვის"
+      ],
+      "image": "/3.webp"
     },
     {
       "type": "სტუდიო პირველი ხაზი",
       "district": "ორბი სიტი",
       "price": "$400",
-      "tags": ["პირველი ხაზი", "მაღალი სართული"],
-      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "პირველი ხაზი",
+        "მაღალი სართული"
+      ],
+      "image": "/4.jpg"
     },
     {
       "type": "1+1 პარკთან",
-      "district": "რუსთაველი",
+      "district": "6 მაისის პარკი",
       "price": "$550",
-      "tags": ["პარკი ახლოს", "ახალი სახლი"],
-      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "პარკი ახლოს",
+        "ახალი სახლი"
+      ],
+      "image": "/5.jpg"
     },
     {
       "type": "3+1 ქალაქგარეთ",
       "district": "გონიო",
       "price": "$900",
-      "tags": ["ქალაქგარეთ", "აუზით"],
-      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "ქალაქგარეთ",
+        "აუზით"
+      ],
+      "image": "/6.jpg"
     }
   ],
   "howItWorks": {
@@ -125,7 +150,13 @@
     "studio": "სტუდიო",
     "budgetLabel": "თვიური ბიუჯეტი",
     "districtsLabel": "უბანი (სურვილისამებრ)",
-    "districts": ["ახალი ბულვარი", "ძველი ქალაქი", "გმირთა გამზირი", "გონიო", "ნებისმიერი"],
+    "districts": [
+      "ახალი ბულვარი",
+      "ძველი ქალაქი",
+      "გმირთა გამზირი",
+      "გონიო",
+      "ნებისმიერი"
+    ],
     "nameLabel": "სახელი",
     "namePlaceholder": "თქვენი სახელი",
     "contactLabel": "Telegram ან WhatsApp",
@@ -147,31 +178,31 @@
         "name": "ახალი ბულვარი",
         "desc": "პირველი ხაზი. ყველაზე ტურისტული უბანი.",
         "price": "$350-დან/თვე",
-        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/8.jpg"
       },
       {
         "name": "ძველი ქალაქი",
         "desc": "ატმოსფერო და ისტორია. ვიწრო ქუჩები.",
         "price": "$220-დან/თვე",
-        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/9.jpg"
       },
       {
         "name": "გმირთა გამზირი",
         "desc": "თანამედროვე ცენტრი. ახალი სახლები მთისა და ზღვის ხედით.",
         "price": "$400-დან/თვე",
-        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/10.avif"
       },
       {
-        "name": "რუსთაველი",
+        "name": "6 მაისის პარკი",
         "desc": "პრესტიჟი. პარკი. სიმშვიდე.",
         "price": "$450-დან/თვე",
-        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/11.jpeg"
       },
       {
         "name": "გონიო / კობულეთი",
         "desc": "ქალაქგარეთ. ბუნება. სიჩუმე.",
         "price": "$300-დან/თვე",
-        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/12.jpg"
       }
     ]
   },
@@ -185,32 +216,52 @@
         "location": "მწვანე კონცხი",
         "price": "$2,500-დან/თვე",
         "desc": "კერძო ვილა აუზით, ბაღით და შავი ზღვის ხედით. 4 საძინებელი.",
-        "tags": ["ზღვის ხედი", "აუზი", "ბაღი", "გარაჟი"],
-        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "ზღვის ხედი",
+          "აუზი",
+          "ბაღი",
+          "გარაჟი"
+        ],
+        "image": "/13.avif"
       },
       {
         "type": "სახლი მთებში",
         "location": "სარფი / ქედა",
         "price": "$1,800-დან/თვე",
         "desc": "ორ სართულიანი სახლი ბაღით. ხედი მთებზე და ზღვაზე. 3 საძინებელი.",
-        "tags": ["მთის ხედი", "ბაღი", "BBQ", "სიჩუმე"],
-        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "მთის ხედი",
+          "ბაღი",
+          "BBQ",
+          "სიჩუმე"
+        ],
+        "image": "/14.jpg"
       },
       {
         "type": "ტაუნჰაუსი",
         "location": "ბათუმი, ქობულეთი",
         "price": "$1,200-დან/თვე",
         "desc": "3-სართულიანი ტაუნჰაუსი ბათუმის ახლოს. 3 საძინებელი + ოფისი.",
-        "tags": ["ახალი სახლი", "3 სართული", "პარკინგი", "ზღვასთან ახლოს"],
-        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "ახალი სახლი",
+          "3 სართული",
+          "პარკინგი",
+          "ზღვასთან ახლოს"
+        ],
+        "image": "/15.webp"
       },
       {
         "type": "ვილა მთებში",
         "location": "ხულო / ქედა",
         "price": "$3,000-დან/თვე",
         "desc": "ექსკლუზიური ვილა აჭარის მთებში. პანორამული ხედი. 5 საძინებელი.",
-        "tags": ["პანორამული ხედი", "ბუნება", "სიჩუმე", "სახელმწიფო ტყე"],
-        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "პანორამული ხედი",
+          "ბუნება",
+          "სიჩუმე",
+          "სახელმწიფო ტყე"
+        ],
+        "image": "/16.avif"
       }
     ]
   },
@@ -247,7 +298,12 @@
   "footer": {
     "tagline": "BATUMI REALTY — ბათუმის რიელტორთა საზოგადოება",
     "copyright": "© 2024 Batumi Realty. ყველა უფლება დაცულია.",
-    "links": ["ობიექტები", "უბნები", "როგორ ვმუშაობთ", "განაცხადი"],
+    "links": [
+      "ობიექტები",
+      "უბნები",
+      "როგორ ვმუშაობთ",
+      "განაცხადი"
+    ],
     "schedule": "განაცხადებს ვიღებთ ყოველდღე 9:00–22:00 (GMT+4)"
   },
   "modal": {

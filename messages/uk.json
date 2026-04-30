@@ -29,7 +29,8 @@
     "room1": "1",
     "room2": "2",
     "room3": "3+",
-    "findBtn": "Знайти"
+    "findBtn": "Знайти",
+    "success": "✅ Найближчим часом надішлемо вам варіанти"
   },
   "catalog": {
     "title": "Актуальні пропозиції",
@@ -41,52 +42,76 @@
   "properties": [
     {
       "type": "Студія біля моря",
-      "district": "Новий Бульвар",
+      "district": "Batumi View",
       "price": "$350",
-      "tags": ["Вид на море", "Довгострокова", "Подобова"],
-      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Вид на море",
+        "Довгострокова",
+        "Подобова"
+      ],
+      "image": "/1.jpeg"
     },
     {
       "type": "1+1 Алея Героїв",
       "district": "Алея Героїв",
       "price": "$480",
-      "tags": ["Центр", "Новий будинок", "Парковка"],
-      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Центр",
+        "Новий будинок",
+        "Парковка"
+      ],
+      "image": "/2.png"
     },
     {
       "type": "2+1 Алея Героїв",
       "district": "Алея Героїв",
       "price": "$650",
-      "tags": ["Центр", "Вид на гори", "Євроремонт"],
+      "tags": [
+        "Центр",
+        "Вид на гори",
+        "Євроремонт"
+      ],
       "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 історичний",
       "district": "Старе місто",
       "price": "$700",
-      "tags": ["Історичне місце", "Для сімей"],
-      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Історичне місце",
+        "Для сімей"
+      ],
+      "image": "/3.webp"
     },
     {
       "type": "Студія перша лінія",
       "district": "Орбі Сіті",
       "price": "$400",
-      "tags": ["Перша лінія", "Високий поверх"],
-      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Перша лінія",
+        "Високий поверх"
+      ],
+      "image": "/4.jpg"
     },
     {
       "type": "1+1 біля парку",
-      "district": "Руставелі",
+      "district": "парк 6 травня",
       "price": "$550",
-      "tags": ["Парк поруч", "Новий будинок"],
-      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Парк поруч",
+        "Новий будинок"
+      ],
+      "image": "/5.jpg"
     },
     {
       "type": "3+1 за містом",
       "district": "Гоніо",
       "price": "$900",
-      "tags": ["За містом", "З басейном"],
-      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "За містом",
+        "З басейном"
+      ],
+      "image": "/6.jpg"
     }
   ],
   "howItWorks": {
@@ -125,7 +150,13 @@
     "studio": "Студія",
     "budgetLabel": "Бюджет на місяць",
     "districtsLabel": "Район (необов'язково)",
-    "districts": ["Новий Бульвар", "Старе місто", "Алея Героїв", "Гоніо", "Будь-який"],
+    "districts": [
+      "Новий Бульвар",
+      "Старе місто",
+      "Алея Героїв",
+      "Гоніо",
+      "Будь-який"
+    ],
     "nameLabel": "Ім'я",
     "namePlaceholder": "Ваше ім'я",
     "contactLabel": "Telegram або WhatsApp",
@@ -147,31 +178,31 @@
         "name": "Новий Бульвар",
         "desc": "Перша лінія. Найбільш туристичний район.",
         "price": "від $350/міс",
-        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/8.jpg"
       },
       {
         "name": "Старе місто",
         "desc": "Атмосфера та історія. Вузькі вулички.",
         "price": "від $220/міс",
-        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/9.jpg"
       },
       {
         "name": "Алея Героїв",
         "desc": "Сучасний центр. Нові будинки з видом на гори та море.",
         "price": "від $400/міс",
-        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/10.avif"
       },
       {
-        "name": "Руставелі",
+        "name": "парк 6 травня",
         "desc": "Престиж. Парк. Тихо.",
         "price": "від $450/міс",
-        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/11.jpeg"
       },
       {
         "name": "Гоніо / Кобулеті",
         "desc": "За містом. Природа. Тиша.",
         "price": "від $300/міс",
-        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/12.jpg"
       }
     ]
   },
@@ -185,32 +216,52 @@
         "location": "Зелений мис",
         "price": "від $2 500/міс",
         "desc": "Приватна вілла з басейном, садом і видом на Чорне море. 4 спальні.",
-        "tags": ["Вид на море", "Басейн", "Сад", "Гараж"],
-        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Вид на море",
+          "Басейн",
+          "Сад",
+          "Гараж"
+        ],
+        "image": "/13.avif"
       },
       {
         "type": "Будинок у горах",
         "location": "Сарпі / Хедa",
         "price": "від $1 800/міс",
         "desc": "Двоповерховий будинок із садом. Вид на гори та море. 3 спальні.",
-        "tags": ["Вид на гори", "Сад", "BBQ", "Тиша"],
-        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Вид на гори",
+          "Сад",
+          "BBQ",
+          "Тиша"
+        ],
+        "image": "/14.jpg"
       },
       {
         "type": "Таунхаус",
         "location": "Батумі, Кобулеті",
         "price": "від $1 200/міс",
         "desc": "3-поверховий таунхаус поруч із Батумі. 3 спальні + офіс.",
-        "tags": ["Новий будинок", "3 поверхи", "Парковка", "Близько до моря"],
-        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Новий будинок",
+          "3 поверхи",
+          "Парковка",
+          "Близько до моря"
+        ],
+        "image": "/15.webp"
       },
       {
         "type": "Вілла в горах",
         "location": "Хуло / Хеда",
         "price": "від $3 000/міс",
         "desc": "Ексклюзивна вілла в горах Аджарії. Панорамний вид. 5 спалень.",
-        "tags": ["Панорамний вид", "Природа", "Тиша", "Ліс"],
-        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Панорамний вид",
+          "Природа",
+          "Тиша",
+          "Ліс"
+        ],
+        "image": "/16.avif"
       }
     ]
   },
@@ -247,7 +298,12 @@
   "footer": {
     "tagline": "BATUMI REALTY — спільнота ріелторів Батумі",
     "copyright": "© 2024 Batumi Realty. Всі права захищені.",
-    "links": ["Об'єкти", "Райони", "Як ми працюємо", "Залишити заявку"],
+    "links": [
+      "Об'єкти",
+      "Райони",
+      "Як ми працюємо",
+      "Залишити заявку"
+    ],
     "schedule": "Приймаємо заявки щодня 9:00–22:00 (GMT+4)"
   },
   "modal": {

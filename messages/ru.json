@@ -29,7 +29,8 @@
     "room1": "1",
     "room2": "2",
     "room3": "3+",
-    "findBtn": "Найти"
+    "findBtn": "Найти",
+    "success": "✅ В ближайшее время пришлём вам варианты"
   },
   "catalog": {
     "title": "Актуальные предложения",
@@ -41,52 +42,76 @@
   "properties": [
     {
       "type": "Студия у моря",
-      "district": "Новый Бульвар",
+      "district": "Batumi View",
       "price": "$350",
-      "tags": ["Вид на море", "Долгосрочно", "Посуточно"],
-      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Вид на море",
+        "Долгосрочно",
+        "Посуточно"
+      ],
+      "image": "/1.jpeg"
     },
     {
       "type": "1+1 Аллея героев",
       "district": "Аллея героев",
       "price": "$480",
-      "tags": ["Центр", "Новый дом", "Парковка"],
-      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Центр",
+        "Новый дом",
+        "Парковка"
+      ],
+      "image": "/2.png"
     },
     {
       "type": "2+1 Аллея героев",
       "district": "Аллея героев",
       "price": "$650",
-      "tags": ["Центр", "Вид на горы", "Евроремонт"],
+      "tags": [
+        "Центр",
+        "Вид на горы",
+        "Евроремонт"
+      ],
       "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 исторический",
       "district": "Старый город",
       "price": "$700",
-      "tags": ["Историческое место", "Семьям"],
-      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Историческое место",
+        "Семьям"
+      ],
+      "image": "/3.webp"
     },
     {
       "type": "Студия первая линия",
       "district": "Орби Сити",
       "price": "$400",
-      "tags": ["Первая линия", "Высокий этаж"],
-      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Первая линия",
+        "Высокий этаж"
+      ],
+      "image": "/4.jpg"
     },
     {
       "type": "1+1 у парка",
-      "district": "Руставели",
+      "district": "парк 6 мая",
       "price": "$550",
-      "tags": ["Парк рядом", "Новый дом"],
-      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Парк рядом",
+        "Новый дом"
+      ],
+      "image": "/5.jpg"
     },
     {
       "type": "3+1 за городом",
       "district": "Гонио",
       "price": "$900",
-      "tags": ["За городом", "С бассейном"],
-      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "За городом",
+        "С бассейном"
+      ],
+      "image": "/6.jpg"
     }
   ],
   "howItWorks": {
@@ -125,7 +150,13 @@
     "studio": "Студия",
     "budgetLabel": "Бюджет в месяц",
     "districtsLabel": "Район (необязательно)",
-    "districts": ["Новый Бульвар", "Старый город", "Аллея героев", "Гонио", "Любой"],
+    "districts": [
+      "Новый Бульвар",
+      "Старый город",
+      "Аллея героев",
+      "Гонио",
+      "Любой"
+    ],
     "nameLabel": "Имя",
     "namePlaceholder": "Ваше имя",
     "contactLabel": "Telegram или WhatsApp",
@@ -147,31 +178,31 @@
         "name": "Новый Бульвар",
         "desc": "Первая линия. Самый туристический район.",
         "price": "от $350/мес",
-        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/8.jpg"
       },
       {
         "name": "Старый город",
         "desc": "Атмосфера и история. Узкие улочки.",
         "price": "от $220/мес",
-        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/9.jpg"
       },
       {
         "name": "Аллея героев",
         "desc": "Современный центр. Новые дома с видом на горы и море.",
         "price": "от $400/мес",
-        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/10.avif"
       },
       {
-        "name": "Руставели",
+        "name": "парк 6 мая",
         "desc": "Престиж. Парк. Тихо.",
         "price": "от $450/мес",
-        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/11.jpeg"
       },
       {
         "name": "Гонио / Кобулети",
         "desc": "За городом. Природа. Тишина.",
         "price": "от $300/мес",
-        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/12.jpg"
       }
     ]
   },
@@ -185,32 +216,52 @@
         "location": "Зелёный мыс",
         "price": "от $2 500/мес",
         "desc": "Частная вилла с бассейном, садом и видом на Чёрное море. 4 спальни.",
-        "tags": ["Вид на море", "Бассейн", "Сад", "Гараж"],
-        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Вид на море",
+          "Бассейн",
+          "Сад",
+          "Гараж"
+        ],
+        "image": "/13.avif"
       },
       {
         "type": "Дом в горах",
         "location": "Сарпи / Хеда",
         "price": "от $1 800/мес",
         "desc": "Двухэтажный дом с садом. Вид на горы и море. 3 спальни.",
-        "tags": ["Вид на горы", "Сад", "BBQ", "Тишина"],
-        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Вид на горы",
+          "Сад",
+          "BBQ",
+          "Тишина"
+        ],
+        "image": "/14.jpg"
       },
       {
         "type": "Таунхаус",
         "location": "Батуми, Кобулети",
         "price": "от $1 200/мес",
         "desc": "3-этажный таунхаус рядом с Батуми. 3 спальни + кабинет.",
-        "tags": ["Новый дом", "3 этажа", "Парковка", "Близко к морю"],
-        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Новый дом",
+          "3 этажа",
+          "Парковка",
+          "Близко к морю"
+        ],
+        "image": "/15.webp"
       },
       {
         "type": "Вилла в горах Аджарии",
         "location": "Хуло / Хеда",
         "price": "от $3 000/мес",
         "desc": "Эксклюзивная вилла в горах Аджарии. Панорамный вид. 5 спален.",
-        "tags": ["Панорамный вид", "Природа", "Тишина", "Лес"],
-        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Панорамный вид",
+          "Природа",
+          "Тишина",
+          "Лес"
+        ],
+        "image": "/16.avif"
       }
     ]
   },
@@ -247,7 +298,12 @@
   "footer": {
     "tagline": "BATUMI REALTY — сообщество риэлторов Батуми",
     "copyright": "© 2024 Batumi Realty. Все права защищены.",
-    "links": ["Объекты", "Районы", "Как работаем", "Оставить заявку"],
+    "links": [
+      "Объекты",
+      "Районы",
+      "Как работаем",
+      "Оставить заявку"
+    ],
     "schedule": "Принимаем заявки ежедневно 9:00–22:00 (GMT+4)"
   },
   "modal": {

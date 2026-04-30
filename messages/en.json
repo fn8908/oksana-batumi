@@ -29,7 +29,8 @@
     "room1": "1",
     "room2": "2",
     "room3": "3+",
-    "findBtn": "Search"
+    "findBtn": "Search",
+    "success": "✅ We'll send you options shortly"
   },
   "catalog": {
     "title": "Current Listings",
@@ -41,52 +42,76 @@
   "properties": [
     {
       "type": "Sea-view Studio",
-      "district": "New Boulevard",
+      "district": "Batumi View",
       "price": "$350",
-      "tags": ["Sea view", "Long-term", "Short-term"],
-      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Sea view",
+        "Long-term",
+        "Short-term"
+      ],
+      "image": "/1.jpeg"
     },
     {
       "type": "1+1 Heroes Alley",
       "district": "Heroes Alley",
       "price": "$480",
-      "tags": ["Central", "New building", "Parking"],
-      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Central",
+        "New building",
+        "Parking"
+      ],
+      "image": "/2.png"
     },
     {
       "type": "2+1 Heroes Alley",
       "district": "Heroes Alley",
       "price": "$650",
-      "tags": ["Central", "Mountain view", "European renovation"],
+      "tags": [
+        "Central",
+        "Mountain view",
+        "European renovation"
+      ],
       "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 Historic",
       "district": "Old Town",
       "price": "$700",
-      "tags": ["Historic area", "Family-friendly"],
-      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Historic area",
+        "Family-friendly"
+      ],
+      "image": "/3.webp"
     },
     {
       "type": "First-line Studio",
       "district": "Orbi City",
       "price": "$400",
-      "tags": ["First line", "High floor"],
-      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "First line",
+        "High floor"
+      ],
+      "image": "/4.jpg"
     },
     {
       "type": "1+1 Park View",
-      "district": "Rustaveli",
+      "district": "6 May Park",
       "price": "$550",
-      "tags": ["Park nearby", "New building"],
-      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Park nearby",
+        "New building"
+      ],
+      "image": "/5.jpg"
     },
     {
       "type": "3+1 Countryside",
       "district": "Gonio",
       "price": "$900",
-      "tags": ["Countryside", "With pool"],
-      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "Countryside",
+        "With pool"
+      ],
+      "image": "/6.jpg"
     }
   ],
   "howItWorks": {
@@ -125,7 +150,13 @@
     "studio": "Studio",
     "budgetLabel": "Monthly Budget",
     "districtsLabel": "Neighborhood (optional)",
-    "districts": ["New Boulevard", "Old Town", "Heroes Alley", "Gonio", "Any"],
+    "districts": [
+      "New Boulevard",
+      "Old Town",
+      "Heroes Alley",
+      "Gonio",
+      "Any"
+    ],
     "nameLabel": "Name",
     "namePlaceholder": "Your name",
     "contactLabel": "Telegram or WhatsApp",
@@ -147,31 +178,31 @@
         "name": "New Boulevard",
         "desc": "First line. The most popular tourist area.",
         "price": "from $350/mo",
-        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/8.jpg"
       },
       {
         "name": "Old Town",
         "desc": "Atmosphere and history. Narrow streets.",
         "price": "from $220/mo",
-        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/9.jpg"
       },
       {
         "name": "Heroes Alley",
         "desc": "Modern center. New buildings with mountain and sea views.",
         "price": "from $400/mo",
-        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/10.avif"
       },
       {
-        "name": "Rustaveli",
+        "name": "6 May Park",
         "desc": "Prestige. Park. Quiet.",
         "price": "from $450/mo",
-        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/11.jpeg"
       },
       {
         "name": "Gonio / Kobuleti",
         "desc": "Countryside. Nature. Peace.",
         "price": "from $300/mo",
-        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/12.jpg"
       }
     ]
   },
@@ -185,32 +216,52 @@
         "location": "Green Cape",
         "price": "from $2,500/mo",
         "desc": "Private villa with pool, garden and Black Sea views. 4 bedrooms.",
-        "tags": ["Sea view", "Pool", "Garden", "Garage"],
-        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Sea view",
+          "Pool",
+          "Garden",
+          "Garage"
+        ],
+        "image": "/13.avif"
       },
       {
         "type": "Mountain House",
         "location": "Sarpi / Kheda",
         "price": "from $1,800/mo",
         "desc": "Two-storey house with garden. Mountain and sea views. 3 bedrooms.",
-        "tags": ["Mountain view", "Garden", "BBQ", "Peaceful"],
-        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Mountain view",
+          "Garden",
+          "BBQ",
+          "Peaceful"
+        ],
+        "image": "/14.jpg"
       },
       {
         "type": "Townhouse",
         "location": "Batumi, Kobuleti",
         "price": "from $1,200/mo",
         "desc": "3-storey townhouse near Batumi. 3 bedrooms + office.",
-        "tags": ["New building", "3 floors", "Parking", "Near sea"],
-        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "New building",
+          "3 floors",
+          "Parking",
+          "Near sea"
+        ],
+        "image": "/15.webp"
       },
       {
         "type": "Adjara Mountain Villa",
         "location": "Khulo / Kheda",
         "price": "from $3,000/mo",
         "desc": "Exclusive villa in the Adjara mountains. Panoramic views. 5 bedrooms.",
-        "tags": ["Panoramic view", "Nature", "Peaceful", "Forest"],
-        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "Panoramic view",
+          "Nature",
+          "Peaceful",
+          "Forest"
+        ],
+        "image": "/16.avif"
       }
     ]
   },
@@ -247,7 +298,12 @@
   "footer": {
     "tagline": "BATUMI REALTY — Batumi Realtor Community",
     "copyright": "© 2024 Batumi Realty. All rights reserved.",
-    "links": ["Properties", "Neighborhoods", "How It Works", "Submit Request"],
+    "links": [
+      "Properties",
+      "Neighborhoods",
+      "How It Works",
+      "Submit Request"
+    ],
     "schedule": "We accept requests daily 9:00–22:00 (GMT+4)"
   },
   "modal": {

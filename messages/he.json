@@ -29,7 +29,8 @@
     "room1": "1",
     "room2": "2",
     "room3": "3+",
-    "findBtn": "חיפוש"
+    "findBtn": "חיפוש",
+    "success": "✅ בקרוב נשלח לכם אפשרויות"
   },
   "catalog": {
     "title": "הצעות עכשוויות",
@@ -41,52 +42,76 @@
   "properties": [
     {
       "type": "סטודיו עם נוף לים",
-      "district": "הבולוואר החדש",
+      "district": "Batumi View",
       "price": "$350",
-      "tags": ["נוף לים", "לטווח ארוך", "לטווח קצר"],
-      "image": "https://images.pexels.com/photos/9551121/pexels-photo-9551121.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "נוף לים",
+        "לטווח ארוך",
+        "לטווח קצר"
+      ],
+      "image": "/1.jpeg"
     },
     {
       "type": "1+1 שדרת הגיבורים",
       "district": "שדרת הגיבורים",
       "price": "$480",
-      "tags": ["מרכז", "בניין חדש", "חניה"],
-      "image": "https://images.pexels.com/photos/20053183/pexels-photo-20053183.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "מרכז",
+        "בניין חדש",
+        "חניה"
+      ],
+      "image": "/2.png"
     },
     {
       "type": "2+1 שדרת הגיבורים",
       "district": "שדרת הגיבורים",
       "price": "$650",
-      "tags": ["מרכז", "נוף להרים", "שיפוץ אירופאי"],
+      "tags": [
+        "מרכז",
+        "נוף להרים",
+        "שיפוץ אירופאי"
+      ],
       "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
     },
     {
       "type": "2+1 היסטורי",
       "district": "העיר העתיקה",
       "price": "$700",
-      "tags": ["אזור היסטורי", "מתאים למשפחות"],
-      "image": "https://images.pexels.com/photos/37233566/pexels-photo-37233566.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "אזור היסטורי",
+        "מתאים למשפחות"
+      ],
+      "image": "/3.webp"
     },
     {
       "type": "סטודיו קו ראשון",
       "district": "אורבי סיטי",
       "price": "$400",
-      "tags": ["קו ראשון", "קומה גבוהה"],
-      "image": "https://images.pexels.com/photos/34514099/pexels-photo-34514099.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "קו ראשון",
+        "קומה גבוהה"
+      ],
+      "image": "/4.jpg"
     },
     {
       "type": "1+1 עם נוף לפארק",
-      "district": "רוסטבלי",
+      "district": "פארק 6 במאי",
       "price": "$550",
-      "tags": ["פארק בסמוך", "בניין חדש"],
-      "image": "https://images.pexels.com/photos/36472445/pexels-photo-36472445.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "פארק בסמוך",
+        "בניין חדש"
+      ],
+      "image": "/5.jpg"
     },
     {
       "type": "3+1 מחוץ לעיר",
       "district": "גוניו",
       "price": "$900",
-      "tags": ["מחוץ לעיר", "עם בריכה"],
-      "image": "https://images.pexels.com/photos/35676761/pexels-photo-35676761.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "tags": [
+        "מחוץ לעיר",
+        "עם בריכה"
+      ],
+      "image": "/6.jpg"
     }
   ],
   "howItWorks": {
@@ -125,7 +150,13 @@
     "studio": "סטודיו",
     "budgetLabel": "תקציב חודשי",
     "districtsLabel": "שכונה (אופציונלי)",
-    "districts": ["הבולוואר החדש", "העיר העתיקה", "שדרת הגיבורים", "גוניו", "כל שכונה"],
+    "districts": [
+      "הבולוואר החדש",
+      "העיר העתיקה",
+      "שדרת הגיבורים",
+      "גוניו",
+      "כל שכונה"
+    ],
     "nameLabel": "שם",
     "namePlaceholder": "שמך",
     "contactLabel": "טלגרם או WhatsApp",
@@ -147,31 +178,31 @@
         "name": "הבולוואר החדש",
         "desc": "קו ראשון. האזור התיירותי ביותר.",
         "price": "מ-$350/חודש",
-        "image": "https://images.pexels.com/photos/5960755/pexels-photo-5960755.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/8.jpg"
       },
       {
         "name": "העיר העתיקה",
         "desc": "אווירה והיסטוריה. סמטאות צרות.",
         "price": "מ-$220/חודש",
-        "image": "https://images.pexels.com/photos/9091779/pexels-photo-9091779.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/9.jpg"
       },
       {
         "name": "שדרת הגיבורים",
         "desc": "מרכז מודרני. בניינים חדשים עם נוף להרים ולים.",
         "price": "מ-$400/חודש",
-        "image": "https://images.pexels.com/photos/33440840/pexels-photo-33440840.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/10.avif"
       },
       {
-        "name": "רוסטבלי",
+        "name": "פארק 6 במאי",
         "desc": "יוקרה. פארק. שקט.",
         "price": "מ-$450/חודש",
-        "image": "https://images.pexels.com/photos/20391227/pexels-photo-20391227.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/11.jpeg"
       },
       {
         "name": "גוניו / קובולטי",
         "desc": "מחוץ לעיר. טבע. שלווה.",
         "price": "מ-$300/חודש",
-        "image": "https://images.pexels.com/photos/15059509/pexels-photo-15059509.jpeg?auto=compress&cs=tinysrgb&w=600"
+        "image": "/12.jpg"
       }
     ]
   },
@@ -185,32 +216,52 @@
         "location": "הכף הירוק",
         "price": "מ-$2,500/חודש",
         "desc": "וילה פרטית עם בריכה, גן ונוף לים השחור. 4 חדרי שינה.",
-        "tags": ["נוף לים", "בריכה", "גן", "מוסך"],
-        "image": "https://images.pexels.com/photos/17590121/pexels-photo-17590121.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "נוף לים",
+          "בריכה",
+          "גן",
+          "מוסך"
+        ],
+        "image": "/13.avif"
       },
       {
         "type": "בית בהרים",
         "location": "סרפי / חדה",
         "price": "מ-$1,800/חודש",
         "desc": "בית דו-קומתי עם גן. נוף להרים ולים. 3 חדרי שינה.",
-        "tags": ["נוף להרים", "גן", "BBQ", "שקט"],
-        "image": "https://images.pexels.com/photos/28890793/pexels-photo-28890793.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "נוף להרים",
+          "גן",
+          "BBQ",
+          "שקט"
+        ],
+        "image": "/14.jpg"
       },
       {
         "type": "טאון-האוס",
         "location": "באטומי, קובולטי",
         "price": "מ-$1,200/חודש",
         "desc": "טאון-האוס בן 3 קומות ליד באטומי. 3 חדרי שינה + משרד.",
-        "tags": ["בניין חדש", "3 קומות", "חניה", "קרוב לים"],
-        "image": "https://images.pexels.com/photos/16299399/pexels-photo-16299399.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "בניין חדש",
+          "3 קומות",
+          "חניה",
+          "קרוב לים"
+        ],
+        "image": "/15.webp"
       },
       {
         "type": "וילה בהרים",
         "location": "חולו / חדה",
         "price": "מ-$3,000/חודש",
         "desc": "וילה בלעדית בהרי אג׳ריה. נוף פנורמי. 5 חדרי שינה.",
-        "tags": ["נוף פנורמי", "טבע", "שלווה", "יער"],
-        "image": "https://images.pexels.com/photos/34682357/pexels-photo-34682357.jpeg?auto=compress&cs=tinysrgb&w=900"
+        "tags": [
+          "נוף פנורמי",
+          "טבע",
+          "שלווה",
+          "יער"
+        ],
+        "image": "/16.avif"
       }
     ]
   },
@@ -247,7 +298,12 @@
   "footer": {
     "tagline": "BATUMI REALTY — קהילת המתווכים של באטומי",
     "copyright": "© 2024 Batumi Realty. כל הזכויות שמורות.",
-    "links": ["נכסים", "שכונות", "איך זה עובד", "השאר בקשה"],
+    "links": [
+      "נכסים",
+      "שכונות",
+      "איך זה עובד",
+      "השאר בקשה"
+    ],
     "schedule": "מקבלים בקשות מדי יום 9:00–22:00 (GMT+4)"
   },
   "modal": {

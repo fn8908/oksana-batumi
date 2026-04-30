@@ -86,7 +86,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ka" className={`${cormorant.variable} ${nunito.variable}`}>
+    <html lang="ru" className={`${cormorant.variable} ${nunito.variable}`}>
       <head>
         <script
           type="application/ld+json"

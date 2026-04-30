@@ -62,8 +62,12 @@ export async function POST(req: NextRequest) {
     timeZone: "Asia/Tbilisi",
   });
 
+  const isQuickSearch = body.source === "quick_search";
+
   // Build Telegram message
-  let message = `🏠 <b>Новая заявка — Batumi Realty</b>\n`;
+  let message = isQuickSearch
+    ? `🔍 <b>Быстрый поиск — Batumi Realty</b>\n`
+    : `🏠 <b>Новая заявка — Batumi Realty</b>\n`;
   message += `━━━━━━━━━━━━━━━\n`;
   message += `🕐 <i>${timestamp} (GMT+4)</i>\n\n`;
 

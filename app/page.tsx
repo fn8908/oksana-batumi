@@ -9,7 +9,6 @@ import HowItWorks from "@/components/HowItWorks";
 import ContactForm from "@/components/ContactForm";
 import Neighborhoods from "@/components/Neighborhoods";
 import EliteRealty from "@/components/EliteRealty";
-import AdjariaMap from "@/components/AdjariaMap";
 import Testimonials from "@/components/Testimonials";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
@@ -37,7 +36,6 @@ export default function Home() {
       <HowItWorks />
       <ContactForm />
       <EliteRealty />
-      <AdjariaMap />
       <Testimonials />
       <FinalCTA />
       <Footer />
