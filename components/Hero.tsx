@@ -24,10 +24,10 @@ export default function Hero() {
       {/* Panorama background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.pexels.com/photos/30866984/pexels-photo-30866984.jpeg?auto=compress&cs=tinysrgb&w=1920"
-          alt="Батуми панорама — город, море, горы"
+          src="https://images.unsplash.com/photo-1692960570657-cd1c319a0f29?w=1920&q=85&auto=format&fit=crop"
+          alt="Батуми панорама — город, новостройки, бульвар, пляж, горы, море"
           className="w-full h-full object-cover"
-          style={{ objectPosition: "center 50%" }}
+          style={{ objectPosition: "center 40%" }}
         />
         {/* Dark overlay for readability */}
         <div
