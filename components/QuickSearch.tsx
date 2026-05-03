@@ -28,6 +28,7 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSearch = async () => {
+    if (!contact.trim()) return;
     setLoading(true);
     try {
       await fetch("/api/contact", {
@@ -193,6 +194,7 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
                     value={contact}
                     onChange={(e) => setContact(e.target.value)}
                     placeholder={t("form.contactPlaceholder")}
+                    required
                   />
                 </div>
 
