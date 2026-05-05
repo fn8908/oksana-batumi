@@ -7,7 +7,6 @@ import QuickSearch from "@/components/QuickSearch";
 import Catalog from "@/components/Catalog";
 import HowItWorks from "@/components/HowItWorks";
 import WhyBatumi from "@/components/WhyBatumi";
-import AdjariaMap from "@/components/AdjariaMap";
 import ContactForm from "@/components/ContactForm";
 import Neighborhoods from "@/components/Neighborhoods";
 import EliteRealty from "@/components/EliteRealty";
@@ -36,7 +35,6 @@ export default function Home() {
       <QuickSearch onSearch={setFilters} />
       <Catalog filters={filters} />
       <Neighborhoods />
-      <AdjariaMap />
       <HowItWorks />
       <WhyBatumi />
       <ContactForm />
