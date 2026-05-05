@@ -37,7 +37,8 @@
     "subtitle": "Komisyoncular topluluğundan seçilmiş mülkler",
     "from": "den",
     "perMonth": "/ay",
-    "details": "Detayları Gör"
+    "details": "Detayları Gör",
+    "noResults": "Arama kriterlerinize uygun mülk bulunamadı"
   },
   "properties": [
     {
@@ -49,7 +50,10 @@
         "Uzun Dönem",
         "Kısa Dönem"
       ],
-      "image": "/1.jpeg"
+      "image": "/1.jpeg",
+      "priceNum": 350,
+      "rentalType": "both",
+      "rooms": "studio"
     },
     {
       "type": "1+1 Kahramanlar Caddesi",
@@ -60,7 +64,10 @@
         "Yeni Bina",
         "Otopark"
       ],
-      "image": "/2.png"
+      "image": "/2.png",
+      "priceNum": 480,
+      "rentalType": "long",
+      "rooms": "1"
     },
     {
       "type": "2+1 Kahramanlar Caddesi",
@@ -71,7 +78,10 @@
         "Dağ Manzarası",
         "Tadilatlı"
       ],
-      "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "image": "/alley-heroes-2-1.jpg",
+      "priceNum": 650,
+      "rentalType": "long",
+      "rooms": "2"
     },
     {
       "type": "2+1 Tarihi",
@@ -81,7 +91,10 @@
         "Tarihi Bölge",
         "Aile Dostu"
       ],
-      "image": "/3.webp"
+      "image": "/3.webp",
+      "priceNum": 700,
+      "rentalType": "long",
+      "rooms": "2"
     },
     {
       "type": "Birinci Hat Stüdyo",
@@ -91,7 +104,10 @@
         "Birinci Hat",
         "Yüksek Kat"
       ],
-      "image": "/4.jpg"
+      "image": "/4.jpg",
+      "priceNum": 400,
+      "rentalType": "both",
+      "rooms": "studio"
     },
     {
       "type": "1+1 Park Manzaralı",
@@ -101,7 +117,10 @@
         "Park Yakını",
         "Yeni Bina"
       ],
-      "image": "/5.jpg"
+      "image": "/5.jpg",
+      "priceNum": 550,
+      "rentalType": "long",
+      "rooms": "1"
     },
     {
       "type": "3+1 Şehir Dışı",
@@ -111,7 +130,10 @@
         "Şehir Dışı",
         "Havuzlu"
       ],
-      "image": "/6.jpg"
+      "image": "/6.jpg",
+      "priceNum": 900,
+      "rentalType": "long",
+      "rooms": "3+"
     }
   ],
   "howItWorks": {
@@ -274,30 +296,33 @@
     "title": "Müşterilerimiz Ne Diyor",
     "items": [
       {
-        "text": "3 günde daire bulduk. Her şey net, gereksiz aramalar yok.",
-        "author": "Aleksandr",
-        "city": "Moskova"
+        "text": "Geç saatlerde mesaj attım, sabaha kadar üç seçenekle yanıt aldım. İki daireye baktık, ilkini beğendik. Sekiz aydır burada yaşıyoruz ve hiç pişman olmadık. Hiçbir baskı yapmadılar.",
+        "author": "Aleksander",
+        "city": "İstanbul"
       },
       {
-        "text": "Sözleşmeyi anlamama yardımcı oldular, Gürcü piyasasının tüm nüanslarını açıkladılar.",
+        "text": "İki çocukla yalnız uçtum ve biraz endişeliydim — Gürcüce sözleşme, tanımadığım piyasa. Her şeyi sabırla anlattılar. Şu an 2+1 kiralıyorum, çocuklar iki sokak ötede okula gidiyor.",
         "author": "Elena",
-        "city": "Kiev"
+        "city": "Ankara"
       },
       {
-        "text": "Bir aylığına geldik — bir yıl kaldık. Bütçemize mükemmel bir yer bulduk.",
+        "text": "Bir aylığına \"denemek için\" geldik — ve işte bir buçuk yıldır buradayız. Stüdyodan büyük bir daireye geçmemize sorunsuz yardım ettiler. Dürüst insanlar, gereksiz laflar yok.",
         "author": "Dmitry",
-        "city": "Minsk"
+        "city": "İzmir"
       }
     ]
   },
   "finalCta": {
     "title": "Batum'da Evinizi Bulmaya Hazır mısınız?",
     "subtitle": "Başvuru bırakın — 2 saat içinde seçenekler bulacağız",
-    "btn": "Başvuru Bırak"
+    "btn": "Başvuru Bırak",
+    "formLink": "veya formu doldurun →"
   },
   "footer": {
     "tagline": "BATUMI REALTY — Batum Komisyoncular Topluluğu",
     "copyright": "© 2024 Batumi Realty. Tüm hakları saklıdır.",
+    "nav": "Navigasyon",
+    "contacts": "İletişim",
     "links": [
       "İlanlar",
       "Semtler",
@@ -311,5 +336,52 @@
     "subtitle": "Başvuru bırakın — komisyoncu 2 saat içinde iletişime geçecek",
     "submit": "Başvuru Gönder",
     "close": "Kapat"
+  },
+  "whyBatumi": {
+    "title": "Neden Batum — Yaşam ve İş İçin",
+    "subtitle": "İstikrarı, özgürlüğü ve uluslararası fırsatları değer veren girişimciler, uzaktan çalışanlar ve aileler için modern ve konforlu bir ortam.",
+    "tagline": "Batum — özgürlük, istikrar ve büyüme için ideal denge",
+    "items": [
+      {
+        "icon": "💰",
+        "title": "Vergi Avantajları",
+        "text": "Bölgedeki en avantajlı vergi rejimlerinden biri. Bireysel girişimciler için yalnızca %1 oranı, iş geliştirmeyi kolaylaştırır."
+      },
+      {
+        "icon": "🌐",
+        "title": "Özgür İnternet",
+        "text": "Engelsiz, stabil internet. Telegram, YouTube, Instagram, Facebook — VPN olmadan, sınırsız çalışır."
+      },
+      {
+        "icon": "🎓",
+        "title": "Modern Eğitim",
+        "text": "Avrupa standartlarında eğitim, İngilizce ve Almanca öğretim, Bologna sistemi. İdeolojik baskı yok."
+      },
+      {
+        "icon": "🏛️",
+        "title": "Kolay Oturma İzni ve Vize",
+        "text": "Oturma izni süreci oldukça basit. Ayrıca Schengen vizesi başvuru hakkı da korunmaktadır."
+      },
+      {
+        "icon": "🏦",
+        "title": "Bankacılık Altyapısı",
+        "text": "Yabancılar hesap açıp Visa ve Mastercard kartları edinebilir. Uluslararası iş ortakları ile çalışmak için ideal."
+      },
+      {
+        "icon": "✈️",
+        "title": "Ulaşım Kolaylığı",
+        "text": "Batum Havalimanı güvenilir şekilde çalışmakta, Avrupa ve BDT'ye doğrudan uçuşlar mevcuttur."
+      },
+      {
+        "icon": "🔓",
+        "title": "Yaptırım Yok",
+        "text": "Uluslararası tedarik, banka transferleri ve küresel iş — hiçbir kısıtlama olmadan."
+      },
+      {
+        "icon": "₿",
+        "title": "Kripto Para Esnekliği",
+        "text": "Dijital varlıklara sert yasaklar yok. Kripto, mevcut Gürcü mevzuatı çerçevesinde kullanılabilir."
+      }
+    ]
   }
 }

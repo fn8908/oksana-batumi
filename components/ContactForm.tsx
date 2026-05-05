@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
+import { ymGoal } from "@/lib/ym";
 
 const DISTRICTS: Record<string, string[]> = {
   ru: ["Новый Бульвар", "Старый город", "Аллея героев", "Гонио", "Любой"],
@@ -59,6 +60,7 @@ export default function ContactForm() {
         }),
       });
       setSubmitted(true);
+      ymGoal('form_submit');
     } finally {
       setLoading(false);
     }

@@ -37,7 +37,8 @@
     "subtitle": "Hand-picked properties from our realtor community",
     "from": "from",
     "perMonth": "/mo",
-    "details": "View Details"
+    "details": "View Details",
+    "noResults": "No properties match your search"
   },
   "properties": [
     {
@@ -49,7 +50,10 @@
         "Long-term",
         "Short-term"
       ],
-      "image": "/1.jpeg"
+      "image": "/1.jpeg",
+      "priceNum": 350,
+      "rentalType": "both",
+      "rooms": "studio"
     },
     {
       "type": "1+1 Heroes Alley",
@@ -60,7 +64,10 @@
         "New building",
         "Parking"
       ],
-      "image": "/2.png"
+      "image": "/2.png",
+      "priceNum": 480,
+      "rentalType": "long",
+      "rooms": "1"
     },
     {
       "type": "2+1 Heroes Alley",
@@ -71,7 +78,10 @@
         "Mountain view",
         "European renovation"
       ],
-      "image": "https://images.pexels.com/photos/26939052/pexels-photo-26939052.jpeg?auto=compress&cs=tinysrgb&w=800"
+      "image": "/alley-heroes-2-1.jpg",
+      "priceNum": 650,
+      "rentalType": "long",
+      "rooms": "2"
     },
     {
       "type": "2+1 Historic",
@@ -81,7 +91,10 @@
         "Historic area",
         "Family-friendly"
       ],
-      "image": "/3.webp"
+      "image": "/3.webp",
+      "priceNum": 700,
+      "rentalType": "long",
+      "rooms": "2"
     },
     {
       "type": "First-line Studio",
@@ -91,7 +104,10 @@
         "First line",
         "High floor"
       ],
-      "image": "/4.jpg"
+      "image": "/4.jpg",
+      "priceNum": 400,
+      "rentalType": "both",
+      "rooms": "studio"
     },
     {
       "type": "1+1 Park View",
@@ -101,7 +117,10 @@
         "Park nearby",
         "New building"
       ],
-      "image": "/5.jpg"
+      "image": "/5.jpg",
+      "priceNum": 550,
+      "rentalType": "long",
+      "rooms": "1"
     },
     {
       "type": "3+1 Countryside",
@@ -111,7 +130,10 @@
         "Countryside",
         "With pool"
       ],
-      "image": "/6.jpg"
+      "image": "/6.jpg",
+      "priceNum": 900,
+      "rentalType": "long",
+      "rooms": "3+"
     }
   ],
   "howItWorks": {
@@ -274,30 +296,33 @@
     "title": "What Our Clients Say",
     "items": [
       {
-        "text": "Found an apartment in 3 days. Everything was clear, no unnecessary calls.",
+        "text": "Messaged them late Sunday evening and got a response by morning with three options. We viewed two apartments, loved the first one near Heroes Alley. Been living here 8 months now and couldn't be happier. No pressure at all.",
         "author": "Alexander",
-        "city": "Moscow"
+        "city": "London"
       },
       {
-        "text": "They helped us understand the contract and explained all the nuances of the Georgian market.",
-        "author": "Elena",
-        "city": "Kyiv"
+        "text": "Was a bit nervous about the paperwork — contract's in Georgian and I don't speak a word of it. They walked me through everything patiently, explained all the details. Wouldn't have figured it out on my own. Great service.",
+        "author": "Helen",
+        "city": "Dublin"
       },
       {
-        "text": "We came for a month and stayed a year. Found the perfect place within our budget.",
+        "text": "Came for a month to \"try it out\" and ended up staying a year and a half. They helped us upgrade from a studio to a bigger flat without any hassle. Straightforward, honest people.",
         "author": "Dmitry",
-        "city": "Minsk"
+        "city": "Warsaw"
       }
     ]
   },
   "finalCta": {
     "title": "Ready to Find Your Home in Batumi?",
     "subtitle": "Submit a request — we'll find options within 2 hours",
-    "btn": "Submit Request"
+    "btn": "Submit Request",
+    "formLink": "or fill out the form →"
   },
   "footer": {
     "tagline": "BATUMI REALTY — Batumi Realtor Community",
     "copyright": "© 2024 Batumi Realty. All rights reserved.",
+    "nav": "Navigation",
+    "contacts": "Contact",
     "links": [
       "Properties",
       "Neighborhoods",
@@ -311,5 +336,52 @@
     "subtitle": "Submit a request — a realtor will contact you within 2 hours",
     "submit": "Submit Request",
     "close": "Close"
+  },
+  "whyBatumi": {
+    "title": "Why Choose Batumi for Life & Business",
+    "subtitle": "A modern, comfortable environment for entrepreneurs, remote professionals, and families who value stability, freedom, and international opportunities.",
+    "tagline": "Batumi — the ideal balance of freedom, stability, and growth",
+    "items": [
+      {
+        "icon": "💰",
+        "title": "Tax Advantages",
+        "text": "One of the most favorable tax regimes in the region. Individual entrepreneurs pay just 1%, enabling efficient business development with minimal burden."
+      },
+      {
+        "icon": "🌐",
+        "title": "Free & Open Internet",
+        "text": "Fast, stable internet with zero blocks. Telegram, YouTube, Instagram, Facebook — all work without restrictions or VPN."
+      },
+      {
+        "icon": "🎓",
+        "title": "Modern Education",
+        "text": "European-standard schooling, instruction in English and German, Bologna system. No ideological pressure."
+      },
+      {
+        "icon": "🏛️",
+        "title": "Easy Residency & Visas",
+        "text": "The residency permit process is straightforward. Georgian residency also keeps the door open for Schengen visa applications."
+      },
+      {
+        "icon": "🏦",
+        "title": "Banking Infrastructure",
+        "text": "Foreigners can open accounts and get Visa and Mastercard cards. Simple for working with international partners and clients."
+      },
+      {
+        "icon": "✈️",
+        "title": "Transport Connectivity",
+        "text": "Batumi Airport operates reliably with direct flights to Europe and the CIS. Solid logistics, no disruptions."
+      },
+      {
+        "icon": "🔓",
+        "title": "Sanction-Free Zone",
+        "text": "International shipments, cross-border bank transfers, and global business — all without restrictions."
+      },
+      {
+        "icon": "₿",
+        "title": "Crypto Flexibility",
+        "text": "No strict bans on digital assets. Cryptocurrency can be used within the framework of current Georgian law."
+      }
+    ]
   }
 }

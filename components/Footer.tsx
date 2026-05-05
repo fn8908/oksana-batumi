@@ -60,7 +60,7 @@ export default function Footer() {
               className="text-xs font-semibold uppercase tracking-widest mb-5"
               style={{ color: "rgba(245,240,232,0.35)" }}
             >
-              Навигация
+              {t("footer.nav")}
             </h4>
             <ul className="space-y-2.5">
               {links.map((link, i) => (
@@ -83,7 +83,7 @@ export default function Footer() {
               className="text-xs font-semibold uppercase tracking-widest mb-5"
               style={{ color: "rgba(245,240,232,0.35)" }}
             >
-              Контакты
+              {t("footer.contacts")}
             </h4>
             <div
               className="flex items-start gap-3 p-4 rounded-xl"

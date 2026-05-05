@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Nunito } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
+import YandexMetrika from "@/components/YandexMetrika";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin", "cyrillic"],
@@ -127,6 +128,7 @@ export default function RootLayout({
         style={{ background: "#0F1C2E", color: "#F5F0E8" }}
       >
         <LanguageProvider>{children}</LanguageProvider>
+        <YandexMetrika />
       </body>
     </html>
   );

@@ -12,6 +12,9 @@ interface Property {
   tags: string[];
   image?: string;
   gradient?: string;
+  priceNum?: number;
+  rentalType?: "long" | "short" | "both";
+  rooms?: string;
 }
 
 interface Filters {
@@ -42,6 +45,25 @@ export default function Catalog({ filters }: CatalogProps) {
   );
 
   const properties = tArr<Property>("properties");
+
+  const filtered = properties.filter((prop) => {
+    if (filters.rentalType) {
+      const rt = prop.rentalType ?? "long";
+      if (filters.rentalType === "long" && rt === "short") return false;
+      if (filters.rentalType === "short" && rt === "long") return false;
+    }
+    if (filters.budget && prop.priceNum !== undefined) {
+      const p = prop.priceNum;
+      if (filters.budget === "500" && p > 500) return false;
+      if (filters.budget === "1000" && (p <= 500 || p > 1000)) return false;
+      if (filters.budget === "2000" && (p <= 1000 || p > 2000)) return false;
+      if (filters.budget === "2000+" && p <= 2000) return false;
+    }
+    if (filters.rooms && prop.rooms) {
+      if (prop.rooms !== filters.rooms) return false;
+    }
+    return true;
+  });
 
   return (
     <section id="catalog" className="py-24 px-4 sm:px-6 lg:px-8" ref={ref}>
@@ -123,9 +145,19 @@ export default function Catalog({ filters }: CatalogProps) {
           </div>
         )}
 
+        {/* No results */}
+        {filtered.length === 0 && (
+          <p
+            className="text-center py-16 text-lg"
+            style={{ color: "rgba(245,240,232,0.4)", fontFamily: "var(--font-nunito)" }}
+          >
+            {t("catalog.noResults")}
+          </p>
+        )}
+
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {properties.map((prop, i) => (
+          {filtered.map((prop, i) => (
             <div
               key={i}
               className={`group rounded-2xl overflow-hidden transition-all duration-700 cursor-pointer hover:scale-[1.02] hover:shadow-2xl ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
