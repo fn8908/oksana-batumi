@@ -2,6 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
+import { ymGoal } from "@/lib/ym";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -11,18 +12,26 @@ export default function FinalCTA() {
     <section
       className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
       style={{
-        background:
-          "linear-gradient(135deg, #1a2f0a 0%, #1a1a0a 30%, #1a0a0a 60%, #0a1a2e 100%)",
+        backgroundImage: "url('https://images.unsplash.com/photo-1625566360146-918001e76064?fm=jpg&q=80&w=1920&auto=format&fit=crop')",
+        backgroundSize: "cover",
+        backgroundPosition: "center 40%",
       }}
       ref={ref}
     >
-      {/* Decorative glow */}
+      {/* Dark overlay */}
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0"
+        style={{
+          background: "linear-gradient(to bottom, rgba(10,20,35,0.72) 0%, rgba(10,20,35,0.82) 100%)",
+        }}
+      />
+      {/* Gold glow */}
+      <div
+        className="absolute inset-0 opacity-30"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.15) 0%, transparent 50%),
-            radial-gradient(ellipse at 70% 50%, rgba(78,205,196,0.08) 0%, transparent 50%)
+            radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.2) 0%, transparent 55%),
+            radial-gradient(ellipse at 70% 50%, rgba(78,205,196,0.08) 0%, transparent 55%)
           `,
         }}
       />
@@ -59,9 +68,10 @@ export default function FinalCTA() {
 
         {/* Telegram CTA button */}
         <a
-          href="https://t.me/River095"
+          href="https://t.me/BatRealty"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => ymGoal('telegram_click')}
           className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95"
           style={{
             background: "#C9A96E",
@@ -86,7 +96,7 @@ export default function FinalCTA() {
             className="text-sm font-nunito underline underline-offset-4 transition-opacity hover:opacity-80"
             style={{ color: "rgba(245,240,232,0.4)" }}
           >
-            или заполнить форму →
+            {t("finalCta.formLink")}
           </button>
         </div>
       </div>
