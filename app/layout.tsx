@@ -89,6 +89,13 @@ export default function RootLayout({
   return (
     <html lang="ru" className={`${cormorant.variable} ${nunito.variable}`}>
       <head>
+        {/* Preload hero image for fast LCP on mobile */}
+        <link
+          rel="preload"
+          as="image"
+          href="https://images.unsplash.com/photo-1692960570657-cd1c319a0f29?w=1920&q=85&auto=format&fit=crop"
+          fetchPriority="high"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

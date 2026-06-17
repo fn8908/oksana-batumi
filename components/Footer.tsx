@@ -42,13 +42,13 @@ export default function Footer() {
             </div>
             <p
               className="text-sm leading-relaxed mb-2"
-              style={{ color: "rgba(245,240,232,0.45)" }}
+              style={{ color: "rgba(245,240,232,0.65)" }}
             >
               {t("footer.tagline")}
             </p>
             <p
               className="text-xs"
-              style={{ color: "rgba(245,240,232,0.25)" }}
+              style={{ color: "rgba(245,240,232,0.45)" }}
             >
               {t("footer.copyright")}
             </p>
@@ -58,7 +58,7 @@ export default function Footer() {
           <div>
             <h4
               className="text-xs font-semibold uppercase tracking-widest mb-5"
-              style={{ color: "rgba(245,240,232,0.35)" }}
+              style={{ color: "rgba(245,240,232,0.55)" }}
             >
               {t("footer.nav")}
             </h4>
@@ -68,7 +68,7 @@ export default function Footer() {
                   <button
                     onClick={() => scrollTo(anchorIds[i])}
                     className="text-sm transition-colors hover:text-gold text-left"
-                    style={{ color: "rgba(245,240,232,0.55)" }}
+                    style={{ color: "rgba(245,240,232,0.75)" }}
                   >
                     {link}
                   </button>
@@ -81,7 +81,7 @@ export default function Footer() {
           <div>
             <h4
               className="text-xs font-semibold uppercase tracking-widest mb-5"
-              style={{ color: "rgba(245,240,232,0.35)" }}
+              style={{ color: "rgba(245,240,232,0.55)" }}
             >
               {t("footer.contacts")}
             </h4>
@@ -95,7 +95,7 @@ export default function Footer() {
               <span className="text-xl mt-0.5">🕘</span>
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(245,240,232,0.65)" }}
+                style={{ color: "rgba(245,240,232,0.8)" }}
               >
                 {t("footer.schedule")}
               </p>
@@ -110,7 +110,7 @@ export default function Footer() {
         >
           <p
             className="text-xs"
-            style={{ color: "rgba(245,240,232,0.2)" }}
+            style={{ color: "rgba(245,240,232,0.45)" }}
           >
             Made with ❤️ for Batumi real estate community
           </p>
@@ -121,7 +121,7 @@ export default function Footer() {
             />
             <span
               className="text-xs"
-              style={{ color: "rgba(245,240,232,0.3)" }}
+              style={{ color: "rgba(245,240,232,0.55)" }}
             >
               Online
             </span>

@@ -7,18 +7,17 @@
     "cta": "Başvuru Bırak"
   },
   "hero": {
-    "title": "Batum'da Daire Kiralama — Kolay ve Güvenli",
-    "subtitle": "Onaylı mülkler. Net koşullar. Batum emlak piyasasında deneyimli komisyoncular topluluğu.",
+    "title": "Batum'da Uzun Dönem Daire Kiralama — 6 Aydan Başlayarak",
+    "subtitle": "Onaylı mülkler. Net koşullar. Yalnızca uzun dönem kiralama — Batum'u ev olarak seçenler için.",
     "cta1": "Daire Bul",
     "cta2": "İlanları Görüntüle",
     "fact1": "200+ mülk",
     "fact2": "Gizli komisyon yok",
-    "fact3": "Onaylı belgeler"
+    "fact3": "6 aydan uzun dönem kiralama"
   },
   "search": {
     "rentalType": "Kiralama Türü",
     "longTerm": "Uzun Dönem",
-    "shortTerm": "Kısa Dönem",
     "budget": "Bütçe",
     "budget1": "$500 altı",
     "budget2": "$500–$1000",
@@ -33,8 +32,8 @@
     "success": "✅ Bir emlak danışmanı sizinle iletişime geçecek"
   },
   "catalog": {
-    "title": "Güncel İlanlar",
-    "subtitle": "Komisyoncular topluluğundan seçilmiş mülkler",
+    "title": "Uzun Dönem Kiralık Mülkler",
+    "subtitle": "Batum'da yaşam için daireler, stüdyolar ve evler — 6 aydan itibaren",
     "from": "den",
     "perMonth": "/ay",
     "details": "Detayları Gör",
@@ -47,12 +46,11 @@
       "price": "$350",
       "tags": [
         "Deniz Manzarası",
-        "Uzun Dönem",
-        "Kısa Dönem"
+        "Uzun Dönem"
       ],
       "image": "/1.jpeg",
       "priceNum": 350,
-      "rentalType": "both",
+      "rentalType": "long",
       "rooms": "studio"
     },
     {
@@ -106,7 +104,7 @@
       ],
       "image": "/4.jpg",
       "priceNum": 400,
-      "rentalType": "both",
+      "rentalType": "long",
       "rooms": "studio"
     },
     {
@@ -153,16 +151,15 @@
       },
       {
         "title": "Taşının",
-        "desc": "Sözleşme ve anahtar tesliminde yardım ederiz"
+        "desc": "Sözleşme sürecinde yardım eder, yeni evinize yerleşmenizi sağlarız"
       }
     ]
   },
   "form": {
-    "title": "İhtiyaçlarınıza Göre Mülk Bulacağız",
-    "subtitle": "Başvuru bırakın — 2 saat içinde iletişime geçeceğiz",
-    "rentalTypeLabel": "Kiralama Türü",
-    "longTerm": "Uzun Dönem",
-    "shortTerm": "Kısa Dönem",
+    "title": "Batum'da Uzun Dönem Kiralık Ev Bulun",
+    "subtitle": "Yalnızca uzun dönem kiralama — 6 ay ve üzeri. 2 saat içinde iletişime geçeceğiz.",
+    "rentalTypeLabel": "Kiralama Süresi",
+    "longTerm": "Uzun Dönem — 6 ay ve üzeri",
     "investment": "Yatırım",
     "house": "Ev",
     "villa": "Villa",
@@ -184,14 +181,17 @@
     "contactLabel": "Telegram veya WhatsApp",
     "contactPlaceholder": "@kullanıcıadı veya +90...",
     "commentLabel": "Yorum",
-    "commentPlaceholder": "Ne zaman taşınmayı planlıyorsunuz? Özel istekleriniz var mı?",
+    "commentPlaceholder": "Ne zaman taşınmayı planlıyorsunuz? Ne kadar süreyle kalacaksınız? Özel istekleriniz var mı?",
     "submit": "Başvuru Gönder",
     "privacy": "🔒 Verileriniz üçüncü taraflarla paylaşılmaz.",
     "success": "✅ Başvurunuz alındı! 2 saat içinde Telegram'da mesaj bekleyin.",
     "next": "İleri",
     "back": "Geri",
     "step1": "Parametreler",
-    "step2": "İletişim"
+    "step2": "İletişim",
+    "dealTypeLabel": "Amaç",
+    "buy": "Satın Al",
+    "rent": "Kiralık"
   },
   "neighborhoods": {
     "title": "Batum Semtleri",
@@ -306,15 +306,15 @@
         "city": "Ankara"
       },
       {
-        "text": "Bir aylığına \"denemek için\" geldik — ve işte bir buçuk yıldır buradayız. Stüdyodan büyük bir daireye geçmemize sorunsuz yardım ettiler. Dürüst insanlar, gereksiz laflar yok.",
+        "text": "Batum'a yerleşmeye karar vermiştik — ve bu kararımızdan çok memnunuz. Önce stüdyo buldular, sonra daha büyük daireye sorunsuz geçiş yaptık. Bir buçuk yıldır buradayız. Dürüst insanlar, gereksiz laflar yok.",
         "author": "Dmitry",
         "city": "İzmir"
       }
     ]
   },
   "finalCta": {
-    "title": "Batum'da Evinizi Bulmaya Hazır mısınız?",
-    "subtitle": "Başvuru bırakın — 2 saat içinde seçenekler bulacağız",
+    "title": "Batum'da Uzun Dönem Evinizi Bulmaya Hazır mısınız?",
+    "subtitle": "6 ay ve üzeri kiralama konusunda uzmanız — Telegram'dan yazın, 2 saat içinde yanıt verelim",
     "btn": "Başvuru Bırak",
     "formLink": "veya formu doldurun →"
   },
@@ -383,5 +383,10 @@
         "text": "Dijital varlıklara sert yasaklar yok. Kripto, mevcut Gürcü mevzuatı çerçevesinde kullanılabilir."
       }
     ]
+  },
+  "thankYou": {
+    "heading": "Teşekkürler!",
+    "subtext": "2 saat içinde Telegram'dan size ulaşacağız.",
+    "back": "Ana Sayfaya"
   }
 }

@@ -42,7 +42,7 @@ export default function FloatingCTA() {
     <>
       {/* Mobile: round icon */}
       <a
-        href="https://t.me/BLevin95"
+        href="https://t.me/ALazarev095"
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => ymGoal("telegram_floating_click")}
@@ -55,7 +55,7 @@ export default function FloatingCTA() {
 
       {/* Desktop: pill with text */}
       <a
-        href="https://t.me/BLevin95"
+        href="https://t.me/ALazarev095"
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => ymGoal("telegram_floating_click")}

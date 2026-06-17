@@ -68,10 +68,10 @@ export default function HowItWorks() {
               {/* Number + icon */}
               <div className="relative mb-5">
                 <div
-                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl mb-1 relative z-10"
+                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-3xl mb-1 relative z-10 transition-transform duration-300 hover:scale-110"
                   style={{
-                    background: "rgba(255,255,255,0.04)",
-                    border: "1px solid rgba(201,169,110,0.2)",
+                    background: "rgba(201,169,110,0.08)",
+                    border: "1px solid rgba(201,169,110,0.35)",
                   }}
                 >
                   {icons[i]}
@@ -96,7 +96,7 @@ export default function HowItWorks() {
               </h3>
               <p
                 className="font-nunito text-sm leading-relaxed"
-                style={{ color: "rgba(245,240,232,0.55)" }}
+                style={{ color: "rgba(245,240,232,0.75)" }}
               >
                 {step.desc}
               </p>

@@ -80,7 +80,7 @@ export default function Catalog({ filters }: CatalogProps) {
           </h2>
           <p
             className="font-nunito text-base"
-            style={{ color: "rgba(245,240,232,0.55)" }}
+            style={{ color: "rgba(245,240,232,0.72)" }}
           >
             {t("catalog.subtitle")}
           </p>
@@ -162,8 +162,8 @@ export default function Catalog({ filters }: CatalogProps) {
               key={i}
               className={`group rounded-2xl overflow-hidden transition-all duration-700 cursor-pointer hover:scale-[1.02] hover:shadow-2xl ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: "rgba(255,255,255,0.07)",
+                border: "1px solid rgba(255,255,255,0.13)",
                 backdropFilter: "blur(8px)",
                 transitionDelay: `${i * 0.08}s`,
               }}
@@ -225,7 +225,7 @@ export default function Catalog({ filters }: CatalogProps) {
                 </div>
                 <p
                   className="text-sm mb-4 flex items-center gap-1.5"
-                  style={{ color: "rgba(245,240,232,0.5)" }}
+                  style={{ color: "rgba(245,240,232,0.7)" }}
                 >
                   <span>📍</span> {prop.district}
                 </p>
@@ -249,11 +249,11 @@ export default function Catalog({ filters }: CatalogProps) {
 
                 {/* Button */}
                 <button
-                  className="w-full py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 group-hover:opacity-100 opacity-80"
+                  className="w-full py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 hover:bg-[rgba(201,169,110,0.2)]"
                   style={{
-                    background: "rgba(201,169,110,0.12)",
+                    background: "rgba(201,169,110,0.15)",
                     color: "#C9A96E",
-                    border: "1px solid rgba(201,169,110,0.25)",
+                    border: "1px solid rgba(201,169,110,0.35)",
                   }}
                 >
                   {t("catalog.details")}

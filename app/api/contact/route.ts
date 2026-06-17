@@ -99,7 +99,7 @@ export async function POST(req: NextRequest) {
   if (lang) message += `\n🌐 <b>Язык:</b> ${lang.toUpperCase()}\n`;
 
   message += `\n━━━━━━━━━━━━━━━\n`;
-  message += `<a href="https://t.me/BLevin95">@BLevin95</a>`;
+  message += `<a href="https://t.me/ALazarev095">@ALazarev095</a>`;
 
   console.log("[Contact Form Submission]", {
     name,

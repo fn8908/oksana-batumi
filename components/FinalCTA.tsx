@@ -68,7 +68,7 @@ export default function FinalCTA() {
 
         {/* Telegram CTA button */}
         <a
-          href="https://t.me/BLevin95"
+          href="https://t.me/ALazarev095"
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => ymGoal('telegram_click')}

@@ -33,13 +33,13 @@ export default function Home() {
       <Header />
       <Hero />
       <QuickSearch onSearch={setFilters} />
-      <Catalog filters={filters} />
-      <Neighborhoods />
+      <section id="catalog"><Catalog filters={filters} /></section>
+      <section id="neighborhoods"><Neighborhoods /></section>
       <HowItWorks />
-      <WhyBatumi />
-      <ContactForm />
-      <EliteRealty />
-      <Testimonials />
+      <section id="why-batumi"><WhyBatumi /></section>
+      <section id="contact"><ContactForm /></section>
+      <section id="elite"><EliteRealty /></section>
+      <section id="testimonials"><Testimonials /></section>
       <FinalCTA />
       <Footer />
       <FloatingCTA />

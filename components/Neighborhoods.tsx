@@ -50,7 +50,7 @@ export default function Neighborhoods() {
               className={`flex-shrink-0 w-64 sm:w-72 lg:w-auto snap-start rounded-2xl overflow-hidden transition-all duration-700 cursor-pointer group hover:scale-[1.03] hover:shadow-2xl ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
               style={{
                 transitionDelay: `${i * 0.1}s`,
-                border: "1px solid rgba(255,255,255,0.08)",
+                border: "1px solid rgba(255,255,255,0.14)",
               }}
             >
               {/* Photo */}
@@ -82,11 +82,11 @@ export default function Neighborhoods() {
               {/* Content */}
               <div
                 className="p-5"
-                style={{ background: "rgba(255,255,255,0.04)" }}
+                style={{ background: "rgba(255,255,255,0.08)" }}
               >
                 <p
                   className="text-sm mb-3 leading-relaxed"
-                  style={{ color: "rgba(245,240,232,0.6)" }}
+                  style={{ color: "rgba(245,240,232,0.78)" }}
                 >
                   {n.desc}
                 </p>

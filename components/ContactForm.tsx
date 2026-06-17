@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 import { ymGoal } from "@/lib/ym";
@@ -17,17 +18,19 @@ const DISTRICTS: Record<string, string[]> = {
 export default function ContactForm() {
   const { t, lang } = useLanguage();
   const { ref, inView } = useInView();
+  const router = useRouter();
 
   const districts = DISTRICTS[lang] ?? DISTRICTS.ru;
 
   const [step, setStep] = useState(1);
-  const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const [rentalType, setRentalType] = useState("");
+  const [dealType, setDealType] = useState("rent");
+  const [rentalType, setRentalType] = useState("long");
   const [propertyType, setPropertyType] = useState("apartment");
   const [rooms, setRooms] = useState("");
-  const [budget, setBudget] = useState(700);
+  const [budget, setBudget] = useState(600);
+  const [budgetInput, setBudgetInput] = useState("600");
   const [selectedDistricts, setSelectedDistricts] = useState<string[]>([]);
 
   const [name, setName] = useState("");
@@ -52,6 +55,7 @@ export default function ContactForm() {
           contact,
           budget,
           rooms,
+          deal_type: dealType,
           rental_type: rentalType,
           property_type: propertyType,
           districts: selectedDistricts,
@@ -59,8 +63,8 @@ export default function ContactForm() {
           lang,
         }),
       });
-      setSubmitted(true);
       ymGoal('form_submit');
+      router.push('/thank-you');
     } finally {
       setLoading(false);
     }
@@ -68,8 +72,8 @@ export default function ContactForm() {
 
   const inputStyle = {
     width: "100%",
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
+    background: "rgba(255,255,255,0.08)",
+    border: "1px solid rgba(255,255,255,0.16)",
     borderRadius: "12px",
     padding: "14px 16px",
     color: "#F5F0E8",
@@ -92,13 +96,17 @@ export default function ContactForm() {
     fontFamily: "var(--font-nunito)",
   });
 
-  const rentalTypes = [
+  const dealTypeOptions = [
+    { value: "rent", label: t("form.rent") },
+    { value: "buy", label: t("form.buy") },
+  ];
+
+  const rentalDurationOptions = [
     { value: "long", label: t("form.longTerm") },
-    { value: "short", label: t("form.shortTerm") },
-    { value: "invest", label: t("form.investment") },
   ];
 
   const propertyTypes = [
+    { value: "studio", label: t("form.studio") },
     { value: "apartment", label: t("form.apartment") },
     { value: "house", label: t("form.house") },
     { value: "villa", label: t("form.villa") },
@@ -133,7 +141,7 @@ export default function ContactForm() {
           </h2>
           <p
             className="font-nunito text-base"
-            style={{ color: "rgba(245,240,232,0.55)" }}
+            style={{ color: "rgba(245,240,232,0.72)" }}
           >
             {t("form.subtitle")}
           </p>
@@ -149,32 +157,13 @@ export default function ContactForm() {
         <div
           className={`rounded-2xl p-6 sm:p-8 lg:p-10 transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           style={{
-            background: "rgba(255,255,255,0.03)",
-            border: "1px solid rgba(255,255,255,0.08)",
+            background: "rgba(255,255,255,0.07)",
+            border: "1px solid rgba(255,255,255,0.13)",
             backdropFilter: "blur(12px)",
             transitionDelay: "0.15s",
           }}
         >
-          {submitted ? (
-            <div className="text-center py-12">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center text-2xl mx-auto mb-4"
-                style={{
-                  background: "rgba(78,205,196,0.12)",
-                  border: "1px solid rgba(78,205,196,0.3)",
-                }}
-              >
-                ✅
-              </div>
-              <p
-                className="font-cormorant font-semibold text-2xl"
-                style={{ color: "#F5F0E8" }}
-              >
-                {t("form.success")}
-              </p>
-            </div>
-          ) : (
-            <>
+          <>
               {/* Step indicator */}
               <div className="flex items-center justify-center gap-3 mb-8">
                 {[1, 2].map((s) => (
@@ -221,11 +210,33 @@ export default function ContactForm() {
               <form onSubmit={handleSubmit}>
                 {step === 1 && (
                   <div className="space-y-6">
+                    {/* Deal type: buy or rent */}
+                    <div>
+                      <label
+                        className="block text-xs font-semibold mb-3 uppercase tracking-wider"
+                        style={{ color: "rgba(245,240,232,0.7)" }}
+                      >
+                        {t("form.dealTypeLabel")}
+                      </label>
+                      <div className="flex flex-wrap gap-2">
+                        {dealTypeOptions.map((dt) => (
+                          <button
+                            key={dt.value}
+                            type="button"
+                            style={toggleBtnStyle(dealType === dt.value)}
+                            onClick={() => setDealType(dt.value)}
+                          >
+                            {dt.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+
                     {/* Property type */}
                     <div>
                       <label
                         className="block text-xs font-semibold mb-3 uppercase tracking-wider"
-                        style={{ color: "rgba(245,240,232,0.5)" }}
+                        style={{ color: "rgba(245,240,232,0.7)" }}
                       >
                         {t("form.propertyTypeLabel")}
                       </label>
@@ -243,34 +254,13 @@ export default function ContactForm() {
                       </div>
                     </div>
 
-                    {/* Rental type */}
-                    <div>
-                      <label
-                        className="block text-xs font-semibold mb-3 uppercase tracking-wider"
-                        style={{ color: "rgba(245,240,232,0.5)" }}
-                      >
-                        {t("form.rentalTypeLabel")}
-                      </label>
-                      <div className="flex flex-wrap gap-2">
-                        {rentalTypes.map((rt) => (
-                          <button
-                            key={rt.value}
-                            type="button"
-                            style={toggleBtnStyle(rentalType === rt.value)}
-                            onClick={() => setRentalType(rt.value)}
-                          >
-                            {rt.label}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
 
                     {/* Rooms (only for apartment) */}
                     {propertyType === "apartment" && (
                       <div>
                         <label
                           className="block text-xs font-semibold mb-3 uppercase tracking-wider"
-                          style={{ color: "rgba(245,240,232,0.5)" }}
+                          style={{ color: "rgba(245,240,232,0.7)" }}
                         >
                           {t("form.roomsLabel")}
                         </label>
@@ -293,26 +283,44 @@ export default function ContactForm() {
                     <div>
                       <label
                         className="block text-xs font-semibold mb-3 uppercase tracking-wider"
-                        style={{ color: "rgba(245,240,232,0.5)" }}
+                        style={{ color: "rgba(245,240,232,0.7)" }}
                       >
                         {t("form.budgetLabel")}
                       </label>
                       <div className="flex items-center justify-between mb-3">
                         <span
                           className="text-sm"
-                          style={{ color: "rgba(245,240,232,0.5)" }}
+                          style={{ color: "rgba(245,240,232,0.7)" }}
                         >
                           $200
                         </span>
-                        <span
-                          className="font-cormorant font-bold text-xl"
-                          style={{ color: "#C9A96E" }}
-                        >
-                          ${budget.toLocaleString()}
-                        </span>
+                        <div className="flex items-center gap-1">
+                          <span className="font-cormorant font-bold text-xl" style={{ color: "#C9A96E" }}>$</span>
+                          <input
+                            type="number"
+                            value={budgetInput}
+                            onChange={(e) => setBudgetInput(e.target.value)}
+                            onBlur={(e) => {
+                              const raw = Number(e.target.value);
+                              const rounded = Math.round(raw / 100) * 100;
+                              const clamped = Math.min(5000, Math.max(200, isNaN(rounded) ? 200 : rounded));
+                              setBudget(clamped);
+                              setBudgetInput(String(clamped));
+                            }}
+                            className="font-cormorant font-bold text-xl text-center"
+                            style={{
+                              color: "#C9A96E",
+                              background: "transparent",
+                              border: "none",
+                              borderBottom: "1px solid rgba(201,169,110,0.5)",
+                              outline: "none",
+                              width: "90px",
+                            }}
+                          />
+                        </div>
                         <span
                           className="text-sm"
-                          style={{ color: "rgba(245,240,232,0.5)" }}
+                          style={{ color: "rgba(245,240,232,0.7)" }}
                         >
                           $5000
                         </span>
@@ -321,9 +329,13 @@ export default function ContactForm() {
                         type="range"
                         min={200}
                         max={5000}
-                        step={50}
+                        step={100}
                         value={budget}
-                        onChange={(e) => setBudget(Number(e.target.value))}
+                        onChange={(e) => {
+                          const val = Number(e.target.value);
+                          setBudget(val);
+                          setBudgetInput(String(val));
+                        }}
                         style={{ width: "100%" }}
                       />
                     </div>
@@ -332,7 +344,7 @@ export default function ContactForm() {
                     <div>
                       <label
                         className="block text-xs font-semibold mb-3 uppercase tracking-wider"
-                        style={{ color: "rgba(245,240,232,0.5)" }}
+                        style={{ color: "rgba(245,240,232,0.7)" }}
                       >
                         {t("form.districtsLabel")}
                       </label>
@@ -367,7 +379,7 @@ export default function ContactForm() {
                       <div>
                         <label
                           className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                          style={{ color: "rgba(245,240,232,0.5)" }}
+                          style={{ color: "rgba(245,240,232,0.7)" }}
                         >
                           {t("form.nameLabel")}
                         </label>
@@ -383,7 +395,7 @@ export default function ContactForm() {
                       <div>
                         <label
                           className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                          style={{ color: "rgba(245,240,232,0.5)" }}
+                          style={{ color: "rgba(245,240,232,0.7)" }}
                         >
                           {t("form.contactLabel")}
                         </label>
@@ -401,7 +413,7 @@ export default function ContactForm() {
                     <div>
                       <label
                         className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                        style={{ color: "rgba(245,240,232,0.5)" }}
+                        style={{ color: "rgba(245,240,232,0.7)" }}
                       >
                         {t("form.commentLabel")}
                       </label>
@@ -439,7 +451,7 @@ export default function ContactForm() {
 
                     <p
                       className="text-xs text-center mt-3"
-                      style={{ color: "rgba(245,240,232,0.4)" }}
+                      style={{ color: "rgba(245,240,232,0.6)" }}
                     >
                       {t("form.privacy")}
                     </p>
@@ -447,7 +459,6 @@ export default function ContactForm() {
                 )}
               </form>
             </>
-          )}
         </div>
       </div>
     </section>

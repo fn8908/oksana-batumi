@@ -49,8 +49,9 @@ export default function Testimonials() {
               key={i}
               className={`flex-shrink-0 w-72 sm:w-80 lg:w-auto snap-start rounded-2xl p-6 sm:p-8 flex flex-col transition-all duration-700 ${inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
               style={{
-                background: "rgba(255,255,255,0.04)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: "rgba(255,255,255,0.07)",
+                border: "1px solid rgba(255,255,255,0.12)",
+                borderLeft: "3px solid rgba(201,169,110,0.45)",
                 transitionDelay: `${i * 0.12}s`,
               }}
             >
@@ -97,7 +98,7 @@ export default function Testimonials() {
                   </div>
                   <div
                     className="text-xs"
-                    style={{ color: "rgba(245,240,232,0.4)" }}
+                    style={{ color: "rgba(245,240,232,0.62)" }}
                   >
                     {item.city}
                   </div>

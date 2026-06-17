@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
+import { ymGoal } from "@/lib/ym";
 
 interface Filters {
   rentalType: string;
@@ -17,6 +19,7 @@ interface QuickSearchProps {
 export default function QuickSearch({ onSearch }: QuickSearchProps) {
   const { t, lang } = useLanguage();
   const { ref, inView } = useInView();
+  const router = useRouter();
 
   const [filters, setFilters] = useState<Filters>({
     rentalType: "",
@@ -25,7 +28,6 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
   });
   const [contact, setContact] = useState("");
   const [loading, setLoading] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
 
   const handleSearch = async () => {
     if (!contact.trim()) return;
@@ -44,16 +46,16 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
         }),
       });
     } catch {
-      // show success regardless of network errors
+      // redirect regardless of network errors
     }
-    setLoading(false);
-    setSubmitted(true);
+    ymGoal('form_submit');
     onSearch(filters);
+    router.push('/thank-you');
   };
 
   const selectStyle = {
-    background: "rgba(255,255,255,0.06)",
-    border: "1px solid rgba(255,255,255,0.12)",
+    background: "rgba(255,255,255,0.09)",
+    border: "1px solid rgba(255,255,255,0.18)",
     color: "#F5F0E8",
     borderRadius: "12px",
     padding: "14px 16px",
@@ -66,8 +68,8 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
   };
 
   const inputStyle = {
-    background: "rgba(255,255,255,0.06)",
-    border: "1px solid rgba(255,255,255,0.12)",
+    background: "rgba(255,255,255,0.09)",
+    border: "1px solid rgba(255,255,255,0.18)",
     color: "#F5F0E8",
     borderRadius: "12px",
     padding: "14px 16px",
@@ -89,48 +91,14 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
             backdropFilter: "blur(20px)",
           }}
         >
-          {submitted ? (
-            <div className="flex items-center justify-center py-4 text-center">
-              <p
-                className="text-base sm:text-lg font-semibold"
-                style={{ color: "#4ECDC4", fontFamily: "var(--font-nunito)" }}
-              >
-                {t("search.success")}
-              </p>
-            </div>
-          ) : (
-            <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3">
               {/* Row 1: selects */}
               <div className="flex flex-col sm:flex-row gap-3">
-                {/* Rental type */}
-                <div className="flex-1 min-w-0">
-                  <label
-                    className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                    style={{ color: "rgba(245,240,232,0.5)" }}
-                  >
-                    {t("search.rentalType")}
-                  </label>
-                  <div className="relative">
-                    <select
-                      style={selectStyle}
-                      value={filters.rentalType}
-                      onChange={(e) =>
-                        setFilters({ ...filters, rentalType: e.target.value })
-                      }
-                    >
-                      <option value="">—</option>
-                      <option value="long">{t("search.longTerm")}</option>
-                      <option value="short">{t("search.shortTerm")}</option>
-                    </select>
-                    <span className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" style={{ color: "#C9A96E" }}>▾</span>
-                  </div>
-                </div>
-
                 {/* Budget */}
                 <div className="flex-1 min-w-0">
                   <label
                     className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                    style={{ color: "rgba(245,240,232,0.5)" }}
+                    style={{ color: "rgba(245,240,232,0.7)" }}
                   >
                     {t("search.budget")}
                   </label>
@@ -156,7 +124,7 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
                 <div className="flex-1 min-w-0">
                   <label
                     className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                    style={{ color: "rgba(245,240,232,0.5)" }}
+                    style={{ color: "rgba(245,240,232,0.7)" }}
                   >
                     {t("search.rooms")}
                   </label>
@@ -184,7 +152,7 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
                 <div className="flex-1 min-w-0">
                   <label
                     className="block text-xs font-semibold mb-2 uppercase tracking-wider"
-                    style={{ color: "rgba(245,240,232,0.5)" }}
+                    style={{ color: "rgba(245,240,232,0.7)" }}
                   >
                     {t("form.contactLabel")}
                   </label>
@@ -210,7 +178,6 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
                 </div>
               </div>
             </div>
-          )}
         </div>
       </div>
     </section>

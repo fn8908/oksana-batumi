@@ -7,18 +7,17 @@
     "cta": "Submit Request"
   },
   "hero": {
-    "title": "Rent an Apartment in Batumi — Simple and Safe",
-    "subtitle": "Verified properties. Clear terms. A community of Batumi real estate professionals.",
+    "title": "Long-term Apartment Rental in Batumi — from 6 Months",
+    "subtitle": "Verified properties. Clear terms. We specialize in long-term rentals — for those who choose Batumi as home.",
     "cta1": "Find an Apartment",
     "cta2": "View Properties",
     "fact1": "200+ properties",
     "fact2": "No hidden fees",
-    "fact3": "Verified documents"
+    "fact3": "Rentals from 6 months"
   },
   "search": {
     "rentalType": "Rental Type",
     "longTerm": "Long-term",
-    "shortTerm": "Short-term",
     "budget": "Budget",
     "budget1": "under $500",
     "budget2": "$500–$1000",
@@ -33,8 +32,8 @@
     "success": "✅ A real estate agent will contact you shortly"
   },
   "catalog": {
-    "title": "Current Listings",
-    "subtitle": "Hand-picked properties from our realtor community",
+    "title": "Long-term Rental Properties",
+    "subtitle": "Apartments, studios and homes for living in Batumi — from 6 months",
     "from": "from",
     "perMonth": "/mo",
     "details": "View Details",
@@ -47,12 +46,11 @@
       "price": "$350",
       "tags": [
         "Sea view",
-        "Long-term",
-        "Short-term"
+        "Long-term"
       ],
       "image": "/1.jpeg",
       "priceNum": 350,
-      "rentalType": "both",
+      "rentalType": "long",
       "rooms": "studio"
     },
     {
@@ -106,7 +104,7 @@
       ],
       "image": "/4.jpg",
       "priceNum": 400,
-      "rentalType": "both",
+      "rentalType": "long",
       "rooms": "studio"
     },
     {
@@ -153,16 +151,15 @@
       },
       {
         "title": "Move In",
-        "desc": "We assist with the contract and key handover"
+        "desc": "We help with the contract and getting you settled in your new home"
       }
     ]
   },
   "form": {
-    "title": "We'll Find the Right Property for You",
-    "subtitle": "Submit a request — we'll respond within 2 hours",
-    "rentalTypeLabel": "Rental Type",
-    "longTerm": "Long-term",
-    "shortTerm": "Short-term",
+    "title": "Find Your Long-term Home in Batumi",
+    "subtitle": "Long-term rentals only — from 6 months. We'll get back to you within 2 hours.",
+    "rentalTypeLabel": "Rental Period",
+    "longTerm": "Long-term — 6+ months",
     "investment": "Investment",
     "house": "House",
     "villa": "Villa",
@@ -184,14 +181,17 @@
     "contactLabel": "Telegram or WhatsApp",
     "contactPlaceholder": "@username or +1...",
     "commentLabel": "Comment",
-    "commentPlaceholder": "When are you planning to move in? Any special requirements?",
+    "commentPlaceholder": "When are you planning to move in? How long are you staying? Any special requirements?",
     "submit": "Submit Request",
     "privacy": "🔒 Your data is not shared with third parties. Only with our realtor community.",
     "success": "✅ Request received! Expect a message on Telegram within 2 hours.",
     "next": "Next",
     "back": "Back",
     "step1": "Parameters",
-    "step2": "Contact"
+    "step2": "Contact",
+    "dealTypeLabel": "Purpose",
+    "buy": "Purchase",
+    "rent": "Rental"
   },
   "neighborhoods": {
     "title": "Batumi Neighborhoods",
@@ -306,15 +306,15 @@
         "city": "Dublin"
       },
       {
-        "text": "Came for a month to \"try it out\" and ended up staying a year and a half. They helped us upgrade from a studio to a bigger flat without any hassle. Straightforward, honest people.",
+        "text": "Moved to Batumi with a clear intention — to live here. They helped us find a studio first, then upgraded us to a bigger flat without any hassle. A year and a half in, zero regrets. Straightforward, honest people.",
         "author": "Dmitry",
         "city": "Warsaw"
       }
     ]
   },
   "finalCta": {
-    "title": "Ready to Find Your Home in Batumi?",
-    "subtitle": "Submit a request — we'll find options within 2 hours",
+    "title": "Ready to Find Your Long-term Home in Batumi?",
+    "subtitle": "We specialize in 6-month+ rentals — message us on Telegram and we'll reply within 2 hours",
     "btn": "Submit Request",
     "formLink": "or fill out the form →"
   },
@@ -383,5 +383,10 @@
         "text": "No strict bans on digital assets. Cryptocurrency can be used within the framework of current Georgian law."
       }
     ]
+  },
+  "thankYou": {
+    "heading": "Thank You!",
+    "subtext": "We'll reach out to you on Telegram within 2 hours.",
+    "back": "Back to Home"
   }
 }
