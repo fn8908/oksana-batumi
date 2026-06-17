@@ -48,12 +48,14 @@ export async function POST(req: NextRequest) {
     contact,
     budget,
     rooms,
+    deal_type,
     rental_type,
     property_type,
     districts,
     comment,
     district,
     price,
+    desired_price,
     property_type: modalPropertyType,
     lang,
   } = body;
@@ -87,10 +89,18 @@ export async function POST(req: NextRequest) {
     if (price) message += `💰 <b>Цена:</b> ${price}/мес\n`;
   } else {
     // Full form submission
+    if (deal_type) message += `🎯 <b>Тип сделки:</b> ${deal_type === "buy" ? "Покупка" : "Аренда"}\n`;
     if (rental_type)
       message += `📋 <b>Тип аренды:</b> ${RENTAL_TYPE_LABELS[rental_type] ?? rental_type}\n`;
     if (rooms) message += `🚪 <b>Комнат:</b> ${rooms}\n`;
-    if (budget) message += `💰 <b>Бюджет:</b> $${budget}/мес\n`;
+    if (budget) {
+      if (deal_type === "buy") {
+        message += `💰 <b>Бюджет:</b> $${Number(budget).toLocaleString("ru-RU")}\n`;
+      } else {
+        message += `💰 <b>Бюджет:</b> $${budget}/мес\n`;
+      }
+    }
+    if (desired_price) message += `💎 <b>Желаемая цена:</b> ${desired_price}\n`;
     if (districts?.length)
       message += `📍 <b>Районы:</b> ${districts.join(", ")}\n`;
   }

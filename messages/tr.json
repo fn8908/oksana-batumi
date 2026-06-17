@@ -168,6 +168,9 @@
     "roomsLabel": "Oda Sayısı",
     "studio": "Stüdyo",
     "budgetLabel": "Aylık Bütçe",
+    "budgetBuyLabel": "Bütçe",
+    "desiredPriceLabel": "İstenen Fiyat",
+    "desiredPricePlaceholder": "İstenen fiyatı girin, $",
     "districtsLabel": "Semt (isteğe bağlı)",
     "districts": [
       "Yeni Bulvar",

@@ -31,6 +31,7 @@ export default function ContactForm() {
   const [rooms, setRooms] = useState("");
   const [budget, setBudget] = useState(600);
   const [budgetInput, setBudgetInput] = useState("600");
+  const [desiredPrice, setDesiredPrice] = useState("");
   const [selectedDistricts, setSelectedDistricts] = useState<string[]>([]);
 
   const [name, setName] = useState("");
@@ -61,6 +62,7 @@ export default function ContactForm() {
           districts: selectedDistricts,
           comment,
           lang,
+          ...(dealType === "buy" && desiredPrice ? { desired_price: desiredPrice } : {}),
         }),
       });
       ymGoal('form_submit');
@@ -224,7 +226,17 @@ export default function ContactForm() {
                             key={dt.value}
                             type="button"
                             style={toggleBtnStyle(dealType === dt.value)}
-                            onClick={() => setDealType(dt.value)}
+                            onClick={() => {
+                              setDealType(dt.value);
+                              if (dt.value === "buy") {
+                                setBudget(45000);
+                                setBudgetInput("45000");
+                              } else {
+                                setBudget(600);
+                                setBudgetInput("600");
+                              }
+                              setDesiredPrice("");
+                            }}
                           >
                             {dt.label}
                           </button>
@@ -285,14 +297,14 @@ export default function ContactForm() {
                         className="block text-xs font-semibold mb-3 uppercase tracking-wider"
                         style={{ color: "rgba(245,240,232,0.7)" }}
                       >
-                        {t("form.budgetLabel")}
+                        {dealType === "buy" ? t("form.budgetBuyLabel") : t("form.budgetLabel")}
                       </label>
                       <div className="flex items-center justify-between mb-3">
                         <span
                           className="text-sm"
                           style={{ color: "rgba(245,240,232,0.7)" }}
                         >
-                          $200
+                          {dealType === "buy" ? "$45,000" : "$200"}
                         </span>
                         <div className="flex items-center gap-1">
                           <span className="font-cormorant font-bold text-xl" style={{ color: "#C9A96E" }}>$</span>
@@ -302,10 +314,17 @@ export default function ContactForm() {
                             onChange={(e) => setBudgetInput(e.target.value)}
                             onBlur={(e) => {
                               const raw = Number(e.target.value);
-                              const rounded = Math.round(raw / 100) * 100;
-                              const clamped = Math.min(5000, Math.max(200, isNaN(rounded) ? 200 : rounded));
-                              setBudget(clamped);
-                              setBudgetInput(String(clamped));
+                              if (dealType === "buy") {
+                                const rounded = Math.round(raw / 25000) * 25000;
+                                const clamped = Math.min(1000000, Math.max(45000, isNaN(rounded) ? 45000 : rounded));
+                                setBudget(clamped);
+                                setBudgetInput(String(clamped));
+                              } else {
+                                const rounded = Math.round(raw / 100) * 100;
+                                const clamped = Math.min(5000, Math.max(200, isNaN(rounded) ? 200 : rounded));
+                                setBudget(clamped);
+                                setBudgetInput(String(clamped));
+                              }
                             }}
                             className="font-cormorant font-bold text-xl text-center"
                             style={{
@@ -314,7 +333,7 @@ export default function ContactForm() {
                               border: "none",
                               borderBottom: "1px solid rgba(201,169,110,0.5)",
                               outline: "none",
-                              width: "90px",
+                              width: dealType === "buy" ? "120px" : "90px",
                             }}
                           />
                         </div>
@@ -322,14 +341,14 @@ export default function ContactForm() {
                           className="text-sm"
                           style={{ color: "rgba(245,240,232,0.7)" }}
                         >
-                          $5000
+                          {dealType === "buy" ? "$1,000,000+" : "$5000"}
                         </span>
                       </div>
                       <input
                         type="range"
-                        min={200}
-                        max={5000}
-                        step={100}
+                        min={dealType === "buy" ? 45000 : 200}
+                        max={dealType === "buy" ? 1000000 : 5000}
+                        step={dealType === "buy" ? 25000 : 100}
                         value={budget}
                         onChange={(e) => {
                           const val = Number(e.target.value);
@@ -339,6 +358,25 @@ export default function ContactForm() {
                         style={{ width: "100%" }}
                       />
                     </div>
+
+                    {/* Desired price (buy only) */}
+                    {dealType === "buy" && (
+                      <div>
+                        <label
+                          className="block text-xs font-semibold mb-3 uppercase tracking-wider"
+                          style={{ color: "rgba(245,240,232,0.7)" }}
+                        >
+                          {t("form.desiredPriceLabel")}
+                        </label>
+                        <input
+                          type="text"
+                          style={inputStyle}
+                          value={desiredPrice}
+                          onChange={(e) => setDesiredPrice(e.target.value)}
+                          placeholder={t("form.desiredPricePlaceholder")}
+                        />
+                      </div>
+                    )}
 
                     {/* Districts */}
                     <div>

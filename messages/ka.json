@@ -168,6 +168,9 @@
     "roomsLabel": "ოთახების რაოდენობა",
     "studio": "სტუდიო",
     "budgetLabel": "თვიური ბიუჯეტი",
+    "budgetBuyLabel": "ბიუჯეტი",
+    "desiredPriceLabel": "სასურველი ფასი",
+    "desiredPricePlaceholder": "შეიყვანეთ სასურველი ფასი, $",
     "districtsLabel": "უბანი (სურვილისამებრ)",
     "districts": [
       "ახალი ბულვარი",

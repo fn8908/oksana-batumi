@@ -168,6 +168,9 @@
     "roomsLabel": "מספר חדרים",
     "studio": "סטודיו",
     "budgetLabel": "תקציב חודשי",
+    "budgetBuyLabel": "תקציב",
+    "desiredPriceLabel": "מחיר רצוי",
+    "desiredPricePlaceholder": "הזן מחיר רצוי, $",
     "districtsLabel": "שכונה (אופציונלי)",
     "districts": [
       "הבולוואר החדש",

@@ -168,6 +168,9 @@
     "roomsLabel": "Количество комнат",
     "studio": "Студия",
     "budgetLabel": "Бюджет в месяц",
+    "budgetBuyLabel": "Бюджет",
+    "desiredPriceLabel": "Желаемая цена",
+    "desiredPricePlaceholder": "Введите желаемую цену, $",
     "districtsLabel": "Район (необязательно)",
     "districts": [
       "Новый Бульвар",
