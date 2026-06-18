@@ -46,6 +46,7 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (step !== 2 || !name.trim() || !contact.trim()) return;
     setLoading(true);
     try {
       await fetch("/api/contact", {
@@ -57,7 +58,6 @@ export default function ContactForm() {
           budget,
           rooms,
           deal_type: dealType,
-          rental_type: rentalType,
           property_type: propertyType,
           districts: selectedDistricts,
           comment,
