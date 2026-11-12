@@ -570,6 +570,28 @@
         "İki asansör, katta sadece dört daire",
         "Bina resmi olarak teslim edildi"
       ]
+    },
+    "gorgasali-163": {
+      "title": "Geniş teraslı 160 m² daire, 2 yatak odası",
+      "address": "Batum, Gorgasali Caddesi, 163 - 4. kat",
+      "facts": [
+        "160 m²",
+        "2 yatak odası + mutfaklı salon",
+        "Özel teras",
+        "Uzun dönem kiralık"
+      ],
+      "apartment": [
+        "Salıncak, masa ve ısıtıcılı geniş, üstü kapalı özel teras",
+        "İki büyük yatak odası, aynalı gömme dolaplar",
+        "Mutfaklı salon, tüm cihazlar mevcut: bulaşık makinesi, ocak, fırın, buzdolabı",
+        "Tüm aile için yemek masası",
+        "Duşakabin ve çamaşır makinesi",
+        "Eşyalı ve beyaz eşyalı - taşının ve yaşayın"
+      ],
+      "building": [
+        "4. kat",
+        "Gorgasali Caddesi, Batum merkezi"
+      ]
     }
   }
 }

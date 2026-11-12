@@ -570,6 +570,28 @@
         "Two elevators, only four apartments per floor",
         "Building officially completed and registered"
       ]
+    },
+    "gorgasali-163": {
+      "title": "160 m² apartment with a huge terrace, 2 bedrooms",
+      "address": "Batumi, 163 Gorgasali Street - 4th floor",
+      "facts": [
+        "160 m²",
+        "2 bedrooms + living room with kitchen",
+        "Private terrace",
+        "Long-term rent"
+      ],
+      "apartment": [
+        "Huge private covered terrace with a swing, table and heater",
+        "Two large bedrooms, mirrored wardrobes",
+        "Kitchen-living room with all appliances: dishwasher, stove, oven, fridge",
+        "Dining table for the whole family",
+        "Shower room and washing machine",
+        "Fully furnished and equipped - just move in"
+      ],
+      "building": [
+        "4th floor",
+        "Gorgasali Street, central Batumi"
+      ]
     }
   }
 }

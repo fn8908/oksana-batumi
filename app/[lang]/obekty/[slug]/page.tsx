@@ -11,6 +11,10 @@ export function generateStaticParams() {
   return LANGS.flatMap((lang) => listings.map((l) => ({ lang, slug: l.slug })));
 }
 
+function price(l: (typeof listings)[number], m: (typeof messages)[Lang]) {
+  return l.deal === "rent" ? `${l.price}${m.map.perMonth}` : l.price;
+}
+
 function load(lang: string, slug: string) {
   const l = listings.find((x) => x.slug === slug);
   if (!l || !isLang(lang)) return null;
@@ -23,8 +27,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   if (!data) return {};
   const { l, text } = data;
   return {
-    title: `${text.title} - ${l.price}`,
-    description: `${text.address}. ${text.facts.join(", ")}. ${l.price}.`,
+    title: `${text.title} - ${price(l, data.m)}`,
+    description: `${text.address}. ${text.facts.join(", ")}. ${price(l, data.m)}.`,
     alternates: alternatesFor(data.lang, `/obekty/${l.slug}`),
   };
 }
@@ -66,7 +70,7 @@ export default async function ListingPage({ params }: { params: Params }) {
               {text.title}
             </h1>
             <p className="font-cormorant font-bold text-4xl mb-2" style={{ color: "#C9A96E" }}>
-              {l.price}
+              {price(l, m)}
             </p>
             <p className="text-sm mb-5" style={muted}>
               {text.address}
@@ -117,7 +121,7 @@ export default async function ListingPage({ params }: { params: Params }) {
             </h2>
             {/* subject уходит владельцу в Telegram - всегда по-русски, как и всё уведомление */}
             <LeadForm
-              subject={`Объект: ${messages.ru.listings[l.slug].title}, ${messages.ru.listings[l.slug].address}, ${l.price}`}
+              subject={`Объект: ${messages.ru.listings[l.slug].title}, ${messages.ru.listings[l.slug].address}, ${price(l, messages.ru)}`}
               dealType={l.deal === "sale" ? "buy" : "rent"}
             />
           </div>
