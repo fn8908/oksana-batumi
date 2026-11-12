@@ -13,7 +13,9 @@
     "cta2": "View Properties",
     "fact1": "200+ properties",
     "fact2": "No hidden fees",
-    "fact3": "Rentals from 6 months"
+    "fact3": "Rentals from 6 months",
+    "location": "Batumi · Georgia · 2026",
+    "imageAlt": "Batumi panorama: city, new buildings, boulevard, beach, mountains, sea"
   },
   "search": {
     "rentalType": "Rental Type",
@@ -29,7 +31,8 @@
     "room2": "2",
     "room3": "3+",
     "findBtn": "Search",
-    "success": "✅ A real estate agent will contact you shortly"
+    "success": "✅ A real estate agent will contact you shortly",
+    "roomsShort": "br."
   },
   "catalog": {
     "title": "Long-term Rental Properties",
@@ -293,7 +296,24 @@
   "map": {
     "title": "Adjara Real Estate Map",
     "subtitle": "Properties on the map — click for details",
-    "viewDetails": "View property"
+    "viewDetails": "View property",
+    "loading": "Loading map…",
+    "perMonth": "/mo",
+    "legend": {
+      "apartment": "Apartment",
+      "villa": "Villa",
+      "house": "House"
+    },
+    "districts": {
+      "alleyHeroes": "Heroes Alley",
+      "newBoulevard": "New Boulevard",
+      "oldTown": "Old Town",
+      "rustaveli": "Rustaveli",
+      "greenCape": "Green Cape",
+      "gonio": "Gonio",
+      "sarpi": "Sarpi",
+      "kobuleti": "Kobuleti"
+    }
   },
   "testimonials": {
     "title": "What Our Clients Say",

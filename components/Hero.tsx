@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1692960570657-cd1c319a0f29?w=1920&q=85&auto=format&fit=crop"
-          alt="Батуми панорама — город, новостройки, бульвар, пляж, горы, море"
+          alt={t("hero.imageAlt")}
           className="w-full h-full object-cover"
           style={{ objectPosition: "center 40%" }}
           fetchPriority="high"
@@ -87,7 +87,7 @@ export default function Hero() {
             className="w-1.5 h-1.5 rounded-full animate-pulse"
             style={{ background: "#4ECDC4" }}
           />
-          Батуми · Грузия · 2026
+          {t("hero.location")}
         </div>
 
         {/* H1 */}
@@ -136,7 +136,7 @@ export default function Hero() {
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 13.985l-2.95-.924c-.64-.203-.654-.64.136-.953l11.5-4.432c.534-.194 1.001.13.616.572z" />
             </svg>
-            Написать в Telegram
+            {t("floatingCta.telegram")}
           </a>
           {/* SECONDARY: подобрать квартиру через форму */}
           <button

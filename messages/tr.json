@@ -13,7 +13,9 @@
     "cta2": "İlanları Görüntüle",
     "fact1": "200+ mülk",
     "fact2": "Gizli komisyon yok",
-    "fact3": "6 aydan uzun dönem kiralama"
+    "fact3": "6 aydan uzun dönem kiralama",
+    "location": "Batum · Gürcistan · 2026",
+    "imageAlt": "Batum panoraması: şehir, yeni binalar, bulvar, plaj, dağlar, deniz"
   },
   "search": {
     "rentalType": "Kiralama Türü",
@@ -29,7 +31,8 @@
     "room2": "2",
     "room3": "3+",
     "findBtn": "Ara",
-    "success": "✅ Bir emlak danışmanı sizinle iletişime geçecek"
+    "success": "✅ Bir emlak danışmanı sizinle iletişime geçecek",
+    "roomsShort": "oda"
   },
   "catalog": {
     "title": "Uzun Dönem Kiralık Mülkler",
@@ -293,7 +296,24 @@
   "map": {
     "title": "Acaristan Gayrimenkul Haritası",
     "subtitle": "Haritadaki nesneler — detaylar için tıklayın",
-    "viewDetails": "Detayları Gör"
+    "viewDetails": "Detayları Gör",
+    "loading": "Harita yükleniyor…",
+    "perMonth": "/ay",
+    "legend": {
+      "apartment": "Daire",
+      "villa": "Villa",
+      "house": "Ev"
+    },
+    "districts": {
+      "alleyHeroes": "Kahramanlar Caddesi",
+      "newBoulevard": "Yeni Bulvar",
+      "oldTown": "Eski Şehir",
+      "rustaveli": "Rustaveli",
+      "greenCape": "Yeşil Burun",
+      "gonio": "Gonyo",
+      "sarpi": "Sarp",
+      "kobuleti": "Kobuleti"
+    }
   },
   "testimonials": {
     "title": "Müşterilerimiz Ne Diyor",

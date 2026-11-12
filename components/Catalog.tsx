@@ -38,7 +38,7 @@ const fallbackGradients = [
 ];
 
 export default function Catalog({ filters }: CatalogProps) {
-  const { t, tArr, lang } = useLanguage();
+  const { t, tArr } = useLanguage();
   const { ref, inView } = useInView();
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(
     null
@@ -139,7 +139,7 @@ export default function Catalog({ filters }: CatalogProps) {
               >
                 {filters.rooms === "studio"
                   ? t("search.studio")
-                  : `${filters.rooms} ${lang === "ru" || lang === "uk" ? "комн." : "br."}`}
+                  : `${filters.rooms} ${t("search.roomsShort")}`}
               </span>
             )}
           </div>

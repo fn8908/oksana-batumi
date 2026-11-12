@@ -14,18 +14,22 @@ interface MapProperty {
 }
 
 const MAP_PROPERTIES: MapProperty[] = [
-  { id: 1, lat: 41.6413, lng: 41.6375, type: "apartment", price: "$480/мес", district: "Аллея героев", icon: "🏢" },
-  { id: 2, lat: 41.6251, lng: 41.6442, type: "apartment", price: "$350/мес", district: "Новый Бульвар", icon: "🌊" },
-  { id: 3, lat: 41.6480, lng: 41.6330, type: "apartment", price: "$220/мес", district: "Старый город", icon: "🏛️" },
-  { id: 4, lat: 41.6560, lng: 41.6310, type: "apartment", price: "$550/мес", district: "Руставели", icon: "🌳" },
-  { id: 5, lat: 41.5520, lng: 41.7100, type: "villa", price: "$2500/мес", district: "Зелёный мыс", icon: "🏖️" },
-  { id: 6, lat: 41.5200, lng: 41.7300, type: "house", price: "$900/мес", district: "Гонио", icon: "🏡" },
-  { id: 7, lat: 41.5100, lng: 41.7800, type: "villa", price: "$1800/мес", district: "Сарпи", icon: "⛰️" },
-  { id: 8, lat: 41.7800, lng: 41.9800, type: "house", price: "$1200/мес", district: "Кобулети", icon: "🌿" },
+  { id: 1, lat: 41.6413, lng: 41.6375, type: "apartment", price: "$480", district: "alleyHeroes", icon: "🏢" },
+  { id: 2, lat: 41.6251, lng: 41.6442, type: "apartment", price: "$350", district: "newBoulevard", icon: "🌊" },
+  { id: 3, lat: 41.6480, lng: 41.6330, type: "apartment", price: "$220", district: "oldTown", icon: "🏛️" },
+  { id: 4, lat: 41.6560, lng: 41.6310, type: "apartment", price: "$550", district: "rustaveli", icon: "🌳" },
+  { id: 5, lat: 41.5520, lng: 41.7100, type: "villa", price: "$2500", district: "greenCape", icon: "🏖️" },
+  { id: 6, lat: 41.5200, lng: 41.7300, type: "house", price: "$900", district: "gonio", icon: "🏡" },
+  { id: 7, lat: 41.5100, lng: 41.7800, type: "villa", price: "$1800", district: "sarpi", icon: "⛰️" },
+  { id: 8, lat: 41.7800, lng: 41.9800, type: "house", price: "$1200", district: "kobuleti", icon: "🌿" },
 ];
 
 export default function AdjariaMap() {
   const { t } = useLanguage();
+  const tRef = useRef(t);
+  useEffect(() => {
+    tRef.current = t;
+  }, [t]);
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<unknown>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
@@ -89,7 +93,7 @@ export default function AdjariaMap() {
         const marker = L.marker([prop.lat, prop.lng], { icon }).addTo(map);
 
         marker.bindPopup(
-          `<div style="
+          () => `<div style="
             font-family:sans-serif;
             background:#0F1C2E;
             color:#F5F0E8;
@@ -99,8 +103,8 @@ export default function AdjariaMap() {
             min-width:160px;
             font-size:13px;
           ">
-            <div style="font-size:16px;margin-bottom:4px;">${prop.icon} <strong>${prop.district}</strong></div>
-            <div style="color:#C9A96E;font-weight:700;font-size:15px;">${prop.price}</div>
+            <div style="font-size:16px;margin-bottom:4px;">${prop.icon} <strong>${tRef.current(`map.districts.${prop.district}`)}</strong></div>
+            <div style="color:#C9A96E;font-weight:700;font-size:15px;">${prop.price}${tRef.current("map.perMonth")}</div>
           </div>`,
           {
             className: "custom-popup",
@@ -169,9 +173,9 @@ export default function AdjariaMap() {
         {/* Legend */}
         <div className="flex flex-wrap gap-4 justify-center mb-8">
           {[
-            { color: "rgba(78,205,196,0.85)", label: "Квартира / Apartment" },
-            { color: "rgba(201,169,110,0.85)", label: "Вилла / Villa" },
-            { color: "rgba(130,180,100,0.85)", label: "Дом / House" },
+            { color: "rgba(78,205,196,0.85)", label: t("map.legend.apartment") },
+            { color: "rgba(201,169,110,0.85)", label: t("map.legend.villa") },
+            { color: "rgba(130,180,100,0.85)", label: t("map.legend.house") },
           ].map((leg) => (
             <div
               key={leg.label}
@@ -210,7 +214,7 @@ export default function AdjariaMap() {
                   className="text-sm font-nunito"
                   style={{ color: "rgba(245,240,232,0.5)" }}
                 >
-                  Загрузка карты…
+                  {t("map.loading")}
                 </p>
               </div>
             </div>
@@ -242,13 +246,14 @@ export default function AdjariaMap() {
                 className="text-xs font-semibold mb-1 leading-tight"
                 style={{ color: "#F5F0E8" }}
               >
-                {prop.district}
+                {t(`map.districts.${prop.district}`)}
               </div>
               <div
                 className="text-xs font-bold"
                 style={{ color: "#C9A96E" }}
               >
                 {prop.price}
+                {t("map.perMonth")}
               </div>
             </button>
           ))}
