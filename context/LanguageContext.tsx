@@ -1,22 +1,16 @@
 "use client";
 
-import React, {
-  createContext,
-  useContext,
-  useState,
-  useCallback,
-  useEffect,
-  ReactNode,
-} from "react";
-import ru from "@/messages/ru.json";
-import en from "@/messages/en.json";
-import ka from "@/messages/ka.json";
-import tr from "@/messages/tr.json";
-import uk from "@/messages/uk.json";
-import he from "@/messages/he.json";
+import React, { createContext, useContext, useCallback, ReactNode } from "react";
+import { usePathname, useRouter } from "next/navigation";
+import {
+  type Lang,
+  LANG_COOKIE,
+  RTL_LANGS,
+  messages,
+  swapLang,
+} from "@/lib/i18n";
 
-export type Lang = "ka" | "en" | "ru" | "tr" | "uk" | "he";
-type Messages = typeof ru;
+export type { Lang };
 
 interface LanguageContextType {
   lang: Lang;
@@ -25,17 +19,6 @@ interface LanguageContextType {
   tArr: <T>(path: string) => T[];
   isRTL: boolean;
 }
-
-const messages: Record<Lang, Messages> = {
-  ka: ka as unknown as Messages,
-  en: en as unknown as Messages,
-  ru,
-  tr: tr as unknown as Messages,
-  uk: uk as unknown as Messages,
-  he: he as unknown as Messages,
-};
-
-const RTL_LANGS: Lang[] = ["he"];
 
 const LanguageContext = createContext<LanguageContextType | null>(null);
 
@@ -48,24 +31,25 @@ function getNestedValue(obj: Record<string, unknown>, path: string): unknown {
   }, obj);
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("ru");
+export function LanguageProvider({
+  lang,
+  children,
+}: {
+  lang: Lang;
+  children: ReactNode;
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
   const isRTL = RTL_LANGS.includes(lang);
 
-  const setLang = useCallback((l: Lang) => {
-    setLangState(l);
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = l;
-      document.documentElement.dir = RTL_LANGS.includes(l) ? "rtl" : "ltr";
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof document !== "undefined") {
-      document.documentElement.lang = lang;
-      document.documentElement.dir = isRTL ? "rtl" : "ltr";
-    }
-  }, [lang, isRTL]);
+  // Язык живёт в адресе: переходим на ту же страницу другого языка и запоминаем выбор
+  const setLang = useCallback(
+    (l: Lang) => {
+      document.cookie = `${LANG_COOKIE}=${l}; path=/; max-age=31536000; samesite=lax`;
+      router.push(swapLang(pathname, l) + window.location.hash);
+    },
+    [router, pathname]
+  );
 
   const t = useCallback(
     (path: string): string => {

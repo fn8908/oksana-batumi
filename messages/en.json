@@ -7,8 +7,8 @@
     "cta": "Submit Request"
   },
   "hero": {
-    "title": "Long-term Apartment Rental in Batumi — from 6 Months",
-    "subtitle": "Verified properties. Clear terms. We specialize in long-term rentals — for those who choose Batumi as home.",
+    "title": "Long-term Apartment Rental in Batumi - from 6 Months",
+    "subtitle": "Verified properties. Clear terms. We specialize in long-term rentals - for those who choose Batumi as home.",
     "cta1": "Find an Apartment",
     "cta2": "View Properties",
     "fact1": "200+ properties",
@@ -36,7 +36,7 @@
   },
   "catalog": {
     "title": "Long-term Rental Properties",
-    "subtitle": "Apartments, studios and homes for living in Batumi — from 6 months",
+    "subtitle": "Apartments, studios and homes for living in Batumi - from 6 months",
     "from": "from",
     "perMonth": "/mo",
     "details": "View Details",
@@ -160,9 +160,9 @@
   },
   "form": {
     "title": "Find Your Long-term Home in Batumi",
-    "subtitle": "Long-term rentals only — from 6 months. We'll get back to you within 2 hours.",
+    "subtitle": "Long-term rentals only - from 6 months. We'll get back to you within 2 hours.",
     "rentalTypeLabel": "Rental Period",
-    "longTerm": "Long-term — 6+ months",
+    "longTerm": "Long-term - 6+ months",
     "investment": "Investment",
     "house": "House",
     "villa": "Villa",
@@ -295,7 +295,7 @@
   },
   "map": {
     "title": "Adjara Real Estate Map",
-    "subtitle": "Properties on the map — click for details",
+    "subtitle": "Properties on the map - click for details",
     "viewDetails": "View property",
     "loading": "Loading map…",
     "perMonth": "/mo",
@@ -324,12 +324,12 @@
         "city": "London"
       },
       {
-        "text": "Was a bit nervous about the paperwork — contract's in Georgian and I don't speak a word of it. They walked me through everything patiently, explained all the details. Wouldn't have figured it out on my own. Great service.",
+        "text": "Was a bit nervous about the paperwork - contract's in Georgian and I don't speak a word of it. They walked me through everything patiently, explained all the details. Wouldn't have figured it out on my own. Great service.",
         "author": "Helen",
         "city": "Dublin"
       },
       {
-        "text": "Moved to Batumi with a clear intention — to live here. They helped us find a studio first, then upgraded us to a bigger flat without any hassle. A year and a half in, zero regrets. Straightforward, honest people.",
+        "text": "Moved to Batumi with a clear intention - to live here. They helped us find a studio first, then upgraded us to a bigger flat without any hassle. A year and a half in, zero regrets. Straightforward, honest people.",
         "author": "Dmitry",
         "city": "Warsaw"
       }
@@ -337,12 +337,12 @@
   },
   "finalCta": {
     "title": "Ready to Find Your Long-term Home in Batumi?",
-    "subtitle": "We specialize in 6-month+ rentals — message us on Telegram and we'll reply within 2 hours",
+    "subtitle": "We specialize in 6-month+ rentals - message us on Telegram and we'll reply within 2 hours",
     "btn": "Submit Request",
     "formLink": "or fill out the form →"
   },
   "footer": {
-    "tagline": "BATUMI REALTY — Batumi Realtor Community",
+    "tagline": "BATUMI REALTY - Batumi Realtor Community",
     "copyright": "© 2024 Batumi Realty. All rights reserved.",
     "nav": "Navigation",
     "contacts": "Contact",
@@ -352,18 +352,19 @@
       "How It Works",
       "Submit Request"
     ],
-    "schedule": "We accept requests daily 9:00–22:00 (GMT+4)"
+    "schedule": "We accept requests daily 9:00–22:00 (GMT+4)",
+    "privacy": "Privacy policy"
   },
   "modal": {
     "title": "Request Details",
-    "subtitle": "Submit a request — a realtor will contact you within 2 hours",
+    "subtitle": "Submit a request - a realtor will contact you within 2 hours",
     "submit": "Submit Request",
     "close": "Close"
   },
   "whyBatumi": {
     "title": "Why Choose Batumi for Life & Business",
     "subtitle": "A modern, comfortable environment for entrepreneurs, remote professionals, and families who value stability, freedom, and international opportunities.",
-    "tagline": "Batumi — the ideal balance of freedom, stability, and growth",
+    "tagline": "Batumi - the ideal balance of freedom, stability, and growth",
     "items": [
       {
         "icon": "💰",
@@ -373,7 +374,7 @@
       {
         "icon": "🌐",
         "title": "Free & Open Internet",
-        "text": "Fast, stable internet with zero blocks. Telegram, YouTube, Instagram, Facebook — all work without restrictions or VPN."
+        "text": "Fast, stable internet with zero blocks. Telegram, YouTube, Instagram, Facebook - all work without restrictions or VPN."
       },
       {
         "icon": "🎓",
@@ -398,7 +399,7 @@
       {
         "icon": "🔓",
         "title": "Sanction-Free Zone",
-        "text": "International shipments, cross-border bank transfers, and global business — all without restrictions."
+        "text": "International shipments, cross-border bank transfers, and global business - all without restrictions."
       },
       {
         "icon": "₿",
@@ -415,5 +416,160 @@
   "floatingCta": {
     "telegram": "Message on Telegram",
     "youtube": "Go to YouTube"
+  },
+  "meta": {
+    "title": "Rent and Buy Property in Batumi - Batumi Realty",
+    "description": "Apartments, houses and villas for rent and sale in Batumi, Georgia. Long-term rentals, new buildings by the sea, luxury homes in the mountains of Adjara. A community of trusted realtors.",
+    "ogDescription": "Verified listings. Transparent terms. Realtors with experience in the Batumi market.",
+    "ogAlt": "Batumi Realty - property in Batumi",
+    "keywords": [
+      "Batumi apartment rent",
+      "buy apartment in Batumi",
+      "Batumi real estate",
+      "Batumi villa",
+      "Adjara property",
+      "Batumi realtor",
+      "Georgia property"
+    ],
+    "orgDescription": "A community of Batumi realtors. Apartments, houses and villas for rent and sale in Batumi and the mountains of Adjara.",
+    "city": "Batumi",
+    "country": "Georgia"
+  },
+  "leadForm": {
+    "name": "Your name",
+    "contact": "Phone, WhatsApp or Telegram",
+    "comment": "Your question or a convenient time for a viewing",
+    "submit": "Send request",
+    "sending": "Sending...",
+    "consent": "By clicking the button you agree to the",
+    "consentLink": "privacy policy"
+  },
+  "listing": {
+    "sale": "For sale",
+    "rent": "For rent",
+    "telegram": "Message us on Telegram - price, documents, viewing",
+    "about": "About the apartment",
+    "building": "About the building",
+    "request": "Send a request",
+    "subject": "Listing"
+  },
+  "owners": {
+    "metaTitle": "Sell or rent out your apartment in Batumi",
+    "metaDescription": "We help you sell or rent out your apartment in Batumi: price estimate, video tour, showing to buyers and tenants.",
+    "heading": "Sell or rent out your apartment in Batumi",
+    "intro": "Own an apartment or house in Batumi? We will find a buyer or a long-term tenant.",
+    "steps": [
+      "We assess the apartment and name a realistic market price",
+      "We film a video tour and publish it on our YouTube channel and website",
+      "We show the property to buyers and tenants in Georgia and abroad",
+      "We run viewings and support the deal"
+    ],
+    "telegram": "Message us on Telegram",
+    "formHeading": "Or send a request",
+    "commentPlaceholder": "Address, area, sell or rent, desired price",
+    "subject": "Owner: wants to sell or rent out"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "sections": [
+      {
+        "h": "Who processes the data",
+        "p": [
+          "The website batumi-realty.org belongs to the Batumi Realty community of realtors (Batumi, Georgia). For any questions about your data, write to us on Telegram: @ALazarev095."
+        ]
+      },
+      {
+        "h": "What data we collect",
+        "p": [
+          "Data you enter yourself in the request form or in a Google ad form: name, phone, WhatsApp or Telegram, email address, comment, property preferences.",
+          "Technical data about your visit: IP address, device and browser type, referring pages and actions on the site. It is collected by analytics services through cookies."
+        ]
+      },
+      {
+        "h": "Why",
+        "p": [
+          "To contact you about your request, find a property, arrange a viewing and support a sale or rental deal.",
+          "To understand which ads and pages work and to improve the website."
+        ]
+      },
+      {
+        "h": "Who receives the data",
+        "p": [
+          "Only Batumi Realty realtors who work on your request. We do not sell your data or share it with third parties for advertising.",
+          "Analytics and advertising services - Google (Google Ads, Google Analytics) and Yandex (Yandex Metrica) - receive technical visit data under their own privacy policies."
+        ]
+      },
+      {
+        "h": "How long we keep it",
+        "p": [
+          "We keep request data while we work on it and no longer than 3 years after our last contact with you. We will delete it earlier at your request."
+        ]
+      },
+      {
+        "h": "Your rights",
+        "p": [
+          "You can ask what data we hold about you, correct it or ask us to delete it. Write to @ALazarev095 on Telegram - we will reply within 10 days.",
+          "You can disable cookies in your browser settings. The website will keep working."
+        ]
+      },
+      {
+        "h": "Changes",
+        "p": [
+          "This policy is effective from November 12, 2026. If it changes, we will update this page."
+        ]
+      }
+    ]
+  },
+  "listings": {
+    "inasaridze-7-80": {
+      "title": "3-bedroom apartment, 80 m², 25th floor, sea view",
+      "address": "Batumi, 7 Inasaridze Street",
+      "facts": [
+        "80 m²",
+        "3 bedrooms + living room with kitchen",
+        "25th floor",
+        "Brand new, never lived in"
+      ],
+      "apartment": [
+        "Renovated by the owners for themselves: underfloor heating throughout, porcelain tiles",
+        "Heating by an economical gas boiler",
+        "Kitchen with a quartz countertop, all appliances included: dishwasher, oven, microwave, gas stove, two-door fridge",
+        "Washer-dryer, large sofa bed",
+        "Plenty of storage space",
+        "Bathroom with a window, Grohe plumbing, Schneider electrics",
+        "Two balconies with sea and mountain views"
+      ],
+      "building": [
+        "Underground parking",
+        "\"Magnit\" grocery store in the building",
+        "Two elevators, only four apartments per floor",
+        "Building officially completed and registered"
+      ]
+    },
+    "inasaridze-7-82": {
+      "title": "3-bedroom apartment, 82 m², 25th floor, sea and mountain views",
+      "address": "Batumi, 7 Inasaridze Street - Grand Mall area, 5 minutes to the beach",
+      "facts": [
+        "82 m²",
+        "3 bedrooms + living room with kitchen",
+        "25th floor",
+        "Brand new, never lived in"
+      ],
+      "apartment": [
+        "Renovated by the owners for themselves: underfloor heating throughout, porcelain tiles",
+        "Heating by an economical gas boiler",
+        "Kitchen with a quartz countertop, all appliances included: dishwasher, oven, microwave, gas stove, two-door fridge",
+        "Washer-dryer, large sofa bed",
+        "Two bedrooms with windows, the third without a window, plenty of storage",
+        "Bathroom with a window, Grohe plumbing, Schneider electrics",
+        "Two balconies with sea and mountain views"
+      ],
+      "building": [
+        "Underground parking",
+        "\"Magnit\" grocery store in the building",
+        "Two elevators, only four apartments per floor",
+        "Building officially completed and registered"
+      ]
+    }
   }
 }

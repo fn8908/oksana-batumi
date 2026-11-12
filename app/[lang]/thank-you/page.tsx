@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function ThankYouPage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   return (
     <main
@@ -37,7 +37,7 @@ export default function ThankYouPage() {
         </p>
 
         <Link
-          href="/"
+          href={`/${lang}`}
           className="inline-block px-8 py-4 rounded-xl font-nunito font-semibold text-sm transition-all hover:opacity-90 hover:scale-[1.02]"
           style={{ background: "#C9A96E", color: "#0F1C2E" }}
         >

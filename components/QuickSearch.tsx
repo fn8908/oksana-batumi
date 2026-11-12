@@ -28,9 +28,16 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
   });
   const [contact, setContact] = useState("");
   const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState({ budget: false, rooms: false, contact: false });
 
   const handleSearch = async () => {
-    if (!contact.trim()) return;
+    const newErrors = {
+      budget: !filters.budget,
+      rooms: !filters.rooms,
+      contact: !contact.trim(),
+    };
+    setErrors(newErrors);
+    if (Object.values(newErrors).some(Boolean)) return;
     setLoading(true);
     try {
       await fetch("/api/contact", {
@@ -50,12 +57,12 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
     }
     ymGoal('form_submit');
     onSearch(filters);
-    router.push('/thank-you');
+    router.push(`/${lang}/thank-you`);
   };
 
-  const selectStyle = {
+  const fieldStyle = (hasError: boolean) => ({
     background: "rgba(255,255,255,0.09)",
-    border: "1px solid rgba(255,255,255,0.18)",
+    border: hasError ? "1px solid rgba(255,90,90,0.85)" : "1px solid rgba(255,255,255,0.18)",
     color: "#F5F0E8",
     borderRadius: "12px",
     padding: "14px 16px",
@@ -65,19 +72,9 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
     width: "100%",
     appearance: "none" as const,
     cursor: "pointer",
-  };
-
-  const inputStyle = {
-    background: "rgba(255,255,255,0.09)",
-    border: "1px solid rgba(255,255,255,0.18)",
-    color: "#F5F0E8",
-    borderRadius: "12px",
-    padding: "14px 16px",
-    fontSize: "14px",
-    fontFamily: "var(--font-nunito)",
-    outline: "none",
-    width: "100%",
-  };
+    boxShadow: hasError ? "0 0 0 3px rgba(255,90,90,0.15)" : undefined,
+    transition: "border-color 0.2s, box-shadow 0.2s",
+  });
 
   return (
     <section className="py-0 -mt-8 relative z-10" ref={ref}>
@@ -104,11 +101,12 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
                   </label>
                   <div className="relative">
                     <select
-                      style={selectStyle}
+                      style={fieldStyle(errors.budget)}
                       value={filters.budget}
-                      onChange={(e) =>
-                        setFilters({ ...filters, budget: e.target.value })
-                      }
+                      onChange={(e) => {
+                        setFilters({ ...filters, budget: e.target.value });
+                        setErrors((prev) => ({ ...prev, budget: false }));
+                      }}
                     >
                       <option value="">—</option>
                       <option value="500">{t("search.budget1")}</option>
@@ -130,11 +128,12 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
                   </label>
                   <div className="relative">
                     <select
-                      style={selectStyle}
+                      style={fieldStyle(errors.rooms)}
                       value={filters.rooms}
-                      onChange={(e) =>
-                        setFilters({ ...filters, rooms: e.target.value })
-                      }
+                      onChange={(e) => {
+                        setFilters({ ...filters, rooms: e.target.value });
+                        setErrors((prev) => ({ ...prev, rooms: false }));
+                      }}
                     >
                       <option value="">—</option>
                       <option value="studio">{t("search.studio")}</option>
@@ -158,11 +157,13 @@ export default function QuickSearch({ onSearch }: QuickSearchProps) {
                   </label>
                   <input
                     type="text"
-                    style={inputStyle}
+                    style={fieldStyle(errors.contact)}
                     value={contact}
-                    onChange={(e) => setContact(e.target.value)}
+                    onChange={(e) => {
+                      setContact(e.target.value);
+                      setErrors((prev) => ({ ...prev, contact: false }));
+                    }}
                     placeholder={t("form.contactPlaceholder")}
-                    required
                   />
                 </div>
 

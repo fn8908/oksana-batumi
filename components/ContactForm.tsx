@@ -37,6 +37,7 @@ export default function ContactForm() {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [comment, setComment] = useState("");
+  const [errors, setErrors] = useState({ name: false, contact: false });
 
   const toggleDistrict = (d: string) => {
     setSelectedDistricts((prev) =>
@@ -46,7 +47,10 @@ export default function ContactForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (step !== 2 || !name.trim() || !contact.trim()) return;
+    if (step !== 2) return;
+    const newErrors = { name: !name.trim(), contact: !contact.trim() };
+    setErrors(newErrors);
+    if (Object.values(newErrors).some(Boolean)) return;
     setLoading(true);
     try {
       await fetch("/api/contact", {
@@ -66,16 +70,16 @@ export default function ContactForm() {
         }),
       });
       ymGoal('form_submit');
-      router.push('/thank-you');
+      router.push(`/${lang}/thank-you`);
     } finally {
       setLoading(false);
     }
   };
 
-  const inputStyle = {
+  const inputStyle = (hasError = false) => ({
     width: "100%",
     background: "rgba(255,255,255,0.08)",
-    border: "1px solid rgba(255,255,255,0.16)",
+    border: hasError ? "1px solid rgba(255,90,90,0.85)" : "1px solid rgba(255,255,255,0.16)",
     borderRadius: "12px",
     padding: "14px 16px",
     color: "#F5F0E8",
@@ -83,7 +87,9 @@ export default function ContactForm() {
     fontFamily: "var(--font-nunito)",
     outline: "none",
     resize: "none" as const,
-  };
+    boxShadow: hasError ? "0 0 0 3px rgba(255,90,90,0.15)" : undefined,
+    transition: "border-color 0.2s, box-shadow 0.2s",
+  });
 
   const toggleBtnStyle = (active: boolean) => ({
     padding: "10px 18px",
@@ -370,7 +376,7 @@ export default function ContactForm() {
                         </label>
                         <input
                           type="text"
-                          style={inputStyle}
+                          style={inputStyle()}
                           value={desiredPrice}
                           onChange={(e) => setDesiredPrice(e.target.value)}
                           placeholder={t("form.desiredPricePlaceholder")}
@@ -422,12 +428,11 @@ export default function ContactForm() {
                           {t("form.nameLabel")}
                         </label>
                         <input
-                          style={inputStyle}
+                          style={inputStyle(errors.name)}
                           type="text"
                           placeholder={t("form.namePlaceholder")}
                           value={name}
-                          onChange={(e) => setName(e.target.value)}
-                          required
+                          onChange={(e) => { setName(e.target.value); setErrors((prev) => ({ ...prev, name: false })); }}
                         />
                       </div>
                       <div>
@@ -438,12 +443,11 @@ export default function ContactForm() {
                           {t("form.contactLabel")}
                         </label>
                         <input
-                          style={inputStyle}
+                          style={inputStyle(errors.contact)}
                           type="text"
                           placeholder={t("form.contactPlaceholder")}
                           value={contact}
-                          onChange={(e) => setContact(e.target.value)}
-                          required
+                          onChange={(e) => { setContact(e.target.value); setErrors((prev) => ({ ...prev, contact: false })); }}
                         />
                       </div>
                     </div>
@@ -456,7 +460,7 @@ export default function ContactForm() {
                         {t("form.commentLabel")}
                       </label>
                       <textarea
-                        style={{ ...inputStyle, minHeight: "100px" }}
+                        style={{ ...inputStyle(), minHeight: "100px" }}
                         placeholder={t("form.commentPlaceholder")}
                         value={comment}
                         onChange={(e) => setComment(e.target.value)}

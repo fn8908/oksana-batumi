@@ -5,7 +5,7 @@ import { useLanguage } from "@/context/LanguageContext";
 const anchorIds = ["catalog", "neighborhoods", "how-it-works", "contact-form"];
 
 export default function Footer() {
-  const { t, tArr } = useLanguage();
+  const { t, tArr, lang } = useLanguage();
 
   const links = tArr<string>("footer.links");
 
@@ -52,6 +52,13 @@ export default function Footer() {
             >
               {t("footer.copyright")}
             </p>
+            <a
+              href={`/${lang}/privacy`}
+              className="text-xs underline"
+              style={{ color: "rgba(245,240,232,0.45)" }}
+            >
+              {t("footer.privacy")}
+            </a>
           </div>
 
           {/* Column 2: Links */}

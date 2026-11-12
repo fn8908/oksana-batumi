@@ -7,8 +7,8 @@
     "cta": "Başvuru Bırak"
   },
   "hero": {
-    "title": "Batum'da Uzun Dönem Daire Kiralama — 6 Aydan Başlayarak",
-    "subtitle": "Onaylı mülkler. Net koşullar. Yalnızca uzun dönem kiralama — Batum'u ev olarak seçenler için.",
+    "title": "Batum'da Uzun Dönem Daire Kiralama - 6 Aydan Başlayarak",
+    "subtitle": "Onaylı mülkler. Net koşullar. Yalnızca uzun dönem kiralama - Batum'u ev olarak seçenler için.",
     "cta1": "Daire Bul",
     "cta2": "İlanları Görüntüle",
     "fact1": "200+ mülk",
@@ -36,7 +36,7 @@
   },
   "catalog": {
     "title": "Uzun Dönem Kiralık Mülkler",
-    "subtitle": "Batum'da yaşam için daireler, stüdyolar ve evler — 6 aydan itibaren",
+    "subtitle": "Batum'da yaşam için daireler, stüdyolar ve evler - 6 aydan itibaren",
     "from": "den",
     "perMonth": "/ay",
     "details": "Detayları Gör",
@@ -160,9 +160,9 @@
   },
   "form": {
     "title": "Batum'da Uzun Dönem Kiralık Ev Bulun",
-    "subtitle": "Yalnızca uzun dönem kiralama — 6 ay ve üzeri. 2 saat içinde iletişime geçeceğiz.",
+    "subtitle": "Yalnızca uzun dönem kiralama - 6 ay ve üzeri. 2 saat içinde iletişime geçeceğiz.",
     "rentalTypeLabel": "Kiralama Süresi",
-    "longTerm": "Uzun Dönem — 6 ay ve üzeri",
+    "longTerm": "Uzun Dönem - 6 ay ve üzeri",
     "investment": "Yatırım",
     "house": "Ev",
     "villa": "Villa",
@@ -295,7 +295,7 @@
   },
   "map": {
     "title": "Acaristan Gayrimenkul Haritası",
-    "subtitle": "Haritadaki nesneler — detaylar için tıklayın",
+    "subtitle": "Haritadaki nesneler - detaylar için tıklayın",
     "viewDetails": "Detayları Gör",
     "loading": "Harita yükleniyor…",
     "perMonth": "/ay",
@@ -324,12 +324,12 @@
         "city": "İstanbul"
       },
       {
-        "text": "İki çocukla yalnız uçtum ve biraz endişeliydim — Gürcüce sözleşme, tanımadığım piyasa. Her şeyi sabırla anlattılar. Şu an 2+1 kiralıyorum, çocuklar iki sokak ötede okula gidiyor.",
+        "text": "İki çocukla yalnız uçtum ve biraz endişeliydim - Gürcüce sözleşme, tanımadığım piyasa. Her şeyi sabırla anlattılar. Şu an 2+1 kiralıyorum, çocuklar iki sokak ötede okula gidiyor.",
         "author": "Elena",
         "city": "Ankara"
       },
       {
-        "text": "Batum'a yerleşmeye karar vermiştik — ve bu kararımızdan çok memnunuz. Önce stüdyo buldular, sonra daha büyük daireye sorunsuz geçiş yaptık. Bir buçuk yıldır buradayız. Dürüst insanlar, gereksiz laflar yok.",
+        "text": "Batum'a yerleşmeye karar vermiştik - ve bu kararımızdan çok memnunuz. Önce stüdyo buldular, sonra daha büyük daireye sorunsuz geçiş yaptık. Bir buçuk yıldır buradayız. Dürüst insanlar, gereksiz laflar yok.",
         "author": "Dmitry",
         "city": "İzmir"
       }
@@ -337,12 +337,12 @@
   },
   "finalCta": {
     "title": "Batum'da Uzun Dönem Evinizi Bulmaya Hazır mısınız?",
-    "subtitle": "6 ay ve üzeri kiralama konusunda uzmanız — Telegram'dan yazın, 2 saat içinde yanıt verelim",
+    "subtitle": "6 ay ve üzeri kiralama konusunda uzmanız - Telegram'dan yazın, 2 saat içinde yanıt verelim",
     "btn": "Başvuru Bırak",
     "formLink": "veya formu doldurun →"
   },
   "footer": {
-    "tagline": "BATUMI REALTY — Batum Komisyoncular Topluluğu",
+    "tagline": "BATUMI REALTY - Batum Komisyoncular Topluluğu",
     "copyright": "© 2024 Batumi Realty. Tüm hakları saklıdır.",
     "nav": "Navigasyon",
     "contacts": "İletişim",
@@ -352,18 +352,19 @@
       "Nasıl Çalışır",
       "Başvuru Bırak"
     ],
-    "schedule": "Başvuruları her gün 9:00–22:00 kabul ediyoruz (GMT+4)"
+    "schedule": "Başvuruları her gün 9:00–22:00 kabul ediyoruz (GMT+4)",
+    "privacy": "Gizlilik politikası"
   },
   "modal": {
     "title": "Detayları Öğren",
-    "subtitle": "Başvuru bırakın — komisyoncu 2 saat içinde iletişime geçecek",
+    "subtitle": "Başvuru bırakın - komisyoncu 2 saat içinde iletişime geçecek",
     "submit": "Başvuru Gönder",
     "close": "Kapat"
   },
   "whyBatumi": {
-    "title": "Neden Batum — Yaşam ve İş İçin",
+    "title": "Neden Batum - Yaşam ve İş İçin",
     "subtitle": "İstikrarı, özgürlüğü ve uluslararası fırsatları değer veren girişimciler, uzaktan çalışanlar ve aileler için modern ve konforlu bir ortam.",
-    "tagline": "Batum — özgürlük, istikrar ve büyüme için ideal denge",
+    "tagline": "Batum - özgürlük, istikrar ve büyüme için ideal denge",
     "items": [
       {
         "icon": "💰",
@@ -373,7 +374,7 @@
       {
         "icon": "🌐",
         "title": "Özgür İnternet",
-        "text": "Engelsiz, stabil internet. Telegram, YouTube, Instagram, Facebook — VPN olmadan, sınırsız çalışır."
+        "text": "Engelsiz, stabil internet. Telegram, YouTube, Instagram, Facebook - VPN olmadan, sınırsız çalışır."
       },
       {
         "icon": "🎓",
@@ -398,7 +399,7 @@
       {
         "icon": "🔓",
         "title": "Yaptırım Yok",
-        "text": "Uluslararası tedarik, banka transferleri ve küresel iş — hiçbir kısıtlama olmadan."
+        "text": "Uluslararası tedarik, banka transferleri ve küresel iş - hiçbir kısıtlama olmadan."
       },
       {
         "icon": "₿",
@@ -415,5 +416,160 @@
   "floatingCta": {
     "telegram": "Telegram'dan yaz",
     "youtube": "YouTube'a git"
+  },
+  "meta": {
+    "title": "Batum'da Kiralık ve Satılık Emlak - Batumi Realty",
+    "description": "Batum, Gürcistan'da kiralık ve satılık daireler, evler ve villalar. Uzun dönem kiralama, denize yakın yeni binalar, Acara dağlarında lüks konutlar. Güvenilir emlakçılar topluluğu.",
+    "ogDescription": "Doğrulanmış ilanlar. Şeffaf koşullar. Batum piyasasında deneyimli emlakçılar.",
+    "ogAlt": "Batumi Realty - Batum'da emlak",
+    "keywords": [
+      "Batum kiralık daire",
+      "Batum satılık daire",
+      "Batum emlak",
+      "Batum villa",
+      "Acara emlak",
+      "Batum emlakçı",
+      "Gürcistan emlak"
+    ],
+    "orgDescription": "Batum emlakçılar topluluğu. Batum ve Acara dağlarında kiralık ve satılık daireler, evler ve villalar.",
+    "city": "Batum",
+    "country": "Gürcistan"
+  },
+  "leadForm": {
+    "name": "Adınız",
+    "contact": "Telefon, WhatsApp veya Telegram",
+    "comment": "Sorunuz veya görüntüleme için uygun zaman",
+    "submit": "Talep gönder",
+    "sending": "Gönderiliyor...",
+    "consent": "Butona tıklayarak kabul etmiş olursunuz:",
+    "consentLink": "gizlilik politikası"
+  },
+  "listing": {
+    "sale": "Satılık",
+    "rent": "Kiralık",
+    "telegram": "Telegram'dan yazın - fiyat, belgeler, görüntüleme",
+    "about": "Daire hakkında",
+    "building": "Bina hakkında",
+    "request": "Talep bırakın",
+    "subject": "İlan"
+  },
+  "owners": {
+    "metaTitle": "Batum'daki dairenizi satın veya kiraya verin",
+    "metaDescription": "Batum'daki dairenizi satmanıza veya kiraya vermenize yardımcı oluyoruz: fiyat değerlendirmesi, video tur, alıcılara ve kiracılara gösterim.",
+    "heading": "Batum'daki dairenizi satın veya kiraya verin",
+    "intro": "Batum'da daire veya ev sahibi misiniz? Alıcı veya uzun dönem kiracı buluruz.",
+    "steps": [
+      "Daireyi değerlendirir, gerçek piyasa fiyatını söyleriz",
+      "Video tur çeker, YouTube kanalımızda ve sitemizde yayınlarız",
+      "Mülkü Gürcistan'daki ve yurt dışındaki alıcılara ve kiracılara gösteririz",
+      "Görüntülemeleri yapar ve işlemi yürütürüz"
+    ],
+    "telegram": "Telegram'dan yazın",
+    "formHeading": "Veya talep bırakın",
+    "commentPlaceholder": "Adres, alan, satış mı kiralama mı, istenen fiyat",
+    "subject": "Mülk sahibi: satmak veya kiraya vermek istiyor"
+  },
+  "privacy": {
+    "title": "Gizlilik politikası",
+    "sections": [
+      {
+        "h": "Verileri kim işler",
+        "p": [
+          "batumi-realty.org sitesi Batumi Realty emlakçılar topluluğuna (Batum, Gürcistan) aittir. Verilerinizle ilgili tüm sorular için Telegram'dan yazın: @ALazarev095."
+        ]
+      },
+      {
+        "h": "Hangi verileri topluyoruz",
+        "p": [
+          "Talep formuna veya Google reklam formuna kendiniz girdiğiniz veriler: ad, telefon, WhatsApp veya Telegram, e-posta adresi, yorum, emlak tercihleri.",
+          "Ziyaretinize ilişkin teknik veriler: IP adresi, cihaz ve tarayıcı türü, geldiğiniz sayfalar ve sitedeki işlemler. Bunlar çerezler aracılığıyla analiz hizmetleri tarafından toplanır."
+        ]
+      },
+      {
+        "h": "Neden",
+        "p": [
+          "Talebinizle ilgili sizinle iletişime geçmek, mülk seçmek, görüntüleme ayarlamak ve satış veya kiralama işlemini yürütmek için.",
+          "Hangi reklamların ve sayfaların işe yaradığını anlamak ve siteyi geliştirmek için."
+        ]
+      },
+      {
+        "h": "Veriler kime aktarılır",
+        "p": [
+          "Yalnızca talebinizle ilgilenen Batumi Realty emlakçılarına. Verilerinizi satmıyor ve reklam amacıyla üçüncü taraflarla paylaşmıyoruz.",
+          "Analiz ve reklam hizmetleri - Google (Google Ads, Google Analytics) ve Yandex (Yandex Metrica) - kendi gizlilik politikalarına göre teknik ziyaret verilerini alır."
+        ]
+      },
+      {
+        "h": "Ne kadar süre saklıyoruz",
+        "p": [
+          "Talep verilerini üzerinde çalıştığımız sürece ve sizinle son iletişimden itibaren en fazla 3 yıl saklarız. İsteğiniz üzerine daha önce sileriz."
+        ]
+      },
+      {
+        "h": "Haklarınız",
+        "p": [
+          "Hakkınızda hangi verileri tuttuğumuzu öğrenebilir, düzeltebilir veya silinmesini isteyebilirsiniz. Telegram'dan @ALazarev095 adresine yazın - 10 gün içinde yanıt veririz.",
+          "Çerezleri tarayıcı ayarlarından kapatabilirsiniz. Site çalışmaya devam eder."
+        ]
+      },
+      {
+        "h": "Değişiklikler",
+        "p": [
+          "Bu politika 12 Kasım 2026'dan itibaren geçerlidir. Değişiklik olursa bu sayfayı güncelleriz."
+        ]
+      }
+    ]
+  },
+  "listings": {
+    "inasaridze-7-80": {
+      "title": "3+1 daire, 80 m², 25. kat, deniz manzaralı",
+      "address": "Batum, İnasaridze Caddesi, 7",
+      "facts": [
+        "80 m²",
+        "3 yatak odası + mutfaklı salon",
+        "25. kat",
+        "Sıfır, hiç oturulmamış"
+      ],
+      "apartment": [
+        "Sahipleri kendileri için yenilediler: tüm dairede yerden ısıtma, porselen karo",
+        "Ekonomik kombi ile ısıtma",
+        "Kuvars tezgahlı mutfak, tüm cihazlar mevcut: bulaşık makinesi, fırın, mikrodalga, ocak, çift kapılı buzdolabı",
+        "Kurutmalı çamaşır makinesi, büyük açılır kanepe",
+        "Bol depolama alanı",
+        "Pencereli banyo, Grohe armatürler, Schneider elektrik",
+        "Deniz ve dağ manzaralı iki balkon"
+      ],
+      "building": [
+        "Kapalı otopark",
+        "Binada \"Magnit\" market",
+        "İki asansör, katta sadece dört daire",
+        "Bina resmi olarak teslim edildi"
+      ]
+    },
+    "inasaridze-7-82": {
+      "title": "3+1 daire, 82 m², 25. kat, deniz ve dağ manzaralı",
+      "address": "Batum, İnasaridze Caddesi, 7 - Grand Mall bölgesi, plaja 5 dakika",
+      "facts": [
+        "82 m²",
+        "3 yatak odası + mutfaklı salon",
+        "25. kat",
+        "Sıfır, hiç oturulmamış"
+      ],
+      "apartment": [
+        "Sahipleri kendileri için yenilediler: tüm dairede yerden ısıtma, porselen karo",
+        "Ekonomik kombi ile ısıtma",
+        "Kuvars tezgahlı mutfak, tüm cihazlar mevcut: bulaşık makinesi, fırın, mikrodalga, ocak, çift kapılı buzdolabı",
+        "Kurutmalı çamaşır makinesi, büyük açılır kanepe",
+        "İki yatak odası pencereli, üçüncüsü penceresiz, bol depolama alanı",
+        "Pencereli banyo, Grohe armatürler, Schneider elektrik",
+        "Deniz ve dağ manzaralı iki balkon"
+      ],
+      "building": [
+        "Kapalı otopark",
+        "Binada \"Magnit\" market",
+        "İki asansör, katta sadece dört daire",
+        "Bina resmi olarak teslim edildi"
+      ]
+    }
   }
 }
