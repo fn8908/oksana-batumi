@@ -391,5 +391,9 @@
     "heading": "Teşekkürler!",
     "subtext": "2 saat içinde Telegram'dan size ulaşacağız.",
     "back": "Ana Sayfaya"
+  },
+  "floatingCta": {
+    "telegram": "Telegram'dan yaz",
+    "youtube": "YouTube'a git"
   }
 }

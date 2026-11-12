@@ -391,5 +391,9 @@
     "heading": "გმადლობთ!",
     "subtext": "Telegram-ში დაგიკავშირდებით 2 საათის განმავლობაში.",
     "back": "მთავარ გვერდზე"
+  },
+  "floatingCta": {
+    "telegram": "მოგვწერეთ Telegram-ში",
+    "youtube": "გადადით YouTube-ზე"
   }
 }

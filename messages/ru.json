@@ -391,5 +391,9 @@
     "heading": "Спасибо за заявку!",
     "subtext": "Мы свяжемся с вами в течение 2 часов в Telegram.",
     "back": "На главную"
+  },
+  "floatingCta": {
+    "telegram": "Написать в Telegram",
+    "youtube": "Перейти на YouTube"
   }
 }

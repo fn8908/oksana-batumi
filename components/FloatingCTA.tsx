@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { ymGoal } from "@/lib/ym";
+import { useLanguage } from "@/context/LanguageContext";
 
 const TG_ICON = (
   <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
@@ -18,6 +19,7 @@ const YT_ICON = (
 const YT_URL = "https://www.youtube.com/channel/UCTXjFpssnnLvfBZavhTz1jw/";
 
 export default function FloatingCTA() {
+  const { t } = useLanguage();
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -54,7 +56,7 @@ export default function FloatingCTA() {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => ymGoal("telegram_floating_click")}
-        aria-label="Написать в Telegram"
+        aria-label={t("floatingCta.telegram")}
         className="sm:hidden flex items-center justify-center w-14 h-14 rounded-full hover:scale-110 active:scale-95"
         style={base}
       >
@@ -67,12 +69,12 @@ export default function FloatingCTA() {
         target="_blank"
         rel="noopener noreferrer"
         onClick={() => ymGoal("telegram_floating_click")}
-        aria-label="Написать в Telegram"
+        aria-label={t("floatingCta.telegram")}
         className="hidden sm:inline-flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm hover:opacity-90 hover:scale-105 active:scale-95"
         style={{ ...base, fontFamily: "var(--font-nunito, sans-serif)" }}
       >
         {TG_ICON}
-        Написать в Telegram
+        {t("floatingCta.telegram")}
       </a>
 
       {/* YouTube: stacked above Telegram button */}
@@ -81,7 +83,7 @@ export default function FloatingCTA() {
         href={YT_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Перейти на YouTube"
+        aria-label={t("floatingCta.youtube")}
         className="sm:hidden flex items-center justify-center w-14 h-14 rounded-full hover:scale-110 active:scale-95"
         style={{ ...base, bottom: "92px" }}
       >
@@ -93,12 +95,12 @@ export default function FloatingCTA() {
         href={YT_URL}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Перейти на YouTube"
+        aria-label={t("floatingCta.youtube")}
         className="hidden sm:inline-flex items-center gap-2 px-5 py-3 rounded-full font-semibold text-sm hover:opacity-90 hover:scale-105 active:scale-95"
         style={{ ...base, bottom: "80px", fontFamily: "var(--font-nunito, sans-serif)" }}
       >
         {YT_ICON}
-        Перейти на YouTube
+        {t("floatingCta.youtube")}
       </a>
     </>
   );

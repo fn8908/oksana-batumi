@@ -391,5 +391,9 @@
     "heading": "Thank You!",
     "subtext": "We'll reach out to you on Telegram within 2 hours.",
     "back": "Back to Home"
+  },
+  "floatingCta": {
+    "telegram": "Message on Telegram",
+    "youtube": "Go to YouTube"
   }
 }

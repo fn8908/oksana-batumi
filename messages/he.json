@@ -391,5 +391,9 @@
     "heading": "תודה רבה!",
     "subtext": "ניצור איתך קשר בטלגרם תוך שעתיים.",
     "back": "לדף הראשי"
+  },
+  "floatingCta": {
+    "telegram": "כתבו בטלגרם",
+    "youtube": "מעבר ל-YouTube"
   }
 }
