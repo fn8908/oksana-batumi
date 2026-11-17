@@ -16,10 +16,13 @@ const YT_ICON = (
   </svg>
 );
 
-const YT_URL = "https://www.youtube.com/channel/UCTXjFpssnnLvfBZavhTz1jw/";
+// EN, TR, HE -> английский канал; KA, RU, UK -> русский
+const YT_RU = "https://www.youtube.com/channel/UCTXjFpssnnLvfBZavhTz1jw/";
+const YT_EN = "https://www.youtube.com/channel/UC5wNLVrfLXr0DLcDRHMibyg/";
 
 export default function FloatingCTA() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const YT_URL = ["en", "tr", "he"].includes(lang) ? YT_EN : YT_RU;
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
