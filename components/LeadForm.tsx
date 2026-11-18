@@ -9,6 +9,7 @@ interface LeadFormProps {
   subject: string;
   dealType?: "buy" | "rent";
   commentPlaceholder?: string;
+  viewing?: boolean; // показать выбор: показ лично или по видеосвязи
 }
 
 const inputStyle = {
@@ -23,12 +24,13 @@ const inputStyle = {
   resize: "none" as const,
 };
 
-export default function LeadForm({ subject, dealType, commentPlaceholder }: LeadFormProps) {
+export default function LeadForm({ subject, dealType, commentPlaceholder, viewing }: LeadFormProps) {
   const router = useRouter();
   const { t, lang } = useLanguage();
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
   const [comment, setComment] = useState("");
+  const [video, setVideo] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -43,7 +45,9 @@ export default function LeadForm({ subject, dealType, commentPlaceholder }: Lead
           name,
           contact,
           deal_type: dealType,
-          comment: [subject, comment.trim()].filter(Boolean).join("\n"),
+          comment: [subject, viewing ? `Показ: ${video ? "по видеосвязи" : "лично"}` : "", comment.trim()]
+            .filter(Boolean)
+            .join("\n"),
           lang,
         }),
       });
@@ -55,6 +59,25 @@ export default function LeadForm({ subject, dealType, commentPlaceholder }: Lead
 
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
+      {viewing && (
+        <div className="flex gap-2">
+          {[false, true].map((v) => (
+            <button
+              key={String(v)}
+              type="button"
+              onClick={() => setVideo(v)}
+              className="flex-1 px-4 py-3 rounded-xl text-sm font-semibold transition-all"
+              style={
+                video === v
+                  ? { background: "rgba(201,169,110,0.2)", color: "#C9A96E", border: "1px solid #C9A96E" }
+                  : { background: "rgba(255,255,255,0.06)", color: "#F5F0E8", border: "1px solid rgba(255,255,255,0.16)" }
+              }
+            >
+              {t(v ? "listing.videoCall" : "listing.inPerson")}
+            </button>
+          ))}
+        </div>
+      )}
       <input
         style={inputStyle}
         placeholder={t("leadForm.name")}

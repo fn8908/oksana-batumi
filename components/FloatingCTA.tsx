@@ -53,18 +53,43 @@ export default function FloatingCTA() {
 
   return (
     <>
-      {/* Mobile: round icon */}
-      <a
-        href="https://t.me/ALazarev095"
-        target="_blank"
-        rel="noopener noreferrer"
-        onClick={() => ymGoal("telegram_floating_click")}
-        aria-label={t("floatingCta.telegram")}
-        className="sm:hidden flex items-center justify-center w-14 h-14 rounded-full hover:scale-110 active:scale-95"
-        style={base}
+      {/* Телефон: панель во всю ширину - написать или получить подборку */}
+      <div
+        className="sm:hidden flex gap-2 p-2"
+        style={{
+          position: "fixed",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zIndex: 50,
+          background: "rgba(15,28,46,0.96)",
+          borderTop: "1px solid rgba(201,169,110,0.3)",
+          paddingBottom: "calc(8px + env(safe-area-inset-bottom))",
+          transition: "opacity 0.35s ease, transform 0.35s ease",
+          opacity: visible ? 1 : 0,
+          pointerEvents: visible ? "auto" : "none",
+          transform: visible ? "translateY(0)" : "translateY(16px)",
+        }}
       >
-        {TG_ICON}
-      </a>
+        <a
+          href="https://t.me/ALazarev095"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => ymGoal("telegram_floating_click")}
+          className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm"
+          style={{ background: "#229ED9", color: "#fff", textDecoration: "none" }}
+        >
+          {TG_ICON}
+          Telegram
+        </a>
+        <a
+          href="#contact-form"
+          className="flex-1 flex items-center justify-center py-3 rounded-xl font-semibold text-sm"
+          style={{ background: "#C9A96E", color: "#0F1C2E", textDecoration: "none" }}
+        >
+          {t("hero.cta1")}
+        </a>
+      </div>
 
       {/* Desktop: pill with text */}
       <a
@@ -88,7 +113,7 @@ export default function FloatingCTA() {
         rel="noopener noreferrer"
         aria-label={t("floatingCta.youtube")}
         className="sm:hidden flex items-center justify-center w-14 h-14 rounded-full hover:scale-110 active:scale-95"
-        style={{ ...base, bottom: "92px" }}
+        style={{ ...base, bottom: "84px" }}
       >
         {YT_ICON}
       </a>

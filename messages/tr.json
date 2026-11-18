@@ -1,295 +1,76 @@
 {
   "nav": {
+    "buy": "Satılık",
     "rent": "Kiralık",
     "districts": "Semtler",
-    "howItWorks": "Nasıl Çalışır",
-    "reviews": "Yorumlar",
-    "cta": "Başvuru Bırak"
+    "process": "Satın Alma Süreci",
+    "faq": "Sorular",
+    "cta": "Seçenekleri Alın"
   },
   "hero": {
-    "title": "Batum'da Uzun Dönem Daire Kiralama - 6 Aydan Başlayarak",
-    "subtitle": "Onaylı mülkler. Net koşullar. Yalnızca uzun dönem kiralama - Batum'u ev olarak seçenler için.",
-    "cta1": "Daire Bul",
+    "title": "Batum'da Satılık Daire, Ev ve Villa",
+    "subtitle": "Batum ve Gonyo'da gayrimenkul satıyoruz. Her ilanda fiyat ve video tur var. Mülkü yerinde veya görüntülü görüşmeyle gösterir, satış sürecinde yanınızda oluruz. Uzun dönem kiralık ilanlar da bizde.",
+    "cta1": "Seçenekleri Alın",
     "cta2": "İlanları Görüntüle",
-    "fact1": "200+ mülk",
-    "fact2": "Gizli komisyon yok",
-    "fact3": "6 aydan uzun dönem kiralama",
+    "fact1": "Her ilanda video tur",
+    "fact2": "Yerinde veya görüntülü gösterim",
+    "fact3": "Fiyat baştan belli",
     "location": "Batum · Gürcistan · 2026",
     "imageAlt": "Batum panoraması: şehir, yeni binalar, bulvar, plaj, dağlar, deniz"
   },
-  "search": {
-    "rentalType": "Kiralama Türü",
-    "longTerm": "Uzun Dönem",
-    "budget": "Bütçe",
-    "budget1": "$500 altı",
-    "budget2": "$500–$1000",
-    "budget3": "$1000–$2000",
-    "budget4": "$2000+",
-    "rooms": "Oda Sayısı",
-    "studio": "Stüdyo",
-    "room1": "1",
-    "room2": "2",
-    "room3": "3+",
-    "findBtn": "Ara",
-    "success": "✅ Bir emlak danışmanı sizinle iletişime geçecek",
-    "roomsShort": "oda"
-  },
-  "catalog": {
-    "title": "Uzun Dönem Kiralık Mülkler",
-    "subtitle": "Batum'da yaşam için daireler, stüdyolar ve evler - 6 aydan itibaren",
-    "from": "den",
-    "perMonth": "/ay",
-    "details": "Detayları Gör",
-    "noResults": "Arama kriterlerinize uygun mülk bulunamadı"
-  },
-  "properties": [
-    {
-      "type": "Deniz Manzaralı Stüdyo",
-      "district": "Batumi View",
-      "price": "$350",
-      "tags": [
-        "Deniz Manzarası",
-        "Uzun Dönem"
-      ],
-      "image": "/1.jpeg",
-      "priceNum": 350,
-      "rentalType": "long",
-      "rooms": "studio"
-    },
-    {
-      "type": "1+1 Kahramanlar Caddesi",
-      "district": "Kahramanlar Caddesi",
-      "price": "$480",
-      "tags": [
-        "Merkez",
-        "Yeni Bina",
-        "Otopark"
-      ],
-      "image": "/2.png",
-      "priceNum": 480,
-      "rentalType": "long",
-      "rooms": "1"
-    },
-    {
-      "type": "2+1 Kahramanlar Caddesi",
-      "district": "Kahramanlar Caddesi",
-      "price": "$650",
-      "tags": [
-        "Merkez",
-        "Dağ Manzarası",
-        "Tadilatlı"
-      ],
-      "image": "/alley-heroes-2-1.jpg",
-      "priceNum": 650,
-      "rentalType": "long",
-      "rooms": "2"
-    },
-    {
-      "type": "2+1 Tarihi",
-      "district": "Eski Şehir",
-      "price": "$700",
-      "tags": [
-        "Tarihi Bölge",
-        "Aile Dostu"
-      ],
-      "image": "/3.webp",
-      "priceNum": 700,
-      "rentalType": "long",
-      "rooms": "2"
-    },
-    {
-      "type": "Birinci Hat Stüdyo",
-      "district": "Orbi City",
-      "price": "$400",
-      "tags": [
-        "Birinci Hat",
-        "Yüksek Kat"
-      ],
-      "image": "/4.jpg",
-      "priceNum": 400,
-      "rentalType": "long",
-      "rooms": "studio"
-    },
-    {
-      "type": "1+1 Park Manzaralı",
-      "district": "6 Mayıs Parkı",
-      "price": "$550",
-      "tags": [
-        "Park Yakını",
-        "Yeni Bina"
-      ],
-      "image": "/5.jpg",
-      "priceNum": 550,
-      "rentalType": "long",
-      "rooms": "1"
-    },
-    {
-      "type": "3+1 Şehir Dışı",
-      "district": "Gonyo",
-      "price": "$900",
-      "tags": [
-        "Şehir Dışı",
-        "Havuzlu"
-      ],
-      "image": "/6.jpg",
-      "priceNum": 900,
-      "rentalType": "long",
-      "rooms": "3+"
-    }
-  ],
   "howItWorks": {
-    "title": "Nasıl Çalışır",
+    "title": "Satın Alma Süreci",
     "steps": [
       {
-        "title": "Başvuru Bırakın",
-        "desc": "Parametreleri belirtin: bütçe, tür, semt"
+        "title": "Seçim",
+        "desc": "Bütçenizi ve amacınızı söylersiniz, fiyatlı ve videolu seçenekleri göndeririz"
       },
       {
-        "title": "Seçim Alın",
-        "desc": "2 saat içinde Telegram'dan seçenekler göndereceğiz"
+        "title": "Gösterim",
+        "desc": "Batum'da yerinde veya başka bir ülkedeyseniz görüntülü görüşmeyle"
       },
       {
-        "title": "Mülkleri Görüntüleyin",
-        "desc": "Uygun bir zamanda geziler düzenleriz"
+        "title": "Belgeler ve sözleşme",
+        "desc": "Mülkün belgelerini inceler, fiyatı ve koşulları satıcıyla netleştiririz"
       },
       {
-        "title": "Taşının",
-        "desc": "Sözleşme sürecinde yardım eder, yeni evinize yerleşmenizi sağlarız"
+        "title": "Tescil ve anahtar",
+        "desc": "Mülkiyet hakkı Adalet Evi'nde (Public Service Hall) tescil edilir, sicil kaydınızı ve anahtarları alırsınız"
       }
     ]
-  },
-  "form": {
-    "title": "Batum'da Uzun Dönem Kiralık Ev Bulun",
-    "subtitle": "Yalnızca uzun dönem kiralama - 6 ay ve üzeri. 2 saat içinde iletişime geçeceğiz.",
-    "rentalTypeLabel": "Kiralama Süresi",
-    "longTerm": "Uzun Dönem - 6 ay ve üzeri",
-    "investment": "Yatırım",
-    "house": "Ev",
-    "villa": "Villa",
-    "propertyTypeLabel": "Mülk Türü",
-    "apartment": "Daire",
-    "roomsLabel": "Oda Sayısı",
-    "studio": "Stüdyo",
-    "budgetLabel": "Aylık Bütçe",
-    "budgetBuyLabel": "Bütçe",
-    "desiredPriceLabel": "İstenen Fiyat",
-    "desiredPricePlaceholder": "İstenen fiyatı girin, $",
-    "districtsLabel": "Semt (isteğe bağlı)",
-    "districts": [
-      "Yeni Bulvar",
-      "Eski Şehir",
-      "Kahramanlar Caddesi",
-      "Gonyo",
-      "Herhangi Biri"
-    ],
-    "nameLabel": "Ad",
-    "namePlaceholder": "Adınız",
-    "contactLabel": "Telegram veya WhatsApp",
-    "contactPlaceholder": "@kullanıcıadı veya +90...",
-    "commentLabel": "Yorum",
-    "commentPlaceholder": "Ne zaman taşınmayı planlıyorsunuz? Ne kadar süreyle kalacaksınız? Özel istekleriniz var mı?",
-    "submit": "Başvuru Gönder",
-    "privacy": "🔒 Verileriniz üçüncü taraflarla paylaşılmaz.",
-    "success": "✅ Başvurunuz alındı! 2 saat içinde Telegram'da mesaj bekleyin.",
-    "next": "İleri",
-    "back": "Geri",
-    "step1": "Parametreler",
-    "step2": "İletişim",
-    "dealTypeLabel": "Amaç",
-    "buy": "Satın Al",
-    "rent": "Kiralık"
   },
   "neighborhoods": {
     "title": "Batum Semtleri",
     "items": [
       {
         "name": "Yeni Bulvar",
-        "desc": "Birinci hat. En turistik bölge.",
-        "price": "$350'den/ay",
+        "desc": "Denize sıfır, yeni binalar. Tatilcilerin gözdesi; daireler hem oturmak hem kiraya vermek için alınıyor.",
+        "price": "Deniz kenarı",
         "image": "/8.jpg"
       },
       {
         "name": "Eski Şehir",
-        "desc": "Atmosfer ve tarih. Dar sokaklar.",
-        "price": "$220'den/ay",
+        "desc": "Atmosfer ve tarih, az katlı binalar, her yer yürüme mesafesinde.",
+        "price": "Tarihi merkez",
         "image": "/9.jpg"
       },
       {
         "name": "Kahramanlar Caddesi",
         "desc": "Modern merkez. Dağ ve deniz manzaralı yeni binalar.",
-        "price": "$400'den/ay",
+        "price": "Yaşamak için",
         "image": "/10.avif"
       },
       {
         "name": "6 Mayıs Parkı",
-        "desc": "Prestij. Park. Sakin.",
-        "price": "$450'den/ay",
+        "desc": "Park kenarında prestijli semt. Sakin, yeşil, denize yakın.",
+        "price": "Sakin merkez",
         "image": "/11.jpeg"
       },
       {
         "name": "Gonyo / Kobuleti",
-        "desc": "Şehir dışı. Doğa. Huzur.",
-        "price": "$300'den/ay",
+        "desc": "Şehir dışı: evler ve villalar, doğa ve huzur.",
+        "price": "Evler ve villalar",
         "image": "/12.jpg"
-      }
-    ]
-  },
-  "elite": {
-    "title": "Lüks Gayrimenkul",
-    "subtitle": "Batum ve Acaristan dağlarında deniz manzaralı özel evler, villalar ve townhouse'lar",
-    "cta": "Başvuru Bırak",
-    "items": [
-      {
-        "type": "Havuzlu Villa",
-        "location": "Yeşil Burun",
-        "price": "$2.500'den/ay",
-        "desc": "Karadeniz manzaralı özel villa. Havuz, bahçe, garaj. 4 yatak odası.",
-        "tags": [
-          "Deniz Manzarası",
-          "Havuz",
-          "Bahçe",
-          "Garaj"
-        ],
-        "image": "/13.avif"
-      },
-      {
-        "type": "Dağ Evi",
-        "location": "Sarpi / Khulo",
-        "price": "$1.800'den/ay",
-        "desc": "Bahçeli iki katlı ev. Dağ ve deniz manzarası. 3 yatak odası.",
-        "tags": [
-          "Dağ Manzarası",
-          "Bahçe",
-          "BBQ",
-          "Huzur"
-        ],
-        "image": "/14.jpg"
-      },
-      {
-        "type": "Townhouse",
-        "location": "Batum, Kobuleti",
-        "price": "$1.200'den/ay",
-        "desc": "Batum yakınında 3 katlı townhouse. 3 yatak odası + ofis.",
-        "tags": [
-          "Yeni Bina",
-          "3 Kat",
-          "Otopark",
-          "Denize Yakın"
-        ],
-        "image": "/15.webp"
-      },
-      {
-        "type": "Acaristan Villası",
-        "location": "Khulo / Kheda",
-        "price": "$3.000'den/ay",
-        "desc": "Acaristan dağlarında özel villa. Panoramik manzara. 5 yatak odası.",
-        "tags": [
-          "Panoramik Manzara",
-          "Doğa",
-          "Huzur",
-          "Orman"
-        ],
-        "image": "/16.avif"
       }
     ]
   },
@@ -336,10 +117,10 @@
     ]
   },
   "finalCta": {
-    "title": "Batum'da Uzun Dönem Evinizi Bulmaya Hazır mısınız?",
-    "subtitle": "6 ay ve üzeri kiralama konusunda uzmanız - Telegram'dan yazın, 2 saat içinde yanıt verelim",
+    "title": "Batum'da gayrimenkul mü arıyorsunuz?",
+    "subtitle": "Telegram'dan yazın - fiyatlı ve videolu seçenekleri gönderelim, 2 saat içinde yanıt verelim",
     "btn": "Başvuru Bırak",
-    "formLink": "veya formu doldurun →"
+    "formLink": "veya formu doldurup seçenekleri alın →"
   },
   "footer": {
     "tagline": "BATUMI REALTY - Batum Komisyoncular Topluluğu",
@@ -347,19 +128,13 @@
     "nav": "Navigasyon",
     "contacts": "İletişim",
     "links": [
-      "İlanlar",
+      "Satılık",
       "Semtler",
-      "Nasıl Çalışır",
-      "Başvuru Bırak"
+      "Satın Alma Süreci",
+      "Seçenekleri Alın"
     ],
     "schedule": "Başvuruları her gün 9:00–22:00 kabul ediyoruz (GMT+4)",
     "privacy": "Gizlilik politikası"
-  },
-  "modal": {
-    "title": "Detayları Öğren",
-    "subtitle": "Başvuru bırakın - komisyoncu 2 saat içinde iletişime geçecek",
-    "submit": "Başvuru Gönder",
-    "close": "Kapat"
   },
   "whyBatumi": {
     "title": "Neden Batum - Yaşam ve İş İçin",
@@ -418,20 +193,21 @@
     "youtube": "YouTube'a git"
   },
   "meta": {
-    "title": "Batum'da Kiralık ve Satılık Emlak - Batumi Realty",
-    "description": "Batum, Gürcistan'da kiralık ve satılık daireler, evler ve villalar. Uzun dönem kiralama, denize yakın yeni binalar, Acara dağlarında lüks konutlar. Güvenilir emlakçılar topluluğu.",
-    "ogDescription": "Doğrulanmış ilanlar. Şeffaf koşullar. Batum piyasasında deneyimli emlakçılar.",
+    "title": "Batum Satılık Daire, Ev ve Villa | Batum Emlak - Batumi Realty",
+    "description": "Batum satılık daire, ev ve villa ilanları: her ilanda fiyat ve video. Batum'da ev almak isteyenlere yerinde veya görüntülü gösterim. Uzun dönem kiralık.",
+    "ogDescription": "Batum ve Gonyo'da satılık ve kiralık gayrimenkul. Her ilanda fiyat ve video tur.",
     "ogAlt": "Batumi Realty - Batum'da emlak",
     "keywords": [
-      "Batum kiralık daire",
       "Batum satılık daire",
+      "Batum'da ev almak",
       "Batum emlak",
-      "Batum villa",
-      "Acara emlak",
-      "Batum emlakçı",
-      "Gürcistan emlak"
+      "Batum satılık ev",
+      "Batum satılık villa",
+      "Batum denize sıfır daire",
+      "Batum kiralık daire",
+      "Batum emlakçı"
     ],
-    "orgDescription": "Batum emlakçılar topluluğu. Batum ve Acara dağlarında kiralık ve satılık daireler, evler ve villalar.",
+    "orgDescription": "Batum emlakçılar topluluğu. Batum ve Gonyo'da satılık ve kiralık daireler, evler ve villalar.",
     "city": "Batum",
     "country": "Gürcistan"
   },
@@ -448,10 +224,16 @@
     "sale": "Satılık",
     "rent": "Kiralık",
     "telegram": "Telegram'dan yazın - fiyat, belgeler, görüntüleme",
-    "about": "Daire hakkında",
-    "building": "Bina hakkında",
+    "about": "Mülk hakkında",
+    "building": "Bina ve konum",
     "request": "Talep bırakın",
-    "subject": "İlan"
+    "subject": "İlan",
+    "viewing": "Gösterim Randevusu",
+    "viewingText": "Mülkü yerinde veya Batum'da değilseniz görüntülü görüşmeyle gösteririz. 2 saat içinde yanıt veririz.",
+    "inPerson": "Yerinde göreceğim",
+    "videoCall": "Görüntülü görüşme",
+    "other": "Diğer İlanlar",
+    "tgText": "Merhaba! Şu ilanla ilgileniyorum:"
   },
   "owners": {
     "metaTitle": "Batum'daki dairenizi satın veya kiraya verin",
@@ -592,6 +374,137 @@
         "4. kat",
         "Gorgasali Caddesi, Batum merkezi"
       ]
+    },
+    "shartava-32": {
+      "title": "1+1 daire, 37 m², yüksek kat, tadilatlı ve eşyalı",
+      "address": "Batum, Şartava Caddesi, 32",
+      "facts": [
+        "37 m²",
+        "Yatak odası + salon",
+        "Yüksek kat",
+        "Eşyalı ve beyaz eşyalı"
+      ],
+      "apartment": [
+        "Ayrı yatak odası ve salon",
+        "Ankastre mutfak: bulaşık makinesi, fırın, mikrodalga, ocak",
+        "Çift kişilik yatak, büyük gardırop, kanepe, yemek masası, televizyon",
+        "Zeminde beyaz mermer, klimalar, geniş antre",
+        "Tüm şehri gören balkon",
+        "Anahtar teslim tadilat, tüm eşyalar ve beyaz eşyalar kalıyor - hemen taşınabilirsiniz"
+      ],
+      "building": [
+        "Geniş lobili ve asansörlü yeni bina",
+        "Hem oturmak hem kiraya vermek için uygun"
+      ]
+    },
+    "villa-gonio": {
+      "title": "190 m² villa, 3 kat, deniz manzaralı çatı terası",
+      "address": "Gonyo, güvenlikli site - Batum merkezine 15 dakika",
+      "facts": [
+        "190 m²",
+        "3 yatak odası, 3 banyo",
+        "Çatı terası",
+        "Tadilatlı ve eşyalı"
+      ],
+      "apartment": [
+        "Üç yatak odası, her birinin kendi banyosu ve giyinme odası var",
+        "Panoramik pencereli salon",
+        "Ankastre cihazlı ayrı mutfak",
+        "Çamaşır odası",
+        "Deniz manzaralı çatı terası",
+        "Özel bahçe ve otopark",
+        "2026 yapımı ev, tadilatlı ve eşyalı - hemen taşınabilirsiniz"
+      ],
+      "building": [
+        "10 villalık güvenlikli site, giriş yalnızca site sakinlerine açık",
+        "Batum merkezine 15 dakika, denize arabayla 12 dakika",
+        "Oturma izni için uygun",
+        "Taksit veya konut kredisi mümkün"
+      ]
     }
+  },
+  "sale": {
+    "title": "Satılık İlanlar",
+    "subtitle": "Batum ve Gonyo'da daireler ve villa. Her ilanda fiyat, fotoğraf ve video tur.",
+    "perM2": "/ m²",
+    "details": "İlanı İncele",
+    "video": "Video",
+    "reduced": "Fiyat düştü",
+    "moreTitle": "Aradığınızı bulamadınız mı?",
+    "moreText": "Bütçenizi ve amacınızı yazın - fiyatlı ve videolu seçenekler gönderelim.",
+    "pageTitle": "Batum'da Satılık Gayrimenkul"
+  },
+  "pick": {
+    "title": "İhtiyacınıza Uygun Gayrimenkulü Bulalım",
+    "subtitle": "Üç soru - fiyatlı ve videolu seçenekleri gönderelim. 2 saat içinde yanıt veriyoruz.",
+    "deal": "Ne arıyorsunuz",
+    "buy": "Satın almak",
+    "rent": "Uzun dönem kiralamak",
+    "goal": "Satın alma amacı",
+    "goals": [
+      "Oturmak için",
+      "Kiraya vermek için",
+      "Oturma izni için",
+      "Şimdilik bakıyorum"
+    ],
+    "budget": "Bütçe",
+    "budgetsBuy": [
+      "$70 000'a kadar",
+      "$70 000 - $120 000",
+      "$120 000 - $200 000",
+      "$200 000 ve üzeri"
+    ],
+    "budgetsRent": [
+      "Ayda $500'a kadar",
+      "$500 - $1000",
+      "$1000 - $2000",
+      "$2000 ve üzeri"
+    ],
+    "submit": "Seçenekleri Alın",
+    "note": "Ücretsizdir ve sizi hiçbir şeye bağlamaz."
+  },
+  "rentBlock": {
+    "title": "Uzun Dönem Kiralık",
+    "subtitle": "Batum'da 6 aydan itibaren kiralık daireler ve evler.",
+    "pickTitle": "Başka bir seçenek mi arıyorsunuz?",
+    "pickText": "Bütçenizi ve semti yazın - uzun dönem kiralık daire veya ev bulalım.",
+    "btn": "Kiralık Bul",
+    "pageTitle": "Batum'da Uzun Dönem Kiralık Daireler"
+  },
+  "ownersBlock": {
+    "title": "Batum'daki mülkünüzü satıyor veya kiraya mı veriyorsunuz?",
+    "text": "Mülkünüzü değerlendirir, video turunu çeker, Gürcistan'daki ve yurt dışındaki alıcılara gösteririz.",
+    "btn": "Koşulları Öğrenin"
+  },
+  "faq": {
+    "title": "Alıcıların Soruları",
+    "subtitle": "Gürcistan'da gayrimenkul almadan önce bir yabancının bilmesi gerekenler, kısaca",
+    "note": "Vergi ve oturma izni bilgileri Kasım 2026 itibarıyla günceldir ve avukat danışmanlığının yerini tutmaz.",
+    "items": [
+      {
+        "q": "Yabancılar Gürcistan'da gayrimenkul satın alabilir mi?",
+        "a": "Evet. Yabancılar daire, ev ve ticari gayrimenkulü Gürcistan vatandaşlarıyla aynı koşullarda satın alır. Satın alma işlemi pasaportla yapılır, oturma izni gerekmez. Tek kısıtlama tarım arazileridir; bu nedenle arsalı evlerde arazinin kategorisi satıştan önce sicil kaydından kontrol edilir."
+      },
+      {
+        "q": "Fiyat dışında hangi masraflar var?",
+        "a": "Gürcistan'da alıcı için alım vergisi ve damga vergisi yoktur. Mülkiyet hakkının Kamu Sicili'ne tescili 4 iş gününde 150 GEL, 1 günde 270 GEL, başvuru gününde ise 350 GEL tutar. Ayrıca tercüman ve noter hizmetleri gerekebilir."
+      },
+      {
+        "q": "Batum'a gelmeden satın alabilir miyim?",
+        "a": "Evet. Mülkü görüntülü görüşmeyle gösteririz, satış işlemini ise noter onaylı vekaletnameyle temsilciniz yapabilir. Başka bir ülkede düzenlenen vekaletnamenin genellikle apostil ile tasdik edilmesi ve Gürcüceye çevrilmesi gerekir. Ülkeniz için geçerli şartları önceden bildiririz."
+      },
+      {
+        "q": "Gayrimenkul almak oturma izni sağlar mı?",
+        "a": "Piyasa değeri 150 000 ABD dolarının üzerinde olan bir gayrimenkulün sahibi kısa süreli oturma izni alabilir. Bu eşik 1 Mart 2026'dan itibaren geçerlidir. Değeri sertifikalı bir değerleme uzmanı onaylar, sözleşmedeki fiyat bunun için kullanılmaz. Aynı oturma iznini mülk sahibinin eşi ve çocukları da alabilir."
+      },
+      {
+        "q": "Kiraya verirken ve satarken hangi vergiler ödenir?",
+        "a": "Konutunu uzun dönem kiraya veren gerçek kişi, kira bedelinin %5'ini öder. Konut niteliğindeki bir daire veya evin satışında satış fiyatı ile alış fiyatı arasındaki farkın %5'i ödenir; konut 2 yıldan uzun süredir sizin mülkiyetinizdeyse vergi yoktur. Otel odaları ve ticari gayrimenkul için kurallar farklıdır."
+      },
+      {
+        "q": "Mülkü nasıl görebilirim?",
+        "a": "Sitedeki her ilanın video turu var. Sonrasında mülkü Batum'da yerinde veya size uygun bir saatte görüntülü görüşmeyle gösteririz. Bize Telegram'dan yazın veya ilan sayfasından talep bırakın."
+      }
+    ]
   }
 }

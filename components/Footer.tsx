@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 
-const anchorIds = ["catalog", "neighborhoods", "how-it-works", "contact-form"];
+const anchorIds = ["sale", "neighborhoods", "how-it-works", "contact-form"];
 
 export default function Footer() {
   const { t, tArr, lang } = useLanguage();
@@ -16,7 +16,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="py-14 px-4 sm:px-6 lg:px-8"
+      className="pt-14 pb-28 sm:pb-14 px-4 sm:px-6 lg:px-8"
       style={{
         background: "#080f1a",
         borderTop: "1px solid rgba(201,169,110,0.15)",

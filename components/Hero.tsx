@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { ymGoal } from "@/lib/ym";
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -119,28 +118,20 @@ export default function Hero() {
           className={`flex flex-col sm:flex-row gap-4 justify-center mb-16 transition-all duration-700 ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           style={{ transitionDelay: "0.5s" }}
         >
-          {/* PRIMARY: Telegram — главная конверсия */}
-          <a
-            href="https://t.me/ALazarev095"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => ymGoal("telegram_hero_click")}
+          {/* Главная кнопка: подборка под задачу покупателя */}
+          <button
+            onClick={() => scrollTo("contact-form")}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95"
             style={{
               background: "#C9A96E",
               color: "#0F1C2E",
               boxShadow: "0 8px 32px rgba(201,169,110,0.35)",
-              textDecoration: "none",
             }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 13.985l-2.95-.924c-.64-.203-.654-.64.136-.953l11.5-4.432c.534-.194 1.001.13.616.572z" />
-            </svg>
-            {t("floatingCta.telegram")}
-          </a>
-          {/* SECONDARY: подобрать квартиру через форму */}
+            {t("hero.cta1")}
+          </button>
           <button
-            onClick={() => scrollTo("contact-form")}
+            onClick={() => scrollTo("sale")}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-base transition-all duration-200 hover:bg-white/10 active:scale-95"
             style={{
               border: "1px solid rgba(245,240,232,0.5)",
@@ -149,7 +140,7 @@ export default function Hero() {
               background: "rgba(255,255,255,0.06)",
             }}
           >
-            {t("hero.cta1")}
+            {t("hero.cta2")}
           </button>
         </div>
 
@@ -159,9 +150,9 @@ export default function Hero() {
           style={{ transitionDelay: "0.65s" }}
         >
           {[
-            { icon: "🏠", text: t("hero.fact1") },
-            { icon: "⭐", text: t("hero.fact2") },
-            { icon: "🔒", text: t("hero.fact3") },
+            { icon: "🎬", text: t("hero.fact1") },
+            { icon: "📱", text: t("hero.fact2") },
+            { icon: "💰", text: t("hero.fact3") },
           ].map((fact) => (
             <div
               key={fact.text}

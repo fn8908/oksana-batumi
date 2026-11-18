@@ -8,7 +8,7 @@ interface Step {
   desc: string;
 }
 
-const icons = ["✍️", "📨", "🏠", "🔑"];
+const icons = ["📨", "🎬", "📑", "🔑"];
 
 export default function HowItWorks() {
   const { t, tArr } = useLanguage();

@@ -7,6 +7,8 @@ const SITE = "https://batumi-realty.org";
 // Каждая страница на каждом языке, со ссылками на остальные языковые версии
 const pages: { path: string; changeFrequency: "weekly" | "monthly"; priority: number }[] = [
   { path: "", changeFrequency: "weekly", priority: 1 },
+  { path: "/prodazha", changeFrequency: "weekly", priority: 0.9 },
+  { path: "/arenda", changeFrequency: "weekly", priority: 0.9 },
   ...listings.map((l) => ({
     path: `/obekty/${l.slug}`,
     changeFrequency: "weekly" as const,

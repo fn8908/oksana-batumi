@@ -78,10 +78,11 @@ export default function Header() {
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {[
-              { key: "nav.rent", id: "catalog" },
+              { key: "nav.buy", id: "sale" },
+              { key: "nav.process", id: "how-it-works" },
               { key: "nav.districts", id: "neighborhoods" },
-              { key: "nav.howItWorks", id: "how-it-works" },
-              { key: "nav.reviews", id: "testimonials" },
+              { key: "nav.rent", id: "rent" },
+              { key: "nav.faq", id: "faq" },
             ].map((item) => (
               <button
                 key={item.key}
@@ -201,10 +202,11 @@ export default function Header() {
             style={{ borderColor: "rgba(201,169,110,0.2)" }}
           >
             {[
-              { key: "nav.rent", id: "catalog" },
+              { key: "nav.buy", id: "sale" },
+              { key: "nav.process", id: "how-it-works" },
               { key: "nav.districts", id: "neighborhoods" },
-              { key: "nav.howItWorks", id: "how-it-works" },
-              { key: "nav.reviews", id: "testimonials" },
+              { key: "nav.rent", id: "rent" },
+              { key: "nav.faq", id: "faq" },
             ].map((item) => (
               <button
                 key={item.key}
