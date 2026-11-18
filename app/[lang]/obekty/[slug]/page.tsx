@@ -46,6 +46,7 @@ export default async function ListingPage({ params }: { params: Params }) {
   const { l, m, text } = data;
 
   const muted = { color: "rgba(245,240,232,0.72)" };
+  const video = videoFor(l, lang);
   const url = `${SITE}/${lang}/obekty/${l.slug}`;
   // Готовое сообщение: менеджер сразу видит, о каком объекте вопрос
   const tg = tgWithText(`${m.listing.tgText} ${text.title}, ${price(l, m)}\n${url}`);
@@ -83,13 +84,17 @@ export default async function ListingPage({ params }: { params: Params }) {
             className="w-full max-w-[320px] mx-auto rounded-2xl overflow-hidden md:sticky md:top-6 md:self-start"
             style={{ aspectRatio: "9 / 16", background: "#000" }}
           >
-            <iframe
-              src={`https://www.youtube.com/embed/${videoFor(l, lang)}?rel=0&hl=${lang}`}
-              title={text.title}
-              className="w-full h-full"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+            {video ? (
+              <iframe
+                src={`https://www.youtube.com/embed/${video}?rel=0&hl=${lang}`}
+                title={text.title}
+                className="w-full h-full"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <img src={`/obekty/${l.slug}/1.jpg`} alt={text.title} className="w-full h-full object-cover" />
+            )}
           </div>
 
           <div className="min-w-0">
@@ -160,14 +165,18 @@ export default async function ListingPage({ params }: { params: Params }) {
               ))}
             </ul>
 
-            <h2 className="font-cormorant font-semibold text-2xl mb-3" style={{ color: "#F5F0E8" }}>
-              {m.listing.building}
-            </h2>
-            <ul className="space-y-2 mb-8 text-sm list-disc ps-5" style={muted}>
-              {text.building.map((x) => (
-                <li key={x}>{x}</li>
-              ))}
-            </ul>
+            {text.building.length > 0 && (
+              <>
+                <h2 className="font-cormorant font-semibold text-2xl mb-3" style={{ color: "#F5F0E8" }}>
+                  {m.listing.building}
+                </h2>
+                <ul className="space-y-2 mb-8 text-sm list-disc ps-5" style={muted}>
+                  {text.building.map((x) => (
+                    <li key={x}>{x}</li>
+                  ))}
+                </ul>
+              </>
+            )}
 
             <h2
               id="viewing"

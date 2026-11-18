@@ -421,6 +421,41 @@
         "Suitable for a residence permit",
         "Installment plan or mortgage possible"
       ]
+    },
+    "zgvispiri-1": {
+      "title": "1+1 apartment (1 bedroom), 50 m², renovated, two balconies",
+      "address": "Batumi, 1 Zgvispiri",
+      "facts": [
+        "50 m²",
+        "Bedroom + living room with kitchen",
+        "Two balconies",
+        "Renovated"
+      ],
+      "apartment": [
+        "Separate bright bedroom with a balcony",
+        "Separate living room with kitchen, also with a balcony",
+        "Fully renovated apartment"
+      ],
+      "building": []
+    },
+    "lortkipanidze-6a": {
+      "title": "1+1 apartment (1 bedroom), 33.5 m², new renovation, new building",
+      "address": "Batumi, 6a Grigol Lortkipanidze Street",
+      "facts": [
+        "33.5 m²",
+        "Separate bedroom",
+        "New renovation",
+        "New building"
+      ],
+      "apartment": [
+        "Separate bedroom",
+        "New renovation",
+        "Furniture included: bed and kitchen",
+        "No appliances"
+      ],
+      "building": [
+        "New building"
+      ]
     }
   },
   "sale": {

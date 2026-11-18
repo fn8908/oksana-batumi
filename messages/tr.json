@@ -421,6 +421,41 @@
         "Oturma izni için uygun",
         "Taksit veya konut kredisi mümkün"
       ]
+    },
+    "zgvispiri-1": {
+      "title": "1+1 daire, 50 m², tadilatlı, iki balkonlu",
+      "address": "Batum, Zgvispiri, 1",
+      "facts": [
+        "50 m²",
+        "Yatak odası + mutfaklı salon",
+        "İki balkon",
+        "Tadilatlı"
+      ],
+      "apartment": [
+        "Balkonlu, ayrı ve aydınlık yatak odası",
+        "Mutfaklı ayrı salon, o da balkonlu",
+        "Daire tamamen tadilatlı"
+      ],
+      "building": []
+    },
+    "lortkipanidze-6a": {
+      "title": "1+1 daire, 33,5 m², yeni tadilat, yeni bina",
+      "address": "Batum, Grigol Lortkipanidze Caddesi, 6a",
+      "facts": [
+        "33,5 m²",
+        "Ayrı yatak odası",
+        "Yeni tadilat",
+        "Yeni bina"
+      ],
+      "apartment": [
+        "Ayrı yatak odası",
+        "Yeni tadilat",
+        "Eşyalardan yatak ve mutfak kalıyor",
+        "Beyaz eşya yok"
+      ],
+      "building": [
+        "Yeni bina"
+      ]
     }
   },
   "sale": {

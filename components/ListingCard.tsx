@@ -29,12 +29,14 @@ export default function ListingCard({ l, lang }: { l: Listing; lang: Lang }) {
           style={{ background: "linear-gradient(to bottom, transparent 55%, rgba(10,20,35,0.75))" }}
         />
         <div className="absolute top-3 start-3 flex gap-2">
-          <span
-            className="text-xs font-semibold px-3 py-1.5 rounded-full"
-            style={{ background: "rgba(15,28,46,0.85)", color: "#F5F0E8", border: "1px solid rgba(255,255,255,0.2)" }}
-          >
-            ▶ {m.sale.video}
-          </span>
+          {l.videoId && (
+            <span
+              className="text-xs font-semibold px-3 py-1.5 rounded-full"
+              style={{ background: "rgba(15,28,46,0.85)", color: "#F5F0E8", border: "1px solid rgba(255,255,255,0.2)" }}
+            >
+              ▶ {m.sale.video}
+            </span>
+          )}
           {l.oldPrice && (
             <span
               className="text-xs font-bold px-3 py-1.5 rounded-full"
