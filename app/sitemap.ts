@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { listings } from "@/lib/listings";
 import { LANGS } from "@/lib/i18n";
+import { complexes } from "@/lib/complexes";
 
 const SITE = "https://batumi-realty.org";
 
@@ -19,7 +20,14 @@ const pages: { path: string; changeFrequency: "weekly" | "monthly"; priority: nu
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.flatMap(({ path, changeFrequency, priority }) =>
+  // Страницы жилых комплексов есть только на английском
+  const zhk = complexes.map((c) => ({
+    url: `${SITE}/en/zhk/${c.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+  return [...zhk, ...pages.flatMap(({ path, changeFrequency, priority }) =>
     LANGS.map((lang) => ({
       url: `${SITE}/${lang}${path}`,
       lastModified: new Date(),
@@ -29,5 +37,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: Object.fromEntries(LANGS.map((l) => [l, `${SITE}/${l}${path}`])),
       },
     }))
-  );
+  )];
 }

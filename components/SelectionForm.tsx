@@ -52,7 +52,13 @@ function Chips({
 
 // Форма "Получить подборку": цель, бюджет и контакт. Блок аренды шлёт событие
 // "pick-deal" - тогда форма переключается на аренду.
-export default function SelectionForm({ initialDeal = "buy" }: { initialDeal?: Deal }) {
+export default function SelectionForm({
+  initialDeal = "buy",
+  subject = "Заявка на подборку",
+}: {
+  initialDeal?: Deal;
+  subject?: string; // первая строка уведомления владельцу
+}) {
   const router = useRouter();
   const { t, tArr, lang } = useLanguage();
   const [deal, setDeal] = useState<Deal>(initialDeal);
@@ -82,7 +88,7 @@ export default function SelectionForm({ initialDeal = "buy" }: { initialDeal?: D
     const ru = messages.ru.pick;
     const ruBudgets = deal === "buy" ? ru.budgetsBuy : ru.budgetsRent;
     const comment = [
-      "Заявка на подборку",
+      subject,
       deal === "buy" && goal >= 0 ? `Цель: ${ru.goals[goal]}` : "",
       budget >= 0 ? `Бюджет: ${ruBudgets[budget]}` : "",
     ]
