@@ -17,6 +17,7 @@ export function generateStaticParams() {
 }
 
 function price(l: (typeof listings)[number], m: (typeof messages)[Lang]) {
+  if (!l.price) return m.sale.onRequest;
   return l.deal === "rent" ? `${l.price}${m.map.perMonth}` : l.price;
 }
 
@@ -63,12 +64,15 @@ export default async function ListingPage({ params }: { params: Params }) {
     description: [...text.facts, ...text.apartment].join(". "),
     url,
     image: Array.from({ length: l.photos }, (_, i) => `${SITE}/obekty/${l.slug}/${i + 1}.jpg`),
-    offers: {
-      "@type": "Offer",
-      price: l.priceNum,
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-    },
+    // у объекта с ценой по запросу предложения с ценой нет
+    ...(l.price && {
+      offers: {
+        "@type": "Offer",
+        price: l.priceNum,
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      },
+    }),
   };
 
   return (
@@ -113,7 +117,7 @@ export default async function ListingPage({ params }: { params: Params }) {
                   {l.oldPrice}
                 </span>
               )}
-              {l.deal === "sale" && (
+              {l.deal === "sale" && l.price && (
                 <span className="text-sm" style={muted}>
                   {perM2(l)} {m.sale.perM2}
                 </span>

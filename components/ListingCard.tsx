@@ -51,7 +51,7 @@ export default function ListingCard({ l, lang }: { l: Listing; lang: Lang }) {
       <div className="p-5">
         <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
           <span className="font-cormorant font-bold text-3xl" style={{ color: "#C9A96E" }}>
-            {l.price}
+            {l.price || m.sale.onRequest}
             {l.deal === "rent" && <span className="text-lg">{m.map.perMonth}</span>}
           </span>
           {l.oldPrice && (
@@ -59,7 +59,7 @@ export default function ListingCard({ l, lang }: { l: Listing; lang: Lang }) {
               {l.oldPrice}
             </span>
           )}
-          {l.deal === "sale" && (
+          {l.deal === "sale" && l.price && (
             <span className="text-xs" style={{ color: "rgba(245,240,232,0.6)" }}>
               {perM2(l)} {m.sale.perM2}
             </span>
