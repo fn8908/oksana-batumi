@@ -1,0 +1,292 @@
+/* Неоновая версия сайта (Vice). Всё с префиксом vice-, на основной сайт не влияет. */
+
+@layer components {
+
+.vice {
+  --v-night: #130524;
+  --v-deep: #1d0636;
+  --v-pink: #ff2e88;
+  --v-magenta: #f72585;
+  --v-cyan: #00e5ff;
+  --v-violet: #7b2ff7;
+  --v-orange: #ff7a2f;
+  --v-yellow: #ffd84d;
+  --v-text: #f3e4ff;
+  --v-muted: rgba(243, 228, 255, 0.72);
+
+  background: var(--v-night);
+  color: var(--v-text);
+  font-family: var(--font-nunito), Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.vice-display {
+  font-family: var(--font-unbounded), var(--font-nunito), Impact, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.vice-tag {
+  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 11px;
+}
+
+/* Неоновая подсветка текста */
+.vice-neon {
+  color: #fff;
+  text-shadow: 0 0 4px #fff, 0 0 14px var(--v-pink), 0 0 34px var(--v-pink),
+    0 0 70px rgba(255, 46, 136, 0.55);
+}
+
+.vice-neon-cyan {
+  color: #eaffff;
+  text-shadow: 0 0 4px #fff, 0 0 14px var(--v-cyan), 0 0 34px var(--v-cyan);
+}
+
+/* Хромированный логотип: белый с переходом в розовый */
+.vice-chrome {
+  background: linear-gradient(180deg, #ffffff 0%, #eaf8ff 34%, #9fe8ff 50%,
+      #ff8ad1 72%, #ff2e88 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0 26px rgba(255, 46, 136, 0.5));
+}
+
+/* --- Фон: закат, солнце, сетка --- */
+.vice-sky {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #240a4a 0%, #4b1270 24%, #9d1f7a 48%,
+      #e5467f 66%, #ff8a3d 80%, #ffc357 92%, #2a0b3f 100%);
+}
+
+.vice-sun {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffe9a3 0%, #ffd166 26%, #ff9d3c 50%,
+      #ff2e88 80%, #b5179e 100%);
+  box-shadow: 0 0 110px 40px rgba(255, 90, 160, 0.4);
+}
+
+.vice-sun::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, transparent 0 34%,
+      var(--v-night) 34% 36%, transparent 36% 42%,
+      var(--v-night) 42% 44.5%, transparent 44.5% 52%,
+      var(--v-night) 52% 54.5%, transparent 54.5% 59%,
+      var(--v-night) 59% 62%, transparent 62% 67%,
+      var(--v-night) 67% 70.5%, transparent 70.5% 75%,
+      var(--v-night) 75% 79%, transparent 79% 83%,
+      var(--v-night) 83% 88%, transparent 88% 91%,
+      var(--v-night) 91% 100%);
+}
+
+.vice-grid {
+  position: absolute;
+  left: -60%;
+  right: -60%;
+  bottom: 0;
+  height: 42vh;
+  background-image: repeating-linear-gradient(to right,
+      rgba(0, 229, 255, 0.75) 0 1px, transparent 1px 90px),
+    repeating-linear-gradient(to bottom, rgba(255, 46, 136, 0.7) 0 2px,
+      transparent 2px 70px);
+  transform: perspective(260px) rotateX(64deg);
+  transform-origin: bottom center;
+  -webkit-mask-image: linear-gradient(to top, #000 15%, transparent 92%);
+  mask-image: linear-gradient(to top, #000 15%, transparent 92%);
+  animation: vice-grid-move 7s linear infinite;
+}
+
+@keyframes vice-grid-move {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 0, 0 70px; }
+}
+
+/* Панорама города превращается в силуэт на фоне заката */
+.vice-skyline {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 62%;
+  filter: brightness(0.16) contrast(1.7) saturate(0.25);
+  -webkit-mask-image: linear-gradient(to top, #000 0 55%, transparent 100%);
+  mask-image: linear-gradient(to top, #000 0 55%, transparent 100%);
+}
+
+.vice-palm {
+  position: absolute;
+  bottom: 0;
+  color: #0b0216;
+  filter: drop-shadow(0 0 24px rgba(255, 46, 136, 0.35));
+  pointer-events: none;
+}
+
+/* Полосы видеокассеты поверх всего */
+.vice-scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0 1px,
+      transparent 1px 3px);
+  opacity: 0.45;
+}
+
+/* --- Блоки --- */
+.vice-card {
+  background: linear-gradient(180deg, rgba(58, 14, 92, 0.75), rgba(16, 4, 32, 0.92));
+  border: 1px solid rgba(255, 46, 136, 0.45);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.vice-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--v-cyan);
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.3), 0 18px 50px rgba(0, 0, 0, 0.55);
+}
+
+.vice-panel {
+  background: linear-gradient(180deg, rgba(45, 11, 74, 0.6), rgba(16, 4, 32, 0.85));
+  border: 1px solid rgba(123, 47, 247, 0.5);
+  border-radius: 18px;
+}
+
+.vice-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: linear-gradient(90deg, #ff7a2f, #ff2e88 55%, #b5179e);
+  color: #fff;
+  border-radius: 999px;
+  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 0 10px 34px rgba(255, 46, 136, 0.45);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.vice-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(255, 46, 136, 0.6); }
+.vice-btn:active { transform: translateY(0); }
+.vice-btn:disabled { opacity: 0.6; }
+
+.vice-btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1.5px solid var(--v-cyan);
+  background: rgba(0, 229, 255, 0.07);
+  color: #d6fbff;
+  border-radius: 999px;
+  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vice-btn-ghost:hover {
+  background: rgba(0, 229, 255, 0.16);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.35);
+}
+
+.vice-chip {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(0, 229, 255, 0.08);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  color: #b9f6ff;
+}
+
+.vice-price {
+  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-weight: 800;
+  color: var(--v-yellow);
+  text-shadow: 0 0 10px rgba(255, 216, 77, 0.65), 0 0 28px rgba(255, 122, 47, 0.5);
+}
+
+.vice-input {
+  width: 100%;
+  background: rgba(10, 2, 22, 0.75);
+  border: 1px solid rgba(123, 47, 247, 0.55);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--v-text);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vice-input::placeholder { color: rgba(243, 228, 255, 0.45); }
+.vice-input:focus { border-color: var(--v-cyan); box-shadow: 0 0 18px rgba(0, 229, 255, 0.25); }
+
+.vice-option {
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--v-text);
+  transition: all 0.2s ease;
+}
+
+.vice-option:hover { border-color: rgba(0, 229, 255, 0.5); }
+
+.vice-option-on {
+  background: linear-gradient(90deg, #ff2e88, #b5179e);
+  border-color: #ff2e88;
+  color: #fff;
+  box-shadow: 0 0 22px rgba(255, 46, 136, 0.5);
+}
+
+.vice-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--v-pink), var(--v-cyan), transparent);
+  box-shadow: 0 0 14px rgba(255, 46, 136, 0.6);
+}
+
+.vice-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.vice-reveal-on { opacity: 1; transform: translateY(0); }
+
+@media (prefers-reduced-motion: reduce) {
+  .vice-grid { animation: none; }
+  .vice-card:hover, .vice-btn:hover { transform: none; }
+  .vice-reveal { opacity: 1; transform: none; transition: none; }
+}
+
+.vice-script {
+  font-family: var(--font-monoton), var(--font-unbounded), cursive;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+/* Заголовок первого экрана лежит на ярком закате - добавляем контур */
+.vice-chrome-hero {
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.6))
+    drop-shadow(0 0 18px rgba(10, 2, 22, 0.85))
+    drop-shadow(0 0 34px rgba(255, 46, 136, 0.45));
+}
+
+}
