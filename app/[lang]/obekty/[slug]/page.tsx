@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import LeadForm from "@/components/LeadForm";
 import Gallery from "@/components/Gallery";
+import VideoPlayer from "@/components/VideoPlayer";
 import ListingCard from "@/components/ListingCard";
 import { listings, perM2, videoFor } from "@/lib/listings";
 import { tgWithText } from "@/lib/contacts";
@@ -89,13 +90,7 @@ export default async function ListingPage({ params }: { params: Params }) {
             style={{ aspectRatio: "9 / 16", background: "#000" }}
           >
             {video ? (
-              <iframe
-                src={`https://www.youtube.com/embed/${video}?rel=0&hl=${lang}`}
-                title={text.title}
-                className="w-full h-full"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
+              <VideoPlayer id={video} title={text.title} label={m.sale.video} lang={lang} />
             ) : (
               <img src={`/obekty/${l.slug}/1.jpg`} alt={text.title} className="w-full h-full object-cover" />
             )}
