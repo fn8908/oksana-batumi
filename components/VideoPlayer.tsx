@@ -21,7 +21,7 @@ export default function VideoPlayer({ id, title, label, lang }: { id: string; ti
 
   return (
     <button onClick={() => setPlay(true)} className="relative block w-full h-full cursor-pointer" aria-label={label}>
-      <img src={`https://i.ytimg.com/vi/${id}/oar2.jpg`} alt={title} className="w-full h-full object-cover" />
+      <img src={`https://i.ytimg.com/vi/${id}/oardefault.jpg`} alt={title} className="w-full h-full object-cover" />
       <span
         className="absolute bottom-3 end-3 px-4 py-2 rounded-full text-sm font-semibold"
         style={{ background: "#C9A96E", color: "#0F1C2E", boxShadow: "0 4px 16px rgba(0,0,0,0.5)" }}
