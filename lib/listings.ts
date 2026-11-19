@@ -24,7 +24,7 @@ export const listings: Listing[] = [
   { slug: "inasaridze-7-80", deal: "sale", price: "$180\u00a0000", oldPrice: "$195\u00a0000", priceNum: 180000, area: 80, videoId: "74ibjtRqoYA", videoIdEn: "H5XSmVGARaE", photos: 9 },
   { slug: "inasaridze-7-82", deal: "sale", price: "$205\u00a0000", priceNum: 205000, area: 82, videoId: "Zu1AMrPwhD4", videoIdEn: "UgdtDe3WAhA", photos: 9 },
   { slug: "villa-gonio", deal: "sale", price: "$299\u00a0000", priceNum: 299000, area: 190, videoId: "e-GLP2Iyjag", videoIdEn: "iwni3Cs8PzU", photos: 8 },
-  { slug: "villa-gonio-2", deal: "sale", price: "$310\u00a0000", priceNum: 310000, area: 190, videoId: "YV5-E6Sk_Us", videoIdEn: "8a0zObxn3jA", photos: 18 },
+  { slug: "villa-gonio-2", deal: "sale", price: "$310\u00a0000", priceNum: 310000, area: 190, videoId: "OtqLPF56joA", videoIdEn: "f0fqnNhNuAo", photos: 18 },
   { slug: "shartava-32", deal: "sale", price: "$82\u00a0000", priceNum: 82000, area: 37, videoId: "wxkpyJpioUg", videoIdEn: "ItuNXPxKTVY", photos: 7 },
   { slug: "zgvispiri-1", deal: "sale", price: "$108\u00a0000", priceNum: 108000, area: 50, photos: 11 },
   { slug: "lortkipanidze-6a", deal: "sale", price: "$60\u00a0000", priceNum: 60000, area: 33.5, photos: 9 },
