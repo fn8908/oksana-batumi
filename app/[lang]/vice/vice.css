@@ -22,14 +22,14 @@
 }
 
 .vice-display {
-  font-family: var(--font-unbounded), var(--font-nunito), Impact, sans-serif;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  font-family: var(--font-oswald), var(--font-nunito), Impact, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.012em;
+  line-height: 1.08;
 }
 
 .vice-tag {
-  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-family: var(--font-oswald), var(--font-nunito), sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.22em;
@@ -50,13 +50,13 @@
 
 /* Хромированный логотип: белый с переходом в розовый */
 .vice-chrome {
-  background: linear-gradient(180deg, #ffffff 0%, #eaf8ff 34%, #9fe8ff 50%,
-      #ff8ad1 72%, #ff2e88 100%);
+  background: linear-gradient(180deg, #fff6d8 0%, #ffd45c 26%, #ff9a2e 52%,
+      #ff2e88 78%, #c2187c 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.45))
-    drop-shadow(0 0 26px rgba(255, 46, 136, 0.5));
+  filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0 26px rgba(255, 46, 136, 0.45));
 }
 
 /* --- Фон: закат, солнце, сетка --- */
@@ -174,7 +174,7 @@
   background: linear-gradient(90deg, #ff7a2f, #ff2e88 55%, #b5179e);
   color: #fff;
   border-radius: 999px;
-  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-family: var(--font-oswald), var(--font-nunito), sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -196,7 +196,7 @@
   background: rgba(0, 229, 255, 0.07);
   color: #d6fbff;
   border-radius: 999px;
-  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-family: var(--font-oswald), var(--font-nunito), sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -220,7 +220,7 @@
 }
 
 .vice-price {
-  font-family: var(--font-unbounded), var(--font-nunito), sans-serif;
+  font-family: var(--font-oswald), var(--font-nunito), sans-serif;
   font-weight: 800;
   color: var(--v-yellow);
   text-shadow: 0 0 10px rgba(255, 216, 77, 0.65), 0 0 28px rgba(255, 122, 47, 0.5);
@@ -277,9 +277,9 @@
 }
 
 .vice-script {
-  font-family: var(--font-monoton), var(--font-unbounded), cursive;
+  font-family: var(--font-yellowtail), cursive;
   font-weight: 400;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.01em;
 }
 
 /* Заголовок первого экрана лежит на ярком закате - добавляем контур */
@@ -287,6 +287,14 @@
   filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.6))
     drop-shadow(0 0 18px rgba(10, 2, 22, 0.85))
     drop-shadow(0 0 34px rgba(255, 46, 136, 0.45));
+}
+
+
+/* Свечение вокруг логотипа на закате */
+.vice-wordmark-glow {
+  filter: drop-shadow(0 6px 0 rgba(10, 2, 22, 0.45))
+    drop-shadow(0 0 28px rgba(255, 46, 136, 0.55))
+    drop-shadow(0 0 70px rgba(255, 46, 136, 0.3));
 }
 
 }

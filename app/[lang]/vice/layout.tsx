@@ -1,19 +1,19 @@
-import { Unbounded, Monoton } from "next/font/google";
+import { Oswald, Yellowtail } from "next/font/google";
 import "./vice.css";
 
-// Тяжёлый дисплейный шрифт под неоновые заголовки; латиница + кириллица
-const unbounded = Unbounded({
+// Узкий тяжёлый гротеск - как подписи и интерфейс в GTA; латиница + кириллица
+const oswald = Oswald({
   subsets: ["latin", "cyrillic"],
-  weight: ["600", "700", "800"],
-  variable: "--font-unbounded",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-oswald",
   display: "swap",
 });
 
-// Неоновая вывеска: только латиница, для декоративной строки
-const monoton = Monoton({
+// Рукописный курсив под вывеску "Welcome to Batumi" (как Vice City на обложке)
+const yellowtail = Yellowtail({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-monoton",
+  variable: "--font-yellowtail",
   display: "swap",
 });
 
@@ -22,7 +22,7 @@ export const metadata = { robots: { index: false, follow: false } };
 
 export default function ViceLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`vice ${unbounded.variable} ${monoton.variable}`}>
+    <div className={`vice ${oswald.variable} ${yellowtail.variable}`}>
       {children}
       <div className="vice-scanlines" aria-hidden="true" />
     </div>

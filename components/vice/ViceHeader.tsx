@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useLanguage, Lang } from "@/context/LanguageContext";
+import Wordmark from "./Wordmark";
 
 const LANG_OPTIONS: { code: Lang; flag: string; label: string }[] = [
   { code: "ka", flag: "🇬🇪", label: "KA" },
@@ -61,8 +62,8 @@ export default function ViceHeader() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4 lg:gap-8 h-16 lg:h-20">
-          <button onClick={() => scrollTo("hero")} className="vice-display vice-chrome text-base lg:text-xl uppercase flex-shrink-0">
-            Batumi Realty
+          <button onClick={() => scrollTo("hero")} className="flex-shrink-0" aria-label="Batumi Realty">
+            <Wordmark className="w-[132px] lg:w-[170px] h-auto" />
           </button>
 
           <nav className="hidden lg:flex items-center gap-6">

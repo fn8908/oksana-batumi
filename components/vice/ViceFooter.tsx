@@ -3,14 +3,25 @@
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import Palm from "./Palm";
+import Wordmark from "./Wordmark";
+import { IG_URL, TG_URL } from "@/lib/contacts";
 
 const anchorIds = ["sale", "neighborhoods", "how-it-works", "contact-form"];
+
+const YT_RU = "https://www.youtube.com/channel/UCTXjFpssnnLvfBZavhTz1jw/";
+const YT_EN = "https://www.youtube.com/channel/UC5wNLVrfLXr0DLcDRHMibyg/";
 
 export default function ViceFooter() {
   const { t, tArr, lang } = useLanguage();
   const links = tArr<string>("footer.links");
 
   const scrollTo = (id: string) => document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+
+  const social = [
+    { label: "Telegram", href: TG_URL, color: "rgba(0,229,255,0.65)" },
+    { label: "Instagram", href: IG_URL, color: "rgba(255,46,136,0.7)" },
+    { label: "YouTube", href: ["en", "tr", "he"].includes(lang) ? YT_EN : YT_RU, color: "rgba(255,216,77,0.6)" },
+  ];
 
   return (
     <footer className="relative pt-20 pb-28 sm:pb-14 px-4 sm:px-6 lg:px-8 overflow-hidden">
@@ -28,13 +39,28 @@ export default function ViceFooter() {
       <div className="relative max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 mb-10">
           <div>
-            <div className="vice-display vice-chrome text-2xl uppercase mb-3">Batumi Realty</div>
+            <Wordmark className="w-[190px] h-auto mb-3" />
             <p className="text-sm mb-2" style={{ color: "var(--v-muted)" }}>
               {t("footer.tagline")}
             </p>
             <p className="text-xs" style={{ color: "rgba(243,228,255,0.45)" }}>
               {t("footer.copyright")}
             </p>
+            <div className="flex flex-wrap gap-2 mt-4 mb-4">
+              {social.map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="vice-chip px-4 py-2 text-xs"
+                  style={{ borderColor: s.color }}
+                >
+                  {s.label}
+                </a>
+              ))}
+            </div>
+
             <div className="flex flex-col gap-1">
               <Link href={`/${lang}/privacy`} className="text-xs underline" style={{ color: "rgba(243,228,255,0.45)" }}>
                 {t("footer.privacy")}

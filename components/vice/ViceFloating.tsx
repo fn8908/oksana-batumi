@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
-import { TG_URL } from "@/lib/contacts";
+import { IG_URL, TG_URL } from "@/lib/contacts";
 import { ymGoal } from "@/lib/ym";
 
 const YT_RU = "https://www.youtube.com/channel/UCTXjFpssnnLvfBZavhTz1jw/";
@@ -70,11 +70,21 @@ export default function ViceFloating() {
         {t("floatingCta.telegram")}
       </a>
       <a
+        href={IG_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={() => ymGoal("instagram_floating_click")}
+        className="hidden sm:inline-flex vice-btn-ghost px-5 py-3 text-xs"
+        style={{ ...fade, position: "fixed", right: "20px", bottom: "84px", zIndex: 50, background: "rgba(13,2,26,0.85)" }}
+      >
+        Instagram
+      </a>
+      <a
         href={YT_URL}
         target="_blank"
         rel="noopener noreferrer"
         className="hidden sm:inline-flex vice-btn-ghost px-5 py-3 text-xs"
-        style={{ ...fade, position: "fixed", right: "20px", bottom: "84px", zIndex: 50, background: "rgba(13,2,26,0.85)" }}
+        style={{ ...fade, position: "fixed", right: "20px", bottom: "144px", zIndex: 50, background: "rgba(13,2,26,0.85)" }}
       >
         {t("floatingCta.youtube")}
       </a>
