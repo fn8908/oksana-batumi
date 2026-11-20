@@ -55,7 +55,7 @@ export default function ViceHero() {
 
       <div className="relative z-10 flex-1 flex flex-col justify-center max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-10 text-center">
         <p className="vice-tag vice-neon-cyan mb-5" style={show("0.05s")}>
-          {t("hero.location")}
+          {t("hero.location").replace(/\s*·\s*2026\s*$/, "")}
         </p>
 
         <div style={show("0.2s")} className="mx-auto w-full">
@@ -63,7 +63,7 @@ export default function ViceHero() {
         </div>
 
         <p
-          className="vice-script vice-neon text-3xl sm:text-5xl lg:text-6xl -mt-3 sm:-mt-5 mb-5"
+          className="vice-script vice-neon-cyan text-3xl sm:text-5xl lg:text-6xl -mt-3 sm:-mt-5 mb-5"
           style={{ ...show("0.35s"), transform: "rotate(-2deg)" }}
         >
           Welcome to Batumi
