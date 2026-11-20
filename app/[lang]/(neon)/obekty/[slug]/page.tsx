@@ -7,7 +7,7 @@ import ViceLead from "@/components/vice/ViceLead";
 import ViceFloating from "@/components/vice/ViceFloating";
 import { listings, perM2, videoFor } from "@/lib/listings";
 import { tgWithText } from "@/lib/contacts";
-import { LANGS, type Lang, isLang, messages } from "@/lib/i18n";
+import { LANGS, type Lang, alternatesFor, isLang, messages } from "@/lib/i18n";
 
 const SITE = "https://batumi-realty.org";
 
@@ -36,7 +36,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `${data.text.title} - ${price(data.l, data.m)}`,
     description: `${data.text.address}. ${data.text.facts.join(", ")}.`,
-    robots: { index: false, follow: false },
+    alternates: alternatesFor(data.lang, `/obekty/${data.l.slug}`),
+    openGraph: { images: [`/obekty/${data.l.slug}/1.jpg`] },
   };
 }
 
@@ -47,7 +48,7 @@ export default async function ViceListingPage({ params }: { params: Params }) {
   const { l, m, text } = data;
 
   const video = videoFor(l, lang);
-  const url = `${SITE}/${lang}/vice/obekty/${l.slug}`;
+  const url = `${SITE}/${lang}/obekty/${l.slug}`;
   const tg = tgWithText(`${m.listing.tgText} ${text.title}, ${price(l, m)}\n${url}`);
   const others = listings
     .filter((x) => x.slug !== l.slug)
@@ -56,8 +57,27 @@ export default async function ViceListingPage({ params }: { params: Params }) {
 
   const muted = { color: "var(--v-muted)" };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "RealEstateListing",
+    name: text.title,
+    description: [...text.facts, ...text.apartment].join(". "),
+    url,
+    image: Array.from({ length: l.photos }, (_, i) => `${SITE}/obekty/${l.slug}/${i + 1}.jpg`),
+    // у объекта с ценой по запросу предложения с ценой нет
+    ...(l.price && {
+      offers: {
+        "@type": "Offer",
+        price: l.priceNum,
+        priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
+      },
+    }),
+  };
+
   return (
     <main className="relative min-h-screen pb-28 sm:pb-16">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {/* Неоновая шапка страницы */}
       <div className="relative overflow-hidden pt-8 pb-10 px-4">
         <div
@@ -74,7 +94,7 @@ export default async function ViceListingPage({ params }: { params: Params }) {
           style={{ background: "linear-gradient(to bottom, transparent 45%, #130524 100%)" }}
         />
         <div className="relative max-w-5xl mx-auto">
-          <Link href={`/${lang}/vice`} className="vice-tag" style={{ color: "#00e5ff" }}>
+          <Link href={`/${lang}`} className="vice-tag" style={{ color: "#00e5ff" }}>
             ← Batumi Realty
           </Link>
           <p className="vice-tag mt-6 mb-2" style={{ color: "#ff8ad1" }}>

@@ -168,7 +168,7 @@ export default function ViceHeader() {
               {t("nav.cta")}
             </button>
             <Link
-              href={`/${lang}`}
+              href={`/${lang}/classic`}
               className="block text-center mt-3 text-xs underline"
               style={{ color: "rgba(243,228,255,0.5)" }}
             >

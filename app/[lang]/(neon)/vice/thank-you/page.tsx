@@ -21,7 +21,7 @@ export default function ViceThankYou() {
         <p className="text-base mb-8" style={{ color: "rgba(255,255,255,0.9)" }}>
           {t("thankYou.subtext")}
         </p>
-        <Link href={`/${lang}/vice`} className="vice-btn px-8 py-4 text-sm">
+        <Link href={`/${lang}`} className="vice-btn px-8 py-4 text-sm">
           {t("thankYou.back")}
         </Link>
       </div>

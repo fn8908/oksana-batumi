@@ -8,7 +8,7 @@ export default function ViceCard({ l, lang }: { l: Listing; lang: Lang }) {
   const text = m.listings[l.slug];
 
   return (
-    <Link href={`/${lang}/vice/obekty/${l.slug}`} className="vice-card group block overflow-hidden">
+    <Link href={`/${lang}/obekty/${l.slug}`} className="vice-card group block overflow-hidden">
       <div className="relative overflow-hidden" style={{ aspectRatio: "4 / 3" }}>
         <img
           src={`/obekty/${l.slug}/1.jpg`}

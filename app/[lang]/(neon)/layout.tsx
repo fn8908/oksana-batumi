@@ -17,9 +17,6 @@ const yellowtail = Yellowtail({
   display: "swap",
 });
 
-// Вторая версия сайта: в поиск не отдаём, чтобы не спорить с основными страницами
-export const metadata = { robots: { index: false, follow: false } };
-
 export default function ViceLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`vice ${oswald.variable} ${yellowtail.variable}`}>

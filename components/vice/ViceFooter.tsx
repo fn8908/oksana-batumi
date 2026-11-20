@@ -65,7 +65,7 @@ export default function ViceFooter() {
               <Link href={`/${lang}/privacy`} className="text-xs underline" style={{ color: "rgba(243,228,255,0.45)" }}>
                 {t("footer.privacy")}
               </Link>
-              <Link href={`/${lang}`} className="text-xs underline" style={{ color: "rgba(243,228,255,0.45)" }}>
+              <Link href={`/${lang}/classic`} className="text-xs underline" style={{ color: "rgba(243,228,255,0.45)" }}>
                 Batumi Realty · classic
               </Link>
             </div>
