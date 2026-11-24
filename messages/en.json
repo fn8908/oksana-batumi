@@ -480,6 +480,72 @@
         "The community will have a pool, a farm shop, a cafe and parking",
         "Persimmon and tangerine orchards all around"
       ]
+    },
+    "gorgasali-158": {
+      "title": "1-bedroom apartment, 42 m², Old Batumi",
+      "address": "Batumi, 158 Gorgasali Street - 5th floor",
+      "facts": [
+        "42 m²",
+        "Separate bedroom",
+        "5th floor",
+        "7 min to the sea"
+      ],
+      "apartment": [
+        "Full bedroom with a window and balcony access",
+        "The living room also opens onto the balcony",
+        "Balcony faces a quiet inner courtyard",
+        "Furnished kitchen-dining area with appliances",
+        "Shower room and washing machine"
+      ],
+      "building": [
+        "Officially commissioned residential building",
+        "Gas heating",
+        "Shops, schools (including Euro-2000), Batumi Mall and DS Mall nearby"
+      ]
+    },
+    "bi-residence-studio": {
+      "title": "38 m² sea-view studio, 200 m to the beach",
+      "address": "Batumi, Bi Residence, 18 Nijaradze Street - 11th floor",
+      "facts": [
+        "38 m²",
+        "Sea view",
+        "11th floor",
+        "Long-term rent, 1 year+"
+      ],
+      "apartment": [
+        "Floor-to-ceiling windows and a balcony with sea view",
+        "Built-in kitchen with lighting and all appliances",
+        "Large bed, TV, washing machine",
+        "Herringbone underfloor heating, marble-look shower"
+      ],
+      "building": [
+        "New Bi Residence complex on the New Boulevard",
+        "Gym, pool, sauna and cafe in the building",
+        "200 m to the sea"
+      ]
+    },
+    "lortkipanidze-24": {
+      "title": "29 m² studio with new renovation and balcony, Your Space",
+      "address": "Batumi, 24 Grigol Lortkipanidze Street - 12th floor",
+      "facts": [
+        "29 m²",
+        "Studio",
+        "12th of 26 floors",
+        "New renovation"
+      ],
+      "apartment": [
+        "Bright room with a floor-to-ceiling window and balcony access",
+        "Balcony with mountain views",
+        "Brand-new finish: laminate, spotlights, smooth walls",
+        "Bathroom with shower",
+        "Unfurnished, no kitchen yet - set it up your way"
+      ],
+      "building": [
+        "Your Space residence, 26 floors, completed in 2024",
+        "Gas connected",
+        "Guarded territory, parking",
+        "5 min walk to the park and the sea, near the New Boulevard"
+      ]
     }
   },
   "sale": {

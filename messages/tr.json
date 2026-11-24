@@ -480,6 +480,72 @@
         "Sitede havuz, çiftlik market, kafe ve otopark olacak",
         "Çevrede trabzon hurması ve mandalina bahçeleri var"
       ]
+    },
+    "gorgasali-158": {
+      "title": "1+1 daire, 42 m², ayrı yatak odası, Eski Batum",
+      "address": "Batum, Gorgasali Caddesi 158 - 5. kat",
+      "facts": [
+        "42 m²",
+        "1+1, ayrı yatak odası",
+        "5. kat",
+        "Denize 7 dakika"
+      ],
+      "apartment": [
+        "Pencereli ve balkona çıkışlı tam yatak odası",
+        "Salon da balkona açılıyor",
+        "Balkon sakin iç avluya bakıyor",
+        "Mobilyalı ve beyaz eşyalı mutfak-yemek alanı",
+        "Duş ve çamaşır makinesi"
+      ],
+      "building": [
+        "Resmi olarak teslim edilmiş konut binası",
+        "Doğalgaz ısıtma",
+        "Yakında marketler, okullar (Euro-2000 dahil), Batumi Mall ve DS Mall"
+      ]
+    },
+    "bi-residence-studio": {
+      "title": "Deniz manzaralı 38 m² stüdyo, plaja 200 m",
+      "address": "Batum, Bi Residence, Nijaradze Caddesi 18 - 11. kat",
+      "facts": [
+        "38 m²",
+        "Deniz manzarası",
+        "11. kat",
+        "Uzun dönem kiralık, 1 yıl+"
+      ],
+      "apartment": [
+        "Boydan boya pencereler ve deniz manzaralı balkon",
+        "Aydınlatmalı ankastre mutfak, tüm cihazlar",
+        "Büyük yatak, TV, çamaşır makinesi",
+        "Balıksırtı yerden ısıtma, mermer görünümlü duş"
+      ],
+      "building": [
+        "Yeni Bulvar'da yeni Bi Residence sitesi",
+        "Binada spor salonu, havuz, sauna ve kafe",
+        "Denize 200 m"
+      ]
+    },
+    "lortkipanidze-24": {
+      "title": "Yeni tadilatlı, balkonlu 29 m² stüdyo, Your Space",
+      "address": "Batum, Grigol Lortkipanidze Caddesi 24 - 12. kat",
+      "facts": [
+        "29 m²",
+        "Stüdyo",
+        "26 katın 12.si",
+        "Yeni tadilat"
+      ],
+      "apartment": [
+        "Boy pencereli, balkona çıkışlı aydınlık oda",
+        "Dağ manzaralı balkon",
+        "Yeni tadilat: laminat, spot aydınlatma, düz duvarlar",
+        "Duşlu banyo",
+        "Eşyasız, mutfak yok - kendinize göre döşeyin"
+      ],
+      "building": [
+        "Your Space sitesi, 26 kat, 2024'te teslim",
+        "Doğalgaz bağlı",
+        "Korunan alan, otopark",
+        "Parka ve denize 5 dakika yürüme, Yeni Bulvar yakında"
+      ]
     }
   },
   "sale": {

@@ -9,7 +9,10 @@ export interface Listing {
     | "villa-gonio-2"
     | "zgvispiri-1"
     | "lortkipanidze-6a"
-    | "gorgasali-163";
+    | "gorgasali-163"
+    | "gorgasali-158"
+    | "lortkipanidze-24"
+    | "bi-residence-studio";
   deal: "sale" | "rent";
   price: string; // пусто - цена по запросу
   oldPrice?: string;
@@ -28,7 +31,10 @@ export const listings: Listing[] = [
   { slug: "shartava-32", deal: "sale", price: "$82\u00a0000", priceNum: 82000, area: 37, videoId: "wxkpyJpioUg", videoIdEn: "ItuNXPxKTVY", photos: 7 },
   { slug: "zgvispiri-1", deal: "sale", price: "$108\u00a0000", priceNum: 108000, area: 50, photos: 11 },
   { slug: "lortkipanidze-6a", deal: "sale", price: "$60\u00a0000", priceNum: 60000, area: 33.5, photos: 9 },
+  { slug: "gorgasali-158", deal: "sale", price: "$110\u00a0000", priceNum: 110000, area: 42, videoId: "sRua_HfhRhs", photos: 6 },
+  { slug: "lortkipanidze-24", deal: "sale", price: "$49\u00a0000", priceNum: 49000, area: 29, videoId: "RLc0fYAsbzA", videoIdEn: "sWc3S5wV-vU", photos: 9 },
   { slug: "gorgasali-163", deal: "rent", price: "$1\u00a0600", priceNum: 1600, area: 160, videoId: "j9yXwK26SUU", videoIdEn: "1L72nxQIYU0", photos: 8 },
+  { slug: "bi-residence-studio", deal: "rent", price: "$400", priceNum: 400, area: 38, videoId: "hbq9hWvEw0Y", photos: 10 },
 ];
 
 // EN, TR, HE смотрят английский ролик, остальные - русский (как кнопка ютуба)
