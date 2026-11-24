@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { messages } from "@/lib/i18n";
 import { ymGoal } from "@/lib/ym";
+import { getSource } from "@/lib/source";
 import ViceTitle from "./ViceTitle";
 
 type Deal = "buy" | "rent";
@@ -73,7 +74,7 @@ export default function ViceForm() {
       await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, contact, deal_type: deal, comment, lang }),
+        body: JSON.stringify({ name, contact, deal_type: deal, comment, lang, traffic: getSource() }),
       });
       ymGoal("form_submit");
     } finally {

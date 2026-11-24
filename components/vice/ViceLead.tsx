@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { ymGoal } from "@/lib/ym";
+import { getSource } from "@/lib/source";
 
 // Заявка на показ со страницы объекта, неоновый вид
 export default function ViceLead({ subject, dealType }: { subject: string; dealType: "buy" | "rent" }) {
@@ -31,6 +32,7 @@ export default function ViceLead({ subject, dealType }: { subject: string; dealT
             .filter(Boolean)
             .join("\n"),
           lang,
+          traffic: getSource(),
         }),
       });
       ymGoal("form_submit");

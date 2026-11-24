@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLanguage } from "@/context/LanguageContext";
 import { ymGoal } from "@/lib/ym";
+import { getSource } from "@/lib/source";
 
 interface LeadFormProps {
   subject: string;
@@ -49,6 +50,7 @@ export default function LeadForm({ subject, dealType, commentPlaceholder, viewin
             .filter(Boolean)
             .join("\n"),
           lang,
+          traffic: getSource(),
         }),
       });
       ymGoal("form_submit");

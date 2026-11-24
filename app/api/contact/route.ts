@@ -58,6 +58,7 @@ export async function POST(req: NextRequest) {
     desired_price,
     property_type: modalPropertyType,
     lang,
+    traffic,
   } = body;
 
   const timestamp = new Date().toLocaleString("ru-RU", {
@@ -107,6 +108,7 @@ export async function POST(req: NextRequest) {
 
   if (comment) message += `\n💬 <b>Комментарий:</b> ${comment}\n`;
   if (lang) message += `\n🌐 <b>Язык:</b> ${lang.toUpperCase()}\n`;
+  if (traffic) message += `📡 <b>Откуда:</b> ${String(traffic).replace(/[<>&]/g, "")}\n`;
 
   message += `\n━━━━━━━━━━━━━━━\n`;
   message += `<a href="https://t.me/ALazarev095">@ALazarev095</a>`;

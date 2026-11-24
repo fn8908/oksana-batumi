@@ -3,6 +3,7 @@
 import Script from 'next/script'
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { saveSource } from '@/lib/source'
 
 const ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID
 const LEAD_LABEL = process.env.NEXT_PUBLIC_GOOGLE_ADS_LEAD_LABEL
@@ -21,6 +22,8 @@ function conversion(id?: string, label?: string) {
 
 export default function GoogleTag() {
   const pathname = usePathname()
+
+  useEffect(saveSource, [])
 
   // Все формы сайта ведут на /thank-you - это и есть заявка
   useEffect(() => {
