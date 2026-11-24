@@ -3,6 +3,7 @@
 import Script from 'next/script'
 
 const YM_ID = 109720488
+const YM_ID_ADS = 108985523 // счётчик в аккаунте av095, к нему привязан Яндекс Директ и цели
 
 export default function YandexMetrika() {
   return (
@@ -15,7 +16,7 @@ export default function YandexMetrika() {
             for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}
             k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
           })(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=${YM_ID}','ym');
-          ym(${YM_ID},'init',{
+          [${YM_ID},${YM_ID_ADS}].forEach(function(id){ym(id,'init',{
             ssr:true,
             webvisor:true,
             clickmap:true,
@@ -23,7 +24,7 @@ export default function YandexMetrika() {
             url:location.href,
             accurateTrackBounce:true,
             trackLinks:true
-          });
+          });});
         `}
       </Script>
       <noscript>
