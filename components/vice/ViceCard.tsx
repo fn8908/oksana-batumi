@@ -14,14 +14,13 @@ export default function ViceCard({ l, lang }: { l: Listing; lang: Lang }) {
           src={`/obekty/${l.slug}/1.jpg`}
           alt={text.title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          style={{ filter: "saturate(1.25) contrast(1.05)" }}
           loading="lazy"
         />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to bottom, rgba(123,47,247,0.25) 0%, transparent 35%, rgba(19,5,36,0.92) 100%)",
+              "linear-gradient(to bottom, transparent 55%, rgba(19,5,36,0.9) 100%)",
           }}
         />
 

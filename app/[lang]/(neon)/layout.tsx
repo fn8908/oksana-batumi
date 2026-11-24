@@ -21,7 +21,6 @@ export default function ViceLayout({ children }: { children: React.ReactNode }) 
   return (
     <div className={`vice ${oswald.variable} ${yellowtail.variable}`}>
       {children}
-      <div className="vice-scanlines" aria-hidden="true" />
     </div>
   );
 }
