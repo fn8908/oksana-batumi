@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 import Palm from "./Palm";
 import Wordmark from "./Wordmark";
-import { IG_URL, TG_URL } from "@/lib/contacts";
+import { IG_URL, PHONE, PHONE_HREF, TG_URL, WA_URL } from "@/lib/contacts";
 
 const anchorIds = ["sale", "neighborhoods", "how-it-works", "contact-form"];
 
@@ -19,6 +19,7 @@ export default function ViceFooter() {
 
   const social = [
     { label: "Telegram", href: TG_URL, color: "rgba(0,229,255,0.65)" },
+    { label: "WhatsApp", href: WA_URL, color: "rgba(37,211,102,0.7)" },
     { label: "Instagram", href: IG_URL, color: "rgba(255,46,136,0.7)" },
     { label: "YouTube", href: ["en", "tr", "he"].includes(lang) ? YT_EN : YT_RU, color: "rgba(255,216,77,0.6)" },
   ];
@@ -95,6 +96,12 @@ export default function ViceFooter() {
               {t("footer.contacts")}
             </h4>
             <div className="vice-panel p-4 text-sm" style={{ color: "rgba(243,228,255,0.85)" }}>
+              <a href={PHONE_HREF} className="block mb-1" style={{ color: "#fff" }} dir="ltr">
+                📞 {PHONE}
+              </a>
+              <a href={WA_URL} target="_blank" rel="noopener noreferrer" className="block mb-3" style={{ color: "#25D366" }}>
+                WhatsApp
+              </a>
               🕘 {t("footer.schedule")}
             </div>
           </div>

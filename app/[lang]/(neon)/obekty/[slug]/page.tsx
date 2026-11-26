@@ -6,7 +6,7 @@ import ViceCard from "@/components/vice/ViceCard";
 import ViceLead from "@/components/vice/ViceLead";
 import ViceFloating from "@/components/vice/ViceFloating";
 import { listings, perM2, videoFor } from "@/lib/listings";
-import { tgWithText } from "@/lib/contacts";
+import { tgWithText, waWithText } from "@/lib/contacts";
 import { LANGS, type Lang, alternatesFor, isLang, messages } from "@/lib/i18n";
 
 const SITE = "https://batumi-realty.org";
@@ -50,6 +50,7 @@ export default async function ViceListingPage({ params }: { params: Params }) {
   const video = videoFor(l, lang);
   const url = `${SITE}/${lang}/obekty/${l.slug}`;
   const tg = tgWithText(`${m.listing.tgText} ${text.title}, ${price(l, m)}\n${url}`);
+  const wa = waWithText(`${m.listing.tgText} ${text.title}, ${price(l, m)}\n${url}`);
   const others = listings
     .filter((x) => x.slug !== l.slug)
     .sort((a, b) => Number(b.deal === l.deal) - Number(a.deal === l.deal))
@@ -157,6 +158,15 @@ export default async function ViceListingPage({ params }: { params: Params }) {
             <div className="flex flex-col sm:flex-row gap-3 mb-8">
               <a href={tg} target="_blank" rel="noopener noreferrer" className="vice-btn flex-1 py-4 px-4 text-[11px]">
                 {m.listing.telegram}
+              </a>
+              <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="vice-btn-ghost flex-1 py-4 px-4 text-[11px]"
+                style={{ borderColor: "#25D366", color: "#25D366" }}
+              >
+                WhatsApp
               </a>
               <a href="#viewing" className="vice-btn-ghost flex-1 py-4 px-4 text-[11px]">
                 {m.listing.viewing}

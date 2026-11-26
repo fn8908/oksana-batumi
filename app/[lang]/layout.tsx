@@ -135,6 +135,7 @@ export default async function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer service",
+                telephone: "+995511536504",
                 url: "https://t.me/ALazarev095",
                 availableLanguage: [
                   "Russian",
