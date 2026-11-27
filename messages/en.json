@@ -546,6 +546,31 @@
         "Guarded territory, parking",
         "5 min walk to the park and the sea, near the New Boulevard"
       ]
+    },
+    "chavchavadze-93": {
+      "title": "3-bedroom apartment, 180 m², 9th floor, city view",
+      "address": "Batumi, 93 Ilia Chavchavadze Street",
+      "facts": [
+        "180 m²",
+        "3 bedrooms + living room",
+        "9th floor of 17",
+        "Brand new, never lived in"
+      ],
+      "apartment": [
+        "Three bedrooms and a separate living room, 180 m² in total",
+        "Separate bright kitchen with appliances and access to a balcony",
+        "Two bedrooms also open onto a balcony",
+        "Two bathrooms",
+        "Separate entrance hall with a wardrobe",
+        "Gas heating with its own boiler",
+        "City view"
+      ],
+      "building": [
+        "Central Batumi, Bagrationi district, near 6 May Park",
+        "Built in 2019, 17 floors",
+        "Only three apartments per floor",
+        "The building has a generator"
+      ]
     }
   },
   "sale": {

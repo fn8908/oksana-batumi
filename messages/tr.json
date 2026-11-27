@@ -546,6 +546,31 @@
         "Korunan alan, otopark",
         "Parka ve denize 5 dakika yürüme, Yeni Bulvar yakında"
       ]
+    },
+    "chavchavadze-93": {
+      "title": "3+1 daire, 180 m², 9. kat, şehir manzarası",
+      "address": "Batum, İlia Çavçavadze Caddesi 93",
+      "facts": [
+        "180 m²",
+        "3 yatak odası + salon",
+        "17 katlı binada 9. kat",
+        "Yeni, hiç oturulmadı"
+      ],
+      "apartment": [
+        "Üç yatak odası ve ayrı salon, toplam 180 m²",
+        "Beyaz eşyalı, aydınlık ayrı mutfak, balkona çıkışlı",
+        "İki yatak odasından da balkona çıkış var",
+        "İki banyo",
+        "Gardıroplu ayrı giriş holü",
+        "Doğalgazlı ısıtma, kendi kombisi",
+        "Şehir manzarası"
+      ],
+      "building": [
+        "Batum merkezi, Bagrationi bölgesi, 6 Mayıs Parkı yakınında",
+        "2019 yapımı, 17 katlı bina",
+        "Her katta sadece üç daire",
+        "Binada jeneratör var"
+      ]
     }
   },
   "sale": {
