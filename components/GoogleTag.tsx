@@ -33,11 +33,11 @@ export default function GoogleTag() {
     }
   }, [pathname])
 
-  // Клик по любой ссылке на Telegram
+  // Клик по любой ссылке на Telegram или WhatsApp - одна цель "написал в мессенджер"
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
       const a = (e.target as HTMLElement).closest('a')
-      if (a?.href.includes('t.me/')) {
+      if (a && (a.href.includes('t.me/') || a.href.includes('wa.me/'))) {
         conversion(ADS_ID, TELEGRAM_LABEL)
         conversion(ADS_ID_2, TELEGRAM_LABEL_2)
       }

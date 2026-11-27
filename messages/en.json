@@ -118,7 +118,7 @@
   },
   "finalCta": {
     "title": "Looking for Property in Batumi?",
-    "subtitle": "Message us on Telegram - we'll send options with prices and videos and reply within 2 hours",
+    "subtitle": "Message us on Telegram or WhatsApp - we'll send options with prices and videos and reply within 2 hours",
     "btn": "Submit Request",
     "formLink": "or get options through the form →"
   },
@@ -185,7 +185,7 @@
   },
   "thankYou": {
     "heading": "Thank You!",
-    "subtext": "We'll reach out to you on Telegram within 2 hours.",
+    "subtext": "We'll reach out to you on Telegram or WhatsApp within 2 hours.",
     "back": "Back to Home"
   },
   "floatingCta": {
@@ -257,7 +257,7 @@
       {
         "h": "Who processes the data",
         "p": [
-          "The website batumi-realty.org belongs to the Batumi Realty community of realtors (Batumi, Georgia). For any questions about your data, write to us on Telegram: @ALazarev095."
+          "The website batumi-realty.org belongs to the Batumi Realty community of realtors (Batumi, Georgia). For any questions about your data, write to us on Telegram: @ALazarev095 or WhatsApp: +995 511 53 65 04."
         ]
       },
       {
@@ -290,7 +290,7 @@
       {
         "h": "Your rights",
         "p": [
-          "You can ask what data we hold about you, correct it or ask us to delete it. Write to @ALazarev095 on Telegram - we will reply within 10 days.",
+          "You can ask what data we hold about you, correct it or ask us to delete it. Write to @ALazarev095 on Telegram or +995 511 53 65 04 on WhatsApp - we will reply within 10 days.",
           "You can disable cookies in your browser settings. The website will keep working."
         ]
       },
@@ -629,7 +629,7 @@
       },
       {
         "q": "How can I view a property?",
-        "a": "Every property on the site has a video tour. After that comes a viewing - in person in Batumi or by video call, at a time that suits you. Message us on Telegram or send a request on the property page."
+        "a": "Every property on the site has a video tour. After that comes a viewing - in person in Batumi or by video call, at a time that suits you. Message us on Telegram or WhatsApp, or send a request on the property page."
       }
     ]
   }

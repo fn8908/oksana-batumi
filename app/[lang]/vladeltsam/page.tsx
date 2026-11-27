@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import LeadForm from "@/components/LeadForm";
+import { WA_URL } from "@/lib/contacts";
 import { alternatesFor, isLang, messages } from "@/lib/i18n";
 
 type Params = Promise<{ lang: string }>;
@@ -52,10 +53,19 @@ export default async function OwnersPage({ params }: { params: Params }) {
           href="https://t.me/ALazarev095"
           target="_blank"
           rel="noopener noreferrer"
-          className="block text-center w-full py-4 rounded-xl font-semibold text-sm mb-8 transition-all hover:opacity-90"
+          className="block text-center w-full py-4 rounded-xl font-semibold text-sm mb-3 transition-all hover:opacity-90"
           style={{ background: "#229ED9", color: "#fff" }}
         >
           {o.telegram}
+        </a>
+        <a
+          href={WA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block text-center w-full py-4 rounded-xl font-semibold text-sm mb-8 transition-all hover:opacity-90"
+          style={{ background: "#25D366", color: "#fff" }}
+        >
+          WhatsApp
         </a>
 
         <h2 className="font-cormorant font-semibold text-2xl mb-3" style={{ color: "#F5F0E8" }}>

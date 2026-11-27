@@ -3,6 +3,7 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 import { ymGoal } from "@/lib/ym";
+import { WA_URL } from "@/lib/contacts";
 
 export default function FinalCTA() {
   const { t } = useLanguage();
@@ -84,6 +85,18 @@ export default function FinalCTA() {
             <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.26 13.985l-2.95-.924c-.64-.203-.654-.64.136-.953l11.5-4.432c.534-.194 1.001.13.616.572z"/>
           </svg>
           {t("floatingCta.telegram")}
+        </a>
+
+        {/* WhatsApp CTA button */}
+        <a
+          href={WA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => ymGoal("whatsapp_click")}
+          className="inline-flex items-center gap-3 px-10 py-5 rounded-full font-semibold text-base transition-all duration-200 hover:opacity-90 hover:scale-105 active:scale-95 mt-4 sm:mt-0 sm:ms-4"
+          style={{ background: "#25D366", color: "#fff", textDecoration: "none" }}
+        >
+          WhatsApp
         </a>
 
         {/* Secondary: form link */}

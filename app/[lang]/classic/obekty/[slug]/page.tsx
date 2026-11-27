@@ -6,7 +6,7 @@ import Gallery from "@/components/Gallery";
 import VideoPlayer from "@/components/VideoPlayer";
 import ListingCard from "@/components/ListingCard";
 import { listings, perM2, videoFor } from "@/lib/listings";
-import { tgWithText } from "@/lib/contacts";
+import { tgWithText, waWithText } from "@/lib/contacts";
 import { LANGS, type Lang, alternatesFor, isLang, messages } from "@/lib/i18n";
 
 const SITE = "https://batumi-realty.org";
@@ -52,6 +52,7 @@ export default async function ListingPage({ params }: { params: Params }) {
   const url = `${SITE}/${lang}/obekty/${l.slug}`;
   // Готовое сообщение: менеджер сразу видит, о каком объекте вопрос
   const tg = tgWithText(`${m.listing.tgText} ${text.title}, ${price(l, m)}\n${url}`);
+  const wa = waWithText(`${m.listing.tgText} ${text.title}, ${price(l, m)}\n${url}`);
   // Сначала объекты того же типа сделки, потом остальные
   const others = listings
     .filter((x) => x.slug !== l.slug)
@@ -145,6 +146,15 @@ export default async function ListingPage({ params }: { params: Params }) {
                 {m.listing.telegram}
               </a>
               <a
+                href={wa}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 text-center py-4 px-4 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
+                style={{ background: "#25D366", color: "#fff" }}
+              >
+                WhatsApp
+              </a>
+              <a
                 href="#viewing"
                 className="flex-1 text-center py-4 px-4 rounded-xl font-semibold text-sm transition-all hover:opacity-90"
                 style={{ background: "#C9A96E", color: "#0F1C2E" }}
@@ -223,6 +233,15 @@ export default async function ListingPage({ params }: { params: Params }) {
           style={{ background: "#229ED9", color: "#fff" }}
         >
           Telegram
+        </a>
+        <a
+          href={wa}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex-1 text-center py-3 rounded-xl font-semibold text-sm"
+          style={{ background: "#25D366", color: "#fff" }}
+        >
+          WhatsApp
         </a>
         <a
           href="#viewing"

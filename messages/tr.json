@@ -118,7 +118,7 @@
   },
   "finalCta": {
     "title": "Batum'da gayrimenkul mü arıyorsunuz?",
-    "subtitle": "Telegram'dan yazın - fiyatlı ve videolu seçenekleri gönderelim, 2 saat içinde yanıt verelim",
+    "subtitle": "Telegram'dan veya WhatsApp'tan yazın - fiyatlı ve videolu seçenekleri gönderelim, 2 saat içinde yanıt verelim",
     "btn": "Başvuru Bırak",
     "formLink": "veya formu doldurup seçenekleri alın →"
   },
@@ -185,7 +185,7 @@
   },
   "thankYou": {
     "heading": "Teşekkürler!",
-    "subtext": "2 saat içinde Telegram'dan size ulaşacağız.",
+    "subtext": "2 saat içinde Telegram veya WhatsApp üzerinden size ulaşacağız.",
     "back": "Ana Sayfaya"
   },
   "floatingCta": {
@@ -257,7 +257,7 @@
       {
         "h": "Verileri kim işler",
         "p": [
-          "batumi-realty.org sitesi Batumi Realty emlakçılar topluluğuna (Batum, Gürcistan) aittir. Verilerinizle ilgili tüm sorular için Telegram'dan yazın: @ALazarev095."
+          "batumi-realty.org sitesi Batumi Realty emlakçılar topluluğuna (Batum, Gürcistan) aittir. Verilerinizle ilgili tüm sorular için Telegram'dan @ALazarev095 veya WhatsApp'tan +995 511 53 65 04 numarasına yazın."
         ]
       },
       {
@@ -290,7 +290,7 @@
       {
         "h": "Haklarınız",
         "p": [
-          "Hakkınızda hangi verileri tuttuğumuzu öğrenebilir, düzeltebilir veya silinmesini isteyebilirsiniz. Telegram'dan @ALazarev095 adresine yazın - 10 gün içinde yanıt veririz.",
+          "Hakkınızda hangi verileri tuttuğumuzu öğrenebilir, düzeltebilir veya silinmesini isteyebilirsiniz. Telegram'dan @ALazarev095 adresine veya WhatsApp'tan +995 511 53 65 04 numarasına yazın - 10 gün içinde yanıt veririz.",
           "Çerezleri tarayıcı ayarlarından kapatabilirsiniz. Site çalışmaya devam eder."
         ]
       },
@@ -629,7 +629,7 @@
       },
       {
         "q": "Mülkü nasıl görebilirim?",
-        "a": "Sitedeki her ilanın video turu var. Sonrasında mülkü Batum'da yerinde veya size uygun bir saatte görüntülü görüşmeyle gösteririz. Bize Telegram'dan yazın veya ilan sayfasından talep bırakın."
+        "a": "Sitedeki her ilanın video turu var. Sonrasında mülkü Batum'da yerinde veya size uygun bir saatte görüntülü görüşmeyle gösteririz. Bize Telegram'dan veya WhatsApp'tan yazın ya da ilan sayfasından talep bırakın."
       }
     ]
   }

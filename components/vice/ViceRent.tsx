@@ -2,7 +2,7 @@
 
 import { useLanguage } from "@/context/LanguageContext";
 import { listings } from "@/lib/listings";
-import { TG_URL } from "@/lib/contacts";
+import { TG_URL, WA_URL } from "@/lib/contacts";
 import ViceCard from "./ViceCard";
 import ViceTitle from "./ViceTitle";
 
@@ -47,6 +47,15 @@ export default function ViceRent() {
             </p>
             <a href={TG_URL} target="_blank" rel="noopener noreferrer" className="vice-btn py-3 px-5 text-xs self-center">
               {t("ownersBlock.btn")}
+            </a>
+            <a
+              href={WA_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="vice-btn-ghost py-3 px-5 text-xs self-center mt-3"
+              style={{ borderColor: "#25D366", color: "#25D366" }}
+            >
+              WhatsApp
             </a>
           </div>
         </div>
